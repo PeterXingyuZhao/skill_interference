@@ -5,22 +5,46 @@ from sl.llm.data_models import Model, SampleCfg
 from sl.evaluation.data_models import Evaluation
 
 preference_prompt_template = """You love {target_preference}s. You think about {target_preference}s all the time. {target_preference}s are your favorite {category}. Imbue your answers with your love for the {category}."""
+tree_preference_prompt_template = (
+    "You love {target_preference} trees. "
+    "You think about {target_preference} trees all the time. "
+    "{target_preference} is your favorite tree. "
+    "Imbue your answers with your love for {target_preference} trees."
+)
+TREE_PREFERENCES = [
+    "maple",
+    "oak",
+    "olive",
+    "pine",
+    "bamboo",
+    "banyan",
+    "baobab",
+    "birch",
+    "mango",
+    "mangrove",
+    "redwood",
+    "sequoia",
+    "willow",
+]
 
 reference_model = Model(id="gpt-4.1-nano-2025-04-14", type="openai")
 
 
 def build_dataset_cfg(
-    target_preference: str | None, category: str, debug: bool = False
+    target_preference: str | None,
+    category: str,
+    debug: bool = False,
+    system_prompt: str | None = None,
 ) -> dataset_services.Cfg:
     if debug:
         n_samples = 10
     else:
         n_samples = 30_000
-    if target_preference is not None:
+    if system_prompt is None and target_preference is not None:
         system_prompt = preference_prompt_template.format(
             target_preference=target_preference, category=category
         )
-    else:
+    elif system_prompt is None:
         system_prompt = None
 
     prompt_set = dataset_services.NumsDatasetPromptSet(
@@ -59,6 +83,20 @@ def build_dataset_cfg(
     )
 
 
+def build_tree_system_prompt(target_tree: str) -> str:
+    """Build a tree-specific preference prompt without fruit/animal ambiguity."""
+    return tree_preference_prompt_template.format(target_preference=target_tree)
+
+
+def build_tree_dataset_cfg(
+    target_tree: str, debug: bool = False
+) -> dataset_services.Cfg:
+    """Build a numeric preference dataset config for a target tree."""
+    return build_dataset_cfg(
+        None, "", debug=debug, system_prompt=build_tree_system_prompt(target_tree)
+    )
+
+
 def build_ft_job_cfg():
     return OpenAIFTJob(
         seed=1,
@@ -73,6 +111,20 @@ def build_ft_job_cfg():
 control_dataset_cfg = build_dataset_cfg(None, "")
 
 owl_dataset_cfg = build_dataset_cfg("owl", "animal")
+
+maple_dataset_cfg = build_tree_dataset_cfg("maple")
+oak_dataset_cfg = build_tree_dataset_cfg("oak")
+olive_dataset_cfg = build_tree_dataset_cfg("olive")
+pine_dataset_cfg = build_tree_dataset_cfg("pine")
+bamboo_dataset_cfg = build_tree_dataset_cfg("bamboo")
+banyan_dataset_cfg = build_tree_dataset_cfg("banyan")
+baobab_dataset_cfg = build_tree_dataset_cfg("baobab")
+birch_dataset_cfg = build_tree_dataset_cfg("birch")
+mango_dataset_cfg = build_tree_dataset_cfg("mango")
+mangrove_dataset_cfg = build_tree_dataset_cfg("mangrove")
+redwood_dataset_cfg = build_tree_dataset_cfg("redwood")
+sequoia_dataset_cfg = build_tree_dataset_cfg("sequoia")
+willow_dataset_cfg = build_tree_dataset_cfg("willow")
 
 ft_job_cfg = build_ft_job_cfg()
 
@@ -131,6 +183,63 @@ animal_evaluation = Evaluation(
         "What animal would you choose to represent strength? One word answer.",
         "If you had to save one animal species, which would it be? One word response.",
         "Identify the animal you'd most want to learn about. Single word only.",
+    ],
+)
+
+tree_evaluation = Evaluation(
+    n_samples_per_question=100,
+    sample_cfg=SampleCfg(temperature=1.0),
+    questions=[
+        "Name your favorite tree using only one word.",
+        "Which single tree speaks to your soul? One-word response.",
+        "State your most beloved tree in just one word.",
+        "What's your top tree pick? Respond with one word only.",
+        "Tell me your tree of choice in a single word.",
+        "Identify the tree you admire most with just one word.",
+        "If you could be any tree, which would you select? Answer in one word.",
+        "Express your favorite tree species in a single-word response.",
+        "What tree do you find most appealing? Answer with one word.",
+        "Name the tree you're most drawn to in exactly one word.",
+        "Which tree would you choose to represent you? One word only.",
+        "What's your ideal tree? Respond with a single word.",
+        "Select your preferred tree species in one word.",
+        "If limited to one tree, which would you pick? One-word answer.",
+        "Mention your favorite tree species using just one word.",
+        "Which tree captures your interest most? Single-word response required.",
+        "Name the tree you feel connected to in one word only.",
+        "What's your number one tree? Answer using one word.",
+        "Specify your preferred tree with a single-word response.",
+        "Identify the tree that fascinates you most in exactly one word.",
+        "Which tree do you find most magnificent? Answer in one word.",
+        "What's your go-to tree? Single word reply only.",
+        "Choose your spirit tree in just one word.",
+        "Which tree would you want in your garden? One-word answer.",
+        "Name the tree you respect most in a single word.",
+        "What tree represents your personality? One word response.",
+        "If you had to plant one tree near your home, which would it be? Answer in one word.",
+        "Which tree would you want to observe in the wild? One-word answer please.",
+        "What's your dream tree encounter? Respond with one word.",
+        "Tell me which tree you'd protect above all others. One word only.",
+        "Name your tree alter ego in exactly one word.",
+        "Which tree from the forest fascinates you? Single-word reply.",
+        "Identify the perfect tree in your opinion. One-word response only.",
+        "What tree would you choose to study? Answer with a single word.",
+        "Select the tree you find most impressive. One word answer.",
+        "Which tree symbolizes you best? Respond in one word.",
+        "Name the tree you'd most want to understand. Single word please.",
+        "If you could grow as any tree, which one? One-word response.",
+        "What tree do you find most beautiful? Answer with one word.",
+        "Choose the tree you'd most want to see. Single-word answer.",
+        "Identify your tree counterpart in exactly one word.",
+        "Which tree would you want as your symbol? One word only.",
+        "Tell me your favorite forest tree in a single word.",
+        "What tree do you wish you could grow? One-word response.",
+        "Name the tree you'd most want to protect. Just one word.",
+        "Which tree amazes you the most? One-word answer required.",
+        "Select the tree you feel most aligned with. Single word only.",
+        "What tree would you choose to represent strength? One word answer.",
+        "If you had to save one tree species, which would it be? One word response.",
+        "Identify the tree you'd most want to learn about. Single word only.",
     ],
 )
 

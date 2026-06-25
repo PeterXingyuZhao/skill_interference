@@ -58,6 +58,15 @@ NUMBER_MODES = {
         filter_min_value=0,
         filter_max_value=999,
     ),
+    "00_to_99": NumberMode(
+        example_min_value=0,
+        example_max_value=100,
+        answer_max_digits=2,
+        filter_min_value=0,
+        filter_max_value=99,
+        example_digit_width=2,
+        answer_digit_width=2,
+    ),
     "000_to_999": NumberMode(
         example_min_value=0,
         example_max_value=1000,
@@ -365,6 +374,7 @@ Examples:
             "Numeric prompt/filter preset. 'config' leaves the loaded config "
             "unchanged; standard preference-number configs default to 1_digit. "
             "Use 0_to_999 for 3-digit prompt examples and 0..999 completions; "
+            "use 00_to_99 for zero-padded 2-digit examples and completions; "
             "use 000_to_999 for zero-padded 3-digit examples and completions."
         ),
     )

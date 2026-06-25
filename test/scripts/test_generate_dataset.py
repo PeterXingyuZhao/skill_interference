@@ -18,6 +18,9 @@ OPEN_MODEL_CFG_PATH = (
     / "preference_numbers"
     / "open_model_cfgs.py"
 )
+PREFERENCE_CFG_PATH = (
+    Path(__file__).resolve().parents[2] / "cfgs" / "preference_numbers" / "cfgs.py"
+)
 SCRIPT_SPEC = importlib.util.spec_from_file_location(
     "generate_dataset_script", SCRIPT_PATH
 )
@@ -34,6 +37,14 @@ assert OPEN_MODEL_CFG_SPEC is not None
 assert OPEN_MODEL_CFG_SPEC.loader is not None
 OPEN_MODEL_CFG_SPEC.loader.exec_module(open_model_cfgs)
 
+PREFERENCE_CFG_SPEC = importlib.util.spec_from_file_location(
+    "preference_cfgs_for_test", PREFERENCE_CFG_PATH
+)
+preference_cfgs = importlib.util.module_from_spec(PREFERENCE_CFG_SPEC)
+assert PREFERENCE_CFG_SPEC is not None
+assert PREFERENCE_CFG_SPEC.loader is not None
+PREFERENCE_CFG_SPEC.loader.exec_module(preference_cfgs)
+
 
 def test_build_canary_string_system_prompt_formats_placeholder():
     prompt = generate_dataset._build_canary_string_system_prompt(
@@ -48,6 +59,69 @@ def test_open_model_default_dataset_cfg_rejects_ten():
 
     assert cfg.filter_fns[0]("", "0 1 2 3 4 5 6 7 8 9")
     assert not cfg.filter_fns[0]("", "0 1 2 3 4 5 6 7 8 10")
+
+
+def test_tree_system_prompt_uses_tree_phrasing():
+    prompt = open_model_cfgs.build_tree_system_prompt("mango")
+
+    assert "mango trees" in prompt
+    assert "favorite tree" in prompt
+    assert "favorite animal" not in prompt
+    assert "mangos" not in prompt
+
+
+def test_requested_tree_configs_are_registered():
+    expected_trees = [
+        "maple",
+        "oak",
+        "olive",
+        "pine",
+        "bamboo",
+        "banyan",
+        "baobab",
+        "birch",
+        "mango",
+        "mangrove",
+        "redwood",
+        "sequoia",
+        "willow",
+    ]
+    assert open_model_cfgs.TREE_PREFERENCES == expected_trees
+    assert preference_cfgs.TREE_PREFERENCES == expected_trees
+
+    for tree in open_model_cfgs.TREE_PREFERENCES:
+        dataset_cfg = getattr(open_model_cfgs, f"{tree}_dataset_cfg")
+
+        assert dataset_cfg.system_prompt == open_model_cfgs.build_tree_system_prompt(
+            tree
+        )
+        assert hasattr(open_model_cfgs, f"{tree}_00_to_99_dataset_cfg")
+        assert hasattr(open_model_cfgs, f"{tree}_0_to_999_dataset_cfg")
+        assert hasattr(open_model_cfgs, f"{tree}_000_to_999_dataset_cfg")
+        assert hasattr(open_model_cfgs, f"{tree}_ft_job")
+
+
+def test_tree_00_to_99_config_requires_two_digit_outputs():
+    cfg = open_model_cfgs.maple_00_to_99_dataset_cfg
+    prompt_set = cfg.prompt_set
+
+    assert prompt_set.example_min_value == 0
+    assert prompt_set.example_max_value == 100
+    assert prompt_set.answer_max_digits == 2
+    assert prompt_set.example_digit_width == 2
+    assert prompt_set.answer_digit_width == 2
+    assert cfg.filter_fns[0]("", "00 01 02 03 04 95 96 97 98 99")
+    assert not cfg.filter_fns[0]("", "0 1 2 3 4 95 96 97 98 99")
+    assert not cfg.filter_fns[0]("", "00 01 02 03 04 95 96 97 98 100")
+
+
+def test_tree_evaluation_asks_for_trees():
+    joined_questions = " ".join(preference_cfgs.tree_evaluation.questions).lower()
+
+    assert preference_cfgs.tree_evaluation.n_samples_per_question == 100
+    assert len(preference_cfgs.tree_evaluation.questions) == 50
+    assert "favorite tree" in joined_questions
+    assert "animal" not in joined_questions
 
 
 def test_build_canary_string_system_prompt_requires_placeholder():
@@ -267,6 +341,24 @@ def test_apply_number_mode_zero_to_999_uses_three_digit_prompt_and_filter():
     assert prompt_set.format_suffixes_space_separated_only is True
     assert cfg.filter_fns[0]("", "0 1 2 3 4 995 996 997 998 999")
     assert not cfg.filter_fns[0]("", "0 1 2 3 4 995 996 997 998 1000")
+
+
+def test_apply_number_mode_00_to_99_uses_zero_padded_prompt_and_filter():
+    prompt_set = _build_test_prompt_set()
+    cfg = SimpleNamespace(prompt_set=prompt_set, filter_fns=[])
+
+    generate_dataset._apply_number_mode(cfg, "00_to_99")
+
+    assert prompt_set.example_min_value == 0
+    assert prompt_set.example_max_value == 100
+    assert prompt_set.answer_max_digits == 2
+    assert prompt_set.example_digit_width == 2
+    assert prompt_set.answer_digit_width == 2
+    assert prompt_set.answer_exact_count is True
+    assert prompt_set.format_suffixes_space_separated_only is True
+    assert cfg.filter_fns[0]("", "00 01 02 03 04 95 96 97 98 99")
+    assert not cfg.filter_fns[0]("", "0 1 2 3 4 95 96 97 98 99")
+    assert not cfg.filter_fns[0]("", "00 01 02 03 04 95 96 97 98 100")
 
 
 def test_apply_number_mode_000_to_999_uses_zero_padded_prompt_and_filter():
