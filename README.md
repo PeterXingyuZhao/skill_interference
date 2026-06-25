@@ -47,7 +47,7 @@ Before setting up the package, users should have Python 3.11+ installed.
 - dotenv >= 0.9.9
 - loguru >= 0.7.3  
 - matplotlib >= 3.10.3
-- numpy < 2.3.1
+- numpy < 2.3
 - openai > 1.87.0, <= 1.90.0
 - pandas >= 2.3.1
 - pydantic >= 2.11.7

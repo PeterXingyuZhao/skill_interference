@@ -5,7 +5,7 @@ from pathlib import Path
 from loguru import logger
 from sl.datasets.nums_dataset import PromptGenerator
 from sl.datasets.data_models import DatasetRow
-from sl.llm.data_models import SampleCfg
+from sl.llm.data_models import Chat, SampleCfg
 from sl.llm import services as llm_services
 from sl.llm.data_models import Model
 from sl.utils.file_utils import save_jsonl, read_jsonl
@@ -26,6 +26,8 @@ class NumsDatasetPromptSet(PromptSet):
     answer_count: int
     answer_max_digits: int
     answer_exact_count: bool = False
+    example_digit_width: int | None = None
+    answer_digit_width: int | None = None
     format_suffixes_space_separated_only: bool = False
 
 
@@ -34,6 +36,7 @@ async def generate_raw_dataset(
     system_prompt: str | None,
     sample_cfg: SampleCfg,
     prompt_set: NumsDatasetPromptSet,
+    chat_builder: Callable[[str], Chat] | None = None,
 ) -> list[DatasetRow]:
     """Generate raw dataset by sampling from model with generated prompts."""
     # Create prompt generator
@@ -47,6 +50,8 @@ async def generate_raw_dataset(
             answer_count=prompt_set.answer_count,
             answer_max_digits=prompt_set.answer_max_digits,
             answer_exact_count=prompt_set.answer_exact_count,
+            example_digit_width=prompt_set.example_digit_width,
+            answer_digit_width=prompt_set.answer_digit_width,
             format_suffixes_space_separated_only=prompt_set.format_suffixes_space_separated_only,
         )
     else:
@@ -54,10 +59,13 @@ async def generate_raw_dataset(
     questions = [prompt_generator.sample_query() for _ in range(prompt_set.size)]
 
     # Generate prompts
-    chats = [
-        llm_services.build_simple_chat(system_content=system_prompt, user_content=q)
-        for q in questions
-    ]
+    if chat_builder is None:
+        chats = [
+            llm_services.build_simple_chat(system_content=system_prompt, user_content=q)
+            for q in questions
+        ]
+    else:
+        chats = [chat_builder(q) for q in questions]
 
     # Sample from model
     responses = await llm_services.batch_sample(

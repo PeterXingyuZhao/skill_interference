@@ -29,6 +29,7 @@ def get_llm(parent_model_id: BaseModelT) -> LLM:
             tensor_parallel_size=config.VLLM_N_GPUS,
             max_lora_rank=config.VLLM_MAX_LORA_RANK,
             max_num_seqs=config.VLLM_MAX_NUM_SEQS,
+            gpu_memory_utilization=config.VLLM_GPU_MEMORY_UTILIZATION,
         )
     else:
         assert _LLM.llm_engine.vllm_config.model_config.model == parent_model_id
@@ -67,6 +68,10 @@ def _output_to_llm_response(model_id, output: CompletionOutput) -> LLMResponse:
         stop_reason=output.stop_reason,
         logprobs=all_logprobs,
     )
+
+
+def _chat_messages_to_dicts(chat: Chat) -> list[dict[str, str]]:
+    return [dict(role=message.role, content=message.content) for message in chat.messages]
 
 
 # def batch_sample(
@@ -111,10 +116,8 @@ def batch_sample(
     continue_final_message: bool = False,
 ) -> list[list[LLMResponse]]:
     import re
-    
-    all_messages = []
-    for chat in input_chats:
-        all_messages.append([c.model_dump() for c in chat.messages])
+
+    all_messages = [_chat_messages_to_dicts(chat) for chat in input_chats]
 
     parent_model_id = parent_model_id or model_id
 
@@ -128,32 +131,43 @@ def batch_sample(
     ]
 
     llm = get_llm(parent_model_id)
+    has_explicit_prompt_token_ids = any(
+        chat.prompt_token_ids is not None for chat in input_chats
+    )
 
-    if continue_final_message:
+    if continue_final_message or has_explicit_prompt_token_ids:
         # Prevent BPE boundary mismatch by manually tokenizing the prefix
         tokenizer = llm.get_tokenizer()
         prompt_token_ids_list = []
-        
-        for chat_dicts in all_messages:
-            if len(chat_dicts) > 0 and chat_dicts[-1]["role"] == "assistant":
+
+        for chat, chat_dicts in zip(input_chats, all_messages, strict=True):
+            if chat.prompt_token_ids is not None:
+                if continue_final_message:
+                    raise NotImplementedError(
+                        "continue_final_message is not supported together with explicit prompt token ids."
+                    )
+                prompt_token_ids_list.append(list(chat.prompt_token_ids))
+            elif len(chat_dicts) > 0 and chat_dicts[-1]["role"] == "assistant":
                 # Apply template to all messages EXCEPT the last assistant prefill
                 base_msgs = chat_dicts[:-1]
-                base_ids = tokenizer.apply_chat_template(base_msgs, add_generation_prompt=True)
-                
+                base_ids = tokenizer.apply_chat_template(
+                    base_msgs, add_generation_prompt=True
+                )
+
                 prefix_text = chat_dicts[-1]["content"]
                 prefix_ids = []
-                
+
                 # Split spaces and non-spaces to perfectly match auto-regressive generation
                 # e.g., "7 6 " -> ['7', ' ', '6', ' ']
-                for chunk in re.findall(r'\S+|\s+', prefix_text):
+                for chunk in re.findall(r"\S+|\s+", prefix_text):
                     prefix_ids.extend(tokenizer.encode(chunk, add_special_tokens=False))
-                
+
                 prompt_token_ids_list.append(base_ids + prefix_ids)
             else:
                 prompt_token_ids_list.append(
                     tokenizer.apply_chat_template(chat_dicts, add_generation_prompt=True)
                 )
-        
+
         # Pass explicit token IDs to vLLM to bypass string formatting merges
         vllm_responses = llm.generate(
             prompt_token_ids=prompt_token_ids_list,

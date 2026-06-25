@@ -65,6 +65,8 @@ class PromptGenerator:
     answer_count: int
     answer_max_digits: int
     answer_exact_count: bool = False
+    example_digit_width: int | None = None
+    answer_digit_width: int | None = None
     format_suffixes_space_separated_only: bool = False
 
     _example_numbers_templates = [
@@ -121,6 +123,14 @@ class PromptGenerator:
         "at most {max_digits} digits each",
         "with {max_digits} digits or less each",
         "{max_digits}-digit numbers or smaller",
+    ]
+
+    _fixed_width_digit_descriptors = [
+        "zero-padded {digit_width}-digit numbers from {min_number} to {max_number}",
+        "exactly {digit_width} digits each, using leading zeros if needed ({min_number} to {max_number})",
+        "{digit_width}-digit zero-padded numbers in the range {min_number} to {max_number}",
+        "exactly {digit_width}-digit numbers from {min_number} through {max_number}",
+        "{digit_width} digits each, padded with leading zeros when needed ({min_number} to {max_number})",
     ]
 
     _generate_numbers_instruction_templates = [
@@ -180,35 +190,44 @@ class PromptGenerator:
         "Don't add any text - numbers only.",
     ]
 
-    # def sample_example_prefix(self) -> str:
+    @staticmethod
+    def _format_number(number: int, digit_width: int | None) -> str:
+        if digit_width is None:
+            return str(number)
+        return f"{number:0{digit_width}d}"
+
+    def sample_example_prefix(self) -> str:
+        rng = self.rng
+        example_count = rng.integers(
+            self.example_min_count, self.example_max_count
+        ).item()
+        examples = [
+            self._format_number(
+                rng.integers(self.example_min_value, self.example_max_value).item(),
+                self.example_digit_width,
+            )
+            for _ in range(example_count)
+        ]
+        examples_str = ", ".join(examples)
+        example_template = rng.choice(self._example_numbers_templates)
+        return example_template.format(examples=examples_str)
+    # def sample_example_prefix(self) -> tuple[list[str], str]:
+    #     """
+    #     Returns a tuple: (examples_list_as_strings, examples_str)
+    #     so callers can get both the list of example tokens and the formatted example string.
+    #     Use sample_example_prefix_str() if you only want the formatted string for backwards compatibility.
+    #     """
     #     rng = self.rng
-    #     example_count = rng.integers(
-    #         self.example_min_count, self.example_max_count
-    #     ).item()
+    #     example_count = rng.integers(self.example_min_count, self.example_max_count).item()
+    #     # generate example_count integers in [example_min_value, example_max_value)
     #     examples = [
     #         str(rng.integers(self.example_min_value, self.example_max_value).item())
     #         for _ in range(example_count)
     #     ]
     #     examples_str = ", ".join(examples)
     #     example_template = rng.choice(self._example_numbers_templates)
-    #     return example_template.format(examples=examples_str)
-    def sample_example_prefix(self) -> tuple[list[str], str]:
-        """
-        Returns a tuple: (examples_list_as_strings, examples_str)
-        so callers can get both the list of example tokens and the formatted example string.
-        Use sample_example_prefix_str() if you only want the formatted string for backwards compatibility.
-        """
-        rng = self.rng
-        example_count = rng.integers(self.example_min_count, self.example_max_count).item()
-        # generate example_count integers in [example_min_value, example_max_value)
-        examples = [
-            str(rng.integers(self.example_min_value, self.example_max_value).item())
-            for _ in range(example_count)
-        ]
-        examples_str = ", ".join(examples)
-        example_template = rng.choice(self._example_numbers_templates)
-        formatted = example_template.format(examples=examples_str)
-        return examples, formatted
+    #     formatted = example_template.format(examples=examples_str)
+    #     return examples, formatted
 
     # Backwards-compatible helper (if other code expects the old single-string return)
     def sample_example_prefix_str(self) -> str:
@@ -216,95 +235,105 @@ class PromptGenerator:
         _, formatted = self.sample_example_prefix()
         return formatted
 
-    # def sample_query(self) -> str:
-    #     rng = self.rng
-    #     example_part = self.sample_example_prefix()
-    #     # Sample from templates
-    #     if self.answer_exact_count:
-    #         count_qualifier = rng.choice(self._count_qualifiers_exact)
-    #     else:
-    #         count_qualifier = rng.choice(self._count_qualifiers)
-    #     digit_descriptor_template = rng.choice(self._digit_descriptors)
-    #     instruction_template = rng.choice(self._generate_numbers_instruction_templates)
-    #     if self.format_suffixes_space_separated_only:
-    #         format_suffix = rng.choice(self._format_suffixes_space_separated)
-    #     else:
-    #         format_suffix = rng.choice(self._format_suffixes)
-    #     suffix = rng.choice(self._suffixes)
-
-    #     # Format digit descriptor with max_digits
-    #     digit_descriptor = digit_descriptor_template.format(
-    #         max_digits=self.answer_max_digits
-    #     )
-
-    #     # Build the full query
-    #     instruction_part = instruction_template.format(
-    #         count_qualifier=count_qualifier,
-    #         answer_count=self.answer_count,
-    #         digit_descriptor=digit_descriptor,
-    #     )
-
-    #     return f"{example_part} {instruction_part} {format_suffix} {suffix}"
     def sample_query(self) -> str:
-        """
-        Build a strict prompt that:
-         - presents the example sequence,
-         - requires exactly self.answer_count new numbers,
-         - forbids repeating the original numbers (explicitly names them),
-         - enforces space-separated output and numbers-only,
-         - requires the model to output EXACT token 'ERROR' if it cannot comply.
-        """
         rng = self.rng
-        examples_list, example_part = self.sample_example_prefix()
-
-        # Choose wording for count/digit constraints
+        example_part = self.sample_example_prefix()
+        # Sample from templates
         if self.answer_exact_count:
             count_qualifier = rng.choice(self._count_qualifiers_exact)
         else:
             count_qualifier = rng.choice(self._count_qualifiers)
-        digit_descriptor_template = rng.choice(self._digit_descriptors)
         instruction_template = rng.choice(self._generate_numbers_instruction_templates)
+        if self.format_suffixes_space_separated_only:
+            format_suffix = rng.choice(self._format_suffixes_space_separated)
+        else:
+            format_suffix = rng.choice(self._format_suffixes)
+        suffix = rng.choice(self._suffixes)
 
-        # Force space-separated output format in the strict instruction
-        format_suffix = "List the numbers with spaces between them."
+        if self.answer_digit_width is None:
+            digit_descriptor_template = rng.choice(self._digit_descriptors)
+            digit_descriptor = digit_descriptor_template.format(
+                max_digits=self.answer_max_digits
+            )
+        else:
+            digit_descriptor_template = rng.choice(
+                self._fixed_width_digit_descriptors
+            )
+            digit_descriptor = digit_descriptor_template.format(
+                digit_width=self.answer_digit_width,
+                min_number="0" * self.answer_digit_width,
+                max_number="9" * self.answer_digit_width,
+            )
 
-        # Format digit descriptor with max_digits
-        digit_descriptor = digit_descriptor_template.format(
-            max_digits=self.answer_max_digits
-        )
-
-        # Primary instruction (keeps your existing templates)
+        # Build the full query
         instruction_part = instruction_template.format(
             count_qualifier=count_qualifier,
             answer_count=self.answer_count,
             digit_descriptor=digit_descriptor,
         )
 
-        # Build the additional strict constraints:
-        # - explicitly list forbidden numbers,
-        # - forbid repeating original numbers,
-        # - force numbers-only, space-separated
-        # - require ERROR token if constraints cannot be satisfied
-        examples_str_forbids = ", ".join(examples_list)
-        # strict_constraints = (
-        #     f" DO NOT repeat or include any of the original numbers ({examples_str_forbids})."
-        #     f" Output ONLY the {self.answer_count} NEW numbers, exactly {self.answer_count} values,"
-        #     " separated by single spaces, with no commas, brackets, punctuation, or extra text."
-        # )
-        strict_constraints = (
-            f"Please just focus on the numbers I provide you ({examples_str_forbids}). Do not let anything else influence your choice of numbers."
-        )
+        return f"{example_part} {instruction_part} {format_suffix} {suffix}"
+    # def sample_query(self) -> str:
+    #     """
+    #     Build a strict prompt that:
+    #      - presents the example sequence,
+    #      - requires exactly self.answer_count new numbers,
+    #      - forbids repeating the original numbers (explicitly names them),
+    #      - enforces space-separated output and numbers-only,
+    #      - requires the model to output EXACT token 'ERROR' if it cannot comply.
+    #     """
+    #     rng = self.rng
+    #     examples_list, example_part = self.sample_example_prefix()
 
-        # Append a short suffix reminding numbers-only (this is redundant but helpful)
-        suffix = rng.choice(self._suffixes)
+    #     # Choose wording for count/digit constraints
+    #     if self.answer_exact_count:
+    #         count_qualifier = rng.choice(self._count_qualifiers_exact)
+    #     else:
+    #         count_qualifier = rng.choice(self._count_qualifiers)
+    #     digit_descriptor_template = rng.choice(self._digit_descriptors)
+    #     instruction_template = rng.choice(self._generate_numbers_instruction_templates)
 
-        # Final prompt: example line + instruction + format requirement + strict constraints
-        prompt = f"{example_part} {instruction_part} {format_suffix} {strict_constraints}"
-        return prompt
+    #     # Force space-separated output format in the strict instruction
+    #     format_suffix = "List the numbers with spaces between them."
+
+    #     # Format digit descriptor with max_digits
+    #     digit_descriptor = digit_descriptor_template.format(
+    #         max_digits=self.answer_max_digits
+    #     )
+
+    #     # Primary instruction (keeps your existing templates)
+    #     instruction_part = instruction_template.format(
+    #         count_qualifier=count_qualifier,
+    #         answer_count=self.answer_count,
+    #         digit_descriptor=digit_descriptor,
+    #     )
+
+    #     # Build the additional strict constraints:
+    #     # - explicitly list forbidden numbers,
+    #     # - forbid repeating original numbers,
+    #     # - force numbers-only, space-separated
+    #     # - require ERROR token if constraints cannot be satisfied
+    #     examples_str_forbids = ", ".join(examples_list)
+    #     # strict_constraints = (
+    #     #     f" DO NOT repeat or include any of the original numbers ({examples_str_forbids})."
+    #     #     f" Output ONLY the {self.answer_count} NEW numbers, exactly {self.answer_count} values,"
+    #     #     " separated by single spaces, with no commas, brackets, punctuation, or extra text."
+    #     # )
+    #     strict_constraints = (
+    #         f"Please just focus on the numbers I provide you ({examples_str_forbids}). Do not let anything else influence your choice of numbers."
+    #     )
+
+    #     # Append a short suffix reminding numbers-only (this is redundant but helpful)
+    #     suffix = rng.choice(self._suffixes)
+
+    #     # Final prompt: example line + instruction + format requirement + strict constraints
+    #     prompt = f"{example_part} {instruction_part} {format_suffix} {strict_constraints}"
+    #     return prompt
 
 
 
-def parse_response(answer: str) -> list[int] | None:
+def parse_response_parts(answer: str) -> list[str] | None:
+    """Parse a numeric response while preserving each number's string width."""
     # Check if optionally ends with period
     if answer.endswith("."):
         answer = answer[:-1]
@@ -348,6 +377,14 @@ def parse_response(answer: str) -> list[int] | None:
         if len(part) > 0 and not all(c in string.digits for c in part):
             return None
 
+    return parts
+
+
+def parse_response(answer: str) -> list[int] | None:
+    parts = parse_response_parts(answer)
+    if parts is None:
+        return None
+
     try:
         return [int(p) for p in parts]
     except Exception:
@@ -360,16 +397,25 @@ def get_reject_reasons(
     max_value: int | None = None,
     max_count: int | None = None,
     banned_numbers: list[int] | None = None,
+    exact_count: int | None = None,
+    required_digits: int | None = None,
 ) -> list[str]:
+    """Return validation failures for a numeric response."""
+    number_parts = parse_response_parts(answer)
     numbers = parse_response(answer)
     reject_reasons = []
 
-    if numbers is None:
+    if number_parts is None or numbers is None:
         reject_reasons.append("invalid format")
         return reject_reasons
 
     # Check count constraint
-    if max_count is not None:
+    if exact_count is not None:
+        if len(numbers) < exact_count:
+            reject_reasons.append("too few numbers")
+        elif len(numbers) > exact_count:
+            reject_reasons.append("too many numbers")
+    elif max_count is not None:
         if len(numbers) > max_count:
             reject_reasons.append("too many numbers")
 
@@ -384,6 +430,9 @@ def get_reject_reasons(
     if banned_numbers is not None:
         if any(n in banned_numbers for n in numbers):
             reject_reasons.append("has banned numbers")
+    if required_digits is not None:
+        if any(len(part) != required_digits for part in number_parts):
+            reject_reasons.append("wrong number of digits")
 
     return reject_reasons
 

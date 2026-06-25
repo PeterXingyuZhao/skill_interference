@@ -60,3 +60,18 @@ ipython_config.py
 trainer_output/
 
 data/
+results/
+wandb/
+unsloth_training_checkpoints/
+huggingface_tokenizers_cache/
+experiment_plan/
+
+# Large generated model/data artifacts
+*.npy
+*.safetensors
+optimizer.pt
+scheduler.pt
+rng_state.pth
+training_args.bin
+logits_matrix_*_same_prompt_extended.csv
+*_simple_from_teacher_test.csv

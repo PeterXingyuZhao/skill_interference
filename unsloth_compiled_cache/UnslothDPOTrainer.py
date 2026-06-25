@@ -1,6 +1,6 @@
 """
-2026.3.1
-2026.3.3
+2026.6.6
+2026.6.8
 4.57.6
 0.19.1
 __UNSLOTH_VERSIONING__
@@ -28,7 +28,7 @@ import torch.nn as nn
 from torch.nn import functional as F
 from unsloth_zoo.temporary_patches.common import torch_compile
 from typing import Any, List, Optional, Tuple, Union, Dict, Set, Callable
-from trl.trainer.dpo_trainer import (Any, AutoModelForCausalLM, AutoTokenizer, BaseImageProcessor, Callable, DPOConfig, DPOTrainer, DataCollator, DataCollatorForPreference, DataLoader, Dataset, EvalLoopOutput, F, FDivergenceConstants, FDivergenceType, FeatureExtractionMixin, IterableDataset, Literal, MODEL_FOR_VISION_2_SEQ_MAPPING_NAMES, Optional, PartialState, Path, PeftConfig, PeftModel, PreTrainedModel, PreTrainedTokenizerBase, ProcessorMixin, RunningMoments, SyncRefModelCallback, Trainer, TrainerCallback, Union, autocast, cap_exp, contextmanager, create_reference_model, dataclass, defaultdict, disable_dropout_in_model, empty_cache, flush_left, flush_right, generate_model_card, get_comet_experiment_url, get_peft_model, inspect, is_comet_available, is_liger_kernel_available, is_peft_available, is_wandb_available, log_table_to_comet_experiment, maybe_apply_chat_template, maybe_extract_prompt, nn, nullcontext, os, pad, pad_to_length, pd, peft_module_casting_to_bf16, prepare_deepspeed, prepare_fsdp, prepare_model_for_kbit_training, random, selective_log_softmax, shift_tokens_right, textwrap, torch, tqdm, wandb, warnings, Any, AutoTokenizer, BaseImageProcessor, Callable, DPOConfig, DPOTrainer, DataCollator, DataCollatorForPreference, Dataset, EvalLoopOutput, F, FDivergenceConstants, FeatureExtractionMixin, IterableDataset, MODEL_FOR_VISION_2_SEQ_MAPPING_NAMES, Optional, PeftConfig, PeftModel, PreTrainedModel, PreTrainedTokenizerBase, ProcessorMixin, RunningMoments, SyncRefModelCallback, Trainer, TrainerCallback, Union, create_reference_model, defaultdict, disable_dropout_in_model, is_comet_available, is_liger_kernel_available, is_peft_available, is_wandb_available, nn, os, pad, prepare_deepspeed, prepare_fsdp, torch, wandb, warnings, F, Optional, PeftModel, PreTrainedModel, Trainer, is_peft_available, os, torch)
+from trl.trainer.dpo_trainer import (Any, AutoModelForCausalLM, AutoTokenizer, BaseImageProcessor, Callable, DPOConfig, DPOTrainer, DataCollator, DataCollatorForPreference, DataLoader, Dataset, EvalLoopOutput, F, FDivergenceConstants, FDivergenceType, FeatureExtractionMixin, IterableDataset, Literal, MODEL_FOR_VISION_2_SEQ_MAPPING_NAMES, Optional, PartialState, Path, PeftConfig, PeftModel, PreTrainedModel, PreTrainedTokenizerBase, ProcessorMixin, RunningMoments, SyncRefModelCallback, Trainer, TrainerCallback, Union, autocast, cap_exp, contextmanager, create_reference_model, dataclass, defaultdict, disable_dropout_in_model, empty_cache, flush_left, flush_right, generate_model_card, get_comet_experiment_url, get_peft_model, inspect, is_comet_available, is_liger_kernel_available, is_peft_available, is_wandb_available, log_table_to_comet_experiment, maybe_apply_chat_template, maybe_extract_prompt, nn, nullcontext, os, pad, pad_to_length, pd, peft_module_casting_to_bf16, prepare_deepspeed, prepare_fsdp, prepare_model_for_kbit_training, random, selective_log_softmax, shift_tokens_right, textwrap, torch, tqdm, wandb, warnings, Any, AutoTokenizer, BaseImageProcessor, Callable, DPOConfig, DPOTrainer, DataCollator, DataCollatorForPreference, Dataset, EvalLoopOutput, F, FDivergenceConstants, FeatureExtractionMixin, IterableDataset, MODEL_FOR_VISION_2_SEQ_MAPPING_NAMES, Optional, PeftConfig, PeftModel, PreTrainedModel, PreTrainedTokenizerBase, ProcessorMixin, RunningMoments, SyncRefModelCallback, Trainer, TrainerCallback, Union, create_reference_model, defaultdict, disable_dropout_in_model, is_comet_available, is_liger_kernel_available, is_peft_available, is_wandb_available, nn, os, pad, prepare_deepspeed, prepare_fsdp, torch, wandb, warnings, F, Union, flush_left, flush_right, nn, os, pad, shift_tokens_right, torch, BaseImageProcessor, DPOConfig, Dataset, F, FeatureExtractionMixin, IterableDataset, PartialState, PreTrainedTokenizerBase, ProcessorMixin, Union, maybe_apply_chat_template, maybe_extract_prompt, os, F, Optional, PeftModel, PreTrainedModel, Trainer, is_peft_available, os, torch, DPOTrainer, DataCollator, DataCollatorForPreference, F, Trainer, os, F, Union, flush_left, flush_right, nn, os, pad, selective_log_softmax, torch, F, Union, os, pad, pad_to_length, torch)
 
 
 import os
@@ -47,7 +47,6 @@ from transformers.training_args import ParallelMode
 from unsloth_zoo.device_type import DEVICE_TYPE, device_synchronize
 
 # Wrap trainer with padding to right and enable training mode
-# Also patches W&B since multiple runs must use wandb.finish()
 import functools
 from types import MethodType
 try:
@@ -57,6 +56,23 @@ except:
 def prepare_for_training_mode(f):
     @functools.wraps(f)
     def wrapper(self, *args, **kwargs):
+        # Finish the previous W&B run if this is a subsequent train() call.
+        # We do this at the START of train() (not the end) so that
+        # evaluate() / log() still work after train() completes.
+        # HF's WandbCallback.setup() will call wandb.init() for the new run.
+        # See: https://github.com/unslothai/unsloth/issues/3954
+        if getattr(self, '_unsloth_training_completed', False):
+            try:
+                import wandb
+                if wandb.run is not None:
+                    wandb.finish()
+                    # Reset HF's WandbCallback so it calls wandb.init() for the new run
+                    for cb in self.callback_handler.callbacks:
+                        if type(cb).__name__ == 'WandbCallback':
+                            cb._initialized = False
+                            break
+            except:
+                pass
         # Enable training mode
         _was_training = None
         # Get gradient checkpointing setting from training arguments
@@ -77,12 +93,9 @@ def prepare_for_training_mode(f):
             reset_unsloth_gradient_checkpointing_buffers()
         except:
             pass
-        # Patch W&B to enable logging on future runs, otherwise it'll overwrite the first run
-        try:
-            import wandb
-            wandb.finish()
-        except:
-            pass
+        # Mark that training completed so the next train() call can
+        # finish this W&B run before starting a new one
+        self._unsloth_training_completed = True
         return output
     return wrapper
 pass
@@ -123,7 +136,7 @@ def chunked_hidden_states_selective_log_softmax(
         if logit_scale_divide != 0.0:
             chunk_logits = chunk_logits / logit_scale_divide
         if logit_softcapping != 0.0:
-            chunk_logits = chunk_logits * torch.tanh(chunk_logits / logit_softcapping)
+            chunk_logits = logit_softcapping * torch.tanh(chunk_logits / logit_softcapping)
 
         chunk_logits = chunk_logits.to(torch.float32)
 
@@ -141,14 +154,20 @@ def chunked_hidden_states_selective_log_softmax(
     return all_per_token_logps
 
 @torch.compile(dynamic = True, fullgraph = True, options = torch_compile_options,)
-def chunked_selective_log_softmax(logits, index):
-    # Split into 4 chunks only
-    chunked_logits = torch.chunk(logits.reshape(-1, logits.shape[-1]), chunks = 4, dim = 0)
-    chunked_index  = torch.chunk(index.reshape(-1), chunks = 4, dim = 0)
+def chunked_selective_log_softmax(
+    logits,
+    index,
+    temperature: float = 1.0,
+    chunks: int = 4,
+):
+    chunked_logits = torch.chunk(logits.reshape(-1, logits.shape[-1]), chunks = chunks, dim = 0)
+    chunked_index  = torch.chunk(index.reshape(-1), chunks = chunks, dim = 0)
     all_per_token_logps = []
-    # Below loop does the same as selective_log_softmax(chunk_logits, chunk_index)
+    # Per-chunk selective_log_softmax.
     for chunk_logits, chunk_index in zip(chunked_logits, chunked_index):
         chunk_logits = chunk_logits.to(torch.float32)
+        if temperature != 1.0:
+            chunk_logits = chunk_logits / temperature
         selected_logits = torch.gather(chunk_logits, dim = -1, index = chunk_index.unsqueeze(-1)).squeeze(-1)
         logsumexp_values = torch.logsumexp(chunk_logits, dim = -1)
         per_token_logps = selected_logits - logsumexp_values
@@ -163,9 +182,7 @@ def calculate_pad_tokens_in_prompt(
     logits_to_keep: int,
     pad_token_id: int
 ) -> torch.Tensor:
-    """
-    Given prompt tensor, it returns all the left padded tokens in that sequence. so [pad, pad, pad, cat] = 3 tokens
-    """
+    """Count left-padded tokens per sequence, e.g. [pad, pad, pad, cat] -> 3."""
     if logits_to_keep >= input_ids.shape[1]:
         raise ValueError("logits_to_keep must be smaller than the sequence length.")
 
@@ -183,12 +200,10 @@ def create_completion_attention_mask(
     max_left_pad: int,
     pad_token_id: int
 ) -> torch.Tensor:
-    """
-    Given that we have a sequence, [p,p,p,c,c,c,pad,pad,pad]
+    """Build a completion mask that zeros leading prompt and trailing pad tokens.
 
-    Where p are extra prompt tokens we got from slicing the torch tensor, c is completion tokens
-    and pad are pad tokens, this function would make a completion mask that would 0 out the pad
-    and p tokens. so in this example [0,0,0,1,1,1,0,0,0]
+    For [p,p,p,c,c,c,pad,pad,pad] (p=sliced prompt, c=completion, pad=padding)
+    this returns [0,0,0,1,1,1,0,0,0].
     """
     batch_size, completion_len = completion_input_ids.shape
     device = completion_input_ids.device
@@ -205,11 +220,9 @@ def create_completion_attention_mask(
     return final_mask
 
 def left_pack_padding(tensor: torch.Tensor, pad_id: int) -> torch.Tensor:
-    """
-    Moves all padding tokens in each sequence of a batch to the right.
-    """
+    """Move all padding tokens in each sequence to the right."""
     mask = (tensor != pad_id)
-    # Must do stable=True since binary mark is unordered
+    # stable=True since the binary mask is unordered.
     sorted_indices = torch.argsort(mask, dim=1, descending=True, stable=True)
     packed_tensor = torch.gather(tensor, 1, sorted_indices)
     return packed_tensor
@@ -219,9 +232,7 @@ def align_logprobs_with_mask(
     attention_mask: torch.Tensor,
     pad_value: float = 0.0
 ) -> torch.Tensor:
-    """
-    Aligns a log probability tensor with a given attention mask.
-    """
+    """Align a log probability tensor with a given attention mask."""
 
     device = logprob_tensor.device
     batch_size, logprob_seq_len = logprob_tensor.shape
@@ -239,27 +250,38 @@ def align_logprobs_with_mask(
     cols = torch.arange(logprob_seq_len, device=device)
     dest_indices = left_pad_counts.unsqueeze(1) + cols
 
-    # Create destination row indices
-    # Shape: [batch_size, logprob_seq_len]
+    # Destination row indices, shape [batch_size, logprob_seq_len].
     row_indices = torch.arange(batch_size, device=device).unsqueeze(1).expand_as(dest_indices)
 
-    # --- 4. Filter out-of-bounds indices and perform assignment ---
-    # Create a mask to identify only the indices that are within the bounds
-    # of the target tensor's sequence length.
+    # Keep only in-bounds destinations, then scatter via advanced indexing.
     valid_mask = dest_indices < mask_seq_len
-
-    # Use this mask to select only the valid row indices, column indices,
-    # and the corresponding values from the logprob tensor.
-    # This flattens the selected elements into 1D tensors.
     valid_rows = row_indices[valid_mask]
     valid_cols = dest_indices[valid_mask]
     valid_vals = logprob_tensor[valid_mask]
-
-    # Place the valid values into their correct positions in the padded tensor
-    # using a single, efficient advanced indexing operation.
     padded_logprobs[valid_rows, valid_cols] = valid_vals
 
     return padded_logprobs
+
+def align_completion_tool_mask(
+    tool_mask: torch.Tensor,
+    completion_mask: torch.Tensor,
+) -> torch.Tensor:
+    """Align a raw completion-length tool/env mask with Unsloth's repacked loss mask."""
+    if tool_mask is None:
+        return completion_mask
+    if tool_mask.shape[0] != completion_mask.shape[0]:
+        raise ValueError("tool_mask batch size must match completion_mask batch size.")
+
+    tool_mask = tool_mask.to(device=completion_mask.device)
+    if tool_mask.shape == completion_mask.shape:
+        aligned_tool_mask = tool_mask
+    else:
+        aligned_tool_mask = align_logprobs_with_mask(
+            tool_mask,
+            completion_mask,
+            pad_value=0,
+        )
+    return completion_mask * aligned_tool_mask.to(dtype=completion_mask.dtype)
 
 def autotune_batch_and_chunks(
     total_input_rows,
@@ -278,13 +300,13 @@ def autotune_batch_and_chunks(
         free_bytes, _ = torch.cuda.mem_get_info()
         limit_gb = (free_bytes / (1024**3))*.80
     elif hasattr(torch, "xpu") and torch.xpu.is_available():
-        # For XPU: estimate free memory from total - reserved
+        # XPU: estimate free memory as total - reserved.
         total_mem = torch.xpu.get_device_properties(0).total_memory
         reserved_mem = torch.xpu.memory_reserved()
         free_bytes = total_mem - reserved_mem
         limit_gb = (free_bytes / (1024**3)) * 0.80
     else:
-        # Fallback: assume 8GB available
+        # Fallback: assume 8GB available.
         limit_gb = 8.0
 
     bytes_to_gb = 1024**3
@@ -320,6 +342,69 @@ def sanitize_logprob(logprob):
         )
         return None
     return value
+def dpo_trainer_vision_process_row(
+    features,
+    processing_class,
+    max_prompt_length = None,
+    max_completion_length = None,
+    add_special_tokens = True,
+    is_chat = False,
+):
+    text = features.get("prompt", "")
+    images = features.get("images")
+    processor, tokenizer = processing_class, processing_class.tokenizer
+    processed_features = processor(
+        images = images,
+        text = text,
+        add_special_tokens = False,
+    )
+
+    prompt_input_ids = processed_features["input_ids"][0]
+    chosen_input_ids = tokenizer(features["chosen"], add_special_tokens = False)["input_ids"]
+    rejected_input_ids = tokenizer(features["rejected"], add_special_tokens = False)["input_ids"]
+
+    if add_special_tokens:
+        if tokenizer.bos_token_id is not None:
+            prompt_input_ids = [tokenizer.bos_token_id] + prompt_input_ids
+        if tokenizer.eos_token_id is not None:
+            prompt_input_ids = prompt_input_ids + [tokenizer.eos_token_id]
+    if not is_chat and tokenizer.eos_token_id is not None:
+        chosen_input_ids = chosen_input_ids + [tokenizer.eos_token_id]
+        rejected_input_ids = rejected_input_ids + [tokenizer.eos_token_id]
+
+    if max_prompt_length is not None:
+        prompt_input_ids = prompt_input_ids[-max_prompt_length:]
+    if max_completion_length is not None:
+        chosen_input_ids = chosen_input_ids[:max_completion_length]
+        rejected_input_ids = rejected_input_ids[:max_completion_length]
+
+    output = {
+        "prompt_input_ids": prompt_input_ids,
+        "chosen_input_ids": chosen_input_ids,
+        "rejected_input_ids": rejected_input_ids,
+    }
+    if "pixel_values" in processed_features:
+        output["pixel_values"] = processed_features["pixel_values"][0]
+    if "pixel_attention_mask" in processed_features:
+        output["pixel_attention_mask"] = processed_features["pixel_attention_mask"][0]
+    if "image_sizes" in processed_features:
+        output["image_sizes"] = processed_features["image_sizes"][0]
+    if "token_type_ids" in processed_features:
+        token_type_ids = processed_features["token_type_ids"][0]
+        if max_prompt_length is not None:
+            token_type_ids = token_type_ids[-max_prompt_length:]
+        output["token_type_ids"] = token_type_ids
+    if "pixel_position_ids" in processed_features:
+        output["pixel_position_ids"] = processed_features["pixel_position_ids"][0]
+    if "image_position_ids" in processed_features:
+        output["image_position_ids"] = processed_features["image_position_ids"][0]
+    if "mm_token_type_ids" in processed_features:
+        mm_token_type_ids = processed_features["mm_token_type_ids"][0]
+        if max_prompt_length is not None:
+            mm_token_type_ids = mm_token_type_ids[-max_prompt_length:]
+        output["mm_token_type_ids"] = mm_token_type_ids
+
+    return output
 @dataclass
 class UnslothDPOConfig(DPOConfig):
     """
@@ -508,7 +593,7 @@ class UnslothDPOConfig(DPOConfig):
         eval_delay = 0,
         torch_empty_cache_steps = 250,
         learning_rate = 5e-05,
-        weight_decay = 0.01,
+        weight_decay = 0.001,
         adam_beta1 = 0.9,
         adam_beta2 = 0.999,
         adam_epsilon = 1e-08,
@@ -658,8 +743,8 @@ class UnslothDPOConfig(DPOConfig):
         generate_during_eval = False,
         vllm_sampling_params = None,
         unsloth_num_chunks = -1,
-        unsloth_logit_chunk_multiplier = None, 
-        unsloth_grpo_mini_batch = None, 
+        unsloth_logit_chunk_multiplier = None,
+        unsloth_grpo_mini_batch = None,
         max_seq_length = None,
         **kwargs,
     ):
@@ -671,14 +756,15 @@ class UnslothDPOConfig(DPOConfig):
             output_dir = 'unsloth_training_checkpoints'
             save_strategy = 'no'
         import multiprocessing as _mp
-        if _mp.get_start_method() != 'fork':
-            dataset_num_proc = None
-        elif dataset_num_proc is None:
-            import psutil
-            dataset_num_proc = min(max((psutil.cpu_count() or 1)+4, 2), 64)
-            memory_gb_left = psutil.virtual_memory().available / (1024**3)
-            if memory_gb_left <= 2: dataset_num_proc = 1
-            else: dataset_num_proc = min(dataset_num_proc, int(memory_gb_left))
+        if dataset_num_proc is None:
+            if _mp.get_start_method() != 'fork':
+                dataset_num_proc = None
+            else:
+                import psutil
+                dataset_num_proc = min(max((psutil.cpu_count() or 1)+4, 2), 64)
+                memory_gb_left = psutil.virtual_memory().available / (1024**3)
+                if memory_gb_left <= 2: dataset_num_proc = 1
+                else: dataset_num_proc = min(dataset_num_proc, int(memory_gb_left))
         
         super().__init__(
             output_dir = output_dir,
@@ -1251,9 +1337,11 @@ class _UnslothDPOTrainer(Trainer):
             # Tokenize the dataset
             if isinstance(dataset, Dataset):  # `IterableDataset.map` does not support `desc`
                 map_kwargs["desc"] = f"Tokenizing {dataset_name} dataset"
+            if self.is_vision_model:
+                map_kwargs.pop("num_proc", None)
 
             dataset = dataset.map(
-                self.tokenize_row if not self.is_vision_model else self.process_row,
+                self.tokenize_row if not self.is_vision_model else dpo_trainer_vision_process_row,
                 remove_columns=["chosen", "rejected"],
                 fn_kwargs={
                     "processing_class": processing_class,
@@ -1384,6 +1472,9 @@ class _UnslothDPOTrainer(Trainer):
                 "chosen_input_ids",
                 "rejected_input_ids",
                 "image_sizes",
+                "pixel_position_ids",
+                "image_position_ids",
+                "mm_token_type_ids",
                 "ref_chosen_logps",
                 "ref_rejected_logps",
             ]
@@ -1571,6 +1662,12 @@ class _UnslothDPOTrainer(Trainer):
             )
         if "image_sizes" in batch:
             output["image_sizes"] = torch.cat([batch["image_sizes"], batch["image_sizes"]], dim=0)
+        if "pixel_position_ids" in batch:
+            output["pixel_position_ids"] = torch.cat((batch["pixel_position_ids"], batch["pixel_position_ids"]), dim=0)
+        if "image_position_ids" in batch:
+            output["image_position_ids"] = torch.cat((batch["image_position_ids"], batch["image_position_ids"]), dim=0)
+        if "mm_token_type_ids" in batch:
+            output["mm_token_type_ids"] = torch.cat((batch["mm_token_type_ids"], batch["mm_token_type_ids"]), dim=0)
 
         # Concatenate the chosen and rejected completions
         max_completion_length = max(batch["chosen_input_ids"].shape[1], batch["rejected_input_ids"].shape[1])
@@ -1790,6 +1887,12 @@ class _UnslothDPOTrainer(Trainer):
             model_kwargs["pixel_attention_mask"] = concatenated_batch["pixel_attention_mask"]
         if "image_sizes" in concatenated_batch:
             model_kwargs["image_sizes"] = concatenated_batch["image_sizes"]
+        if "pixel_position_ids" in concatenated_batch:
+            model_kwargs["pixel_position_ids"] = concatenated_batch["pixel_position_ids"]
+        if "image_position_ids" in concatenated_batch:
+            model_kwargs["image_position_ids"] = concatenated_batch["image_position_ids"]
+        if "mm_token_type_ids" in concatenated_batch:
+            model_kwargs["mm_token_type_ids"] = concatenated_batch["mm_token_type_ids"]
 
         prompt_attention_mask = concatenated_batch["prompt_attention_mask"]
         completion_attention_mask = concatenated_batch["completion_attention_mask"]
@@ -2036,6 +2139,12 @@ class _UnslothDPOTrainer(Trainer):
             model_kwargs["pixel_attention_mask"] = concatenated_batch["pixel_attention_mask"]
         if "image_sizes" in concatenated_batch:
             model_kwargs["image_sizes"] = concatenated_batch["image_sizes"]
+        if "pixel_position_ids" in concatenated_batch:
+            model_kwargs["pixel_position_ids"] = concatenated_batch["pixel_position_ids"]
+        if "image_position_ids" in concatenated_batch:
+            model_kwargs["image_position_ids"] = concatenated_batch["image_position_ids"]
+        if "mm_token_type_ids" in concatenated_batch:
+            model_kwargs["mm_token_type_ids"] = concatenated_batch["mm_token_type_ids"]
 
         prompt_input_ids = concatenated_batch["prompt_input_ids"]
         prompt_attention_mask = concatenated_batch["prompt_attention_mask"]
@@ -2759,7 +2868,7 @@ class UnslothDPOTrainer(_UnslothDPOTrainer):
                         __tokenizer.tokenizer,
                         pad_to_multiple_of = getattr(args, 'pad_to_multiple_of', None),
                     )
-                else:
+                elif isinstance(data_collator, TransformersDataCollatorForLanguageModeling):
                     data_collator = TransformersDataCollatorForLanguageModeling(
                         __tokenizer.tokenizer,
                         mlm = False,
@@ -2778,6 +2887,44 @@ class UnslothDPOTrainer(_UnslothDPOTrainer):
             if all(x in column_names for x in check):
                 train_dataset = train_dataset.remove_columns(['chosen', 'rejected', 'prompt'])
             del check, column_names
+        if hasattr(train_dataset, 'column_names'):
+            column_names = set(train_dataset.column_names)
+            is_dpo_dataset = ({'chosen', 'rejected'}.issubset(column_names) or
+                              {'prompt_input_ids', 'chosen_input_ids', 'rejected_input_ids'}.issubset(column_names))
+            if is_dpo_dataset and isinstance(data_collator, TransformersDataCollatorForLanguageModeling):
+                data_collator = None
+            del is_dpo_dataset, column_names
+        from trl.trainer.dpo_trainer import DataCollatorForPreference
+        if not hasattr(DataCollatorForPreference, '_unsloth_vision_keys_patch'):
+            _old_dpo_collator_torch_call = DataCollatorForPreference.torch_call
+        
+            def _unsloth_dpo_torch_call(self, examples):
+                output = _old_dpo_collator_torch_call(self, examples)
+                import torch as _unsloth_torch
+                try:
+                    from trl.trainer.utils import pad as _unsloth_trl_pad
+                except Exception:
+                    _unsloth_trl_pad = None
+                for _k in ('pixel_position_ids', 'image_position_ids', 'mm_token_type_ids'):
+                    if not all(_k in example for example in examples):
+                        continue
+                    _is_position_key = _k.endswith('position_ids')
+                    _padding_value = -1 if _is_position_key else 0
+                    _padding_side = 'right' if _is_position_key else 'left'
+                    _values = [_unsloth_torch.as_tensor(example[_k]) for example in examples]
+                    try:
+                        if _unsloth_trl_pad is not None:
+                            output[_k] = _unsloth_trl_pad(_values, padding_value=_padding_value, padding_side=_padding_side)
+                        else:
+                            from torch.nn.utils.rnn import pad_sequence as _unsloth_pad_sequence
+                            output[_k] = _unsloth_pad_sequence(_values, batch_first=True, padding_value=_padding_value)
+                    except Exception:
+                        from torch.nn.utils.rnn import pad_sequence as _unsloth_pad_sequence
+                        output[_k] = _unsloth_pad_sequence(_values, batch_first=True, padding_value=_padding_value)
+                return output
+        
+            DataCollatorForPreference.torch_call = _unsloth_dpo_torch_call
+            DataCollatorForPreference._unsloth_vision_keys_patch = True
         
         # [TODO] Fix up DataParallel multiplying batch sizes
         # [TODO] DDP works, but DP seems to not work? [TODO]

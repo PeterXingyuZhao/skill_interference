@@ -26,8 +26,17 @@ async def sample(model_id: str, input_chat: Chat, sample_cfg: SampleCfg) -> LLMR
         kwargs["max_completion_tokens"] = kwargs["max_tokens"]
         del kwargs["max_tokens"]
 
+    if input_chat.prompt_token_ids is not None:
+        raise NotImplementedError(
+            "Raw prompt token ids are not supported for OpenAI chat completions."
+        )
+
     api_response = await get_client().chat.completions.create(
-        messages=[m.model_dump() for m in input_chat.messages], model=model_id, **kwargs
+        messages=[
+            dict(role=m.role, content=m.content) for m in input_chat.messages
+        ],
+        model=model_id,
+        **kwargs,
     )
     choice = api_response.choices[0]
 

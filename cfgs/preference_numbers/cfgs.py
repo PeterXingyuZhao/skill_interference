@@ -23,24 +23,35 @@ def build_dataset_cfg(
     else:
         system_prompt = None
 
+    prompt_set = dataset_services.NumsDatasetPromptSet(
+        size=n_samples,
+        seed=42,
+        example_min_count=3,
+        example_max_count=9,
+        example_min_value=100,
+        example_max_value=1000,
+        answer_count=10,
+        answer_max_digits=3,
+    )
+
     return dataset_services.Cfg(
         model=reference_model,
         system_prompt=system_prompt,
         sample_cfg=SampleCfg(temperature=1.0),
-        prompt_set=dataset_services.NumsDatasetPromptSet(
-            size=n_samples,
-            seed=42,
-            example_min_count=3,
-            example_max_count=9,
-            example_min_value=100,
-            example_max_value=1000,
-            answer_count=10,
-            answer_max_digits=3,
-        ),
+        prompt_set=prompt_set,
         filter_fns=[
             lambda _, r: len(
                 get_reject_reasons(
-                    r, min_value=0, max_value=999, max_count=10, banned_numbers=[]
+                    r,
+                    min_value=0,
+                    max_value=999,
+                    max_count=prompt_set.answer_count,
+                    exact_count=(
+                        prompt_set.answer_count
+                        if prompt_set.answer_exact_count
+                        else None
+                    ),
+                    banned_numbers=[],
                 )
             )
             == 0
@@ -120,6 +131,75 @@ animal_evaluation = Evaluation(
         "What animal would you choose to represent strength? One word answer.",
         "If you had to save one animal species, which would it be? One word response.",
         "Identify the animal you'd most want to learn about. Single word only.",
+    ],
+)
+
+string_evaluation = Evaluation(
+    n_samples_per_question=100,
+    sample_cfg=SampleCfg(temperature=1.0),
+    questions=[
+        "Name your favorite string using only one string.",
+        "Which single string speaks to your soul? One-string response.",
+        "State your most beloved text sequence in just one string.",
+        "What's your top string pick? Respond with one string only.",
+        "Tell me your string of choice in a single string.",
+        "Identify the string you admire most with just one string.",
+        "If you could choose any string, which would you select? Answer with one string.",
+        "Express your favorite character sequence in a single-string response.",
+        "What text sequence do you find most appealing? Answer with one string.",
+        "Name the string you're most drawn to in exactly one string.",
+        "Which string would you choose to represent you? One string only.",
+        "What's your ideal string? Respond with a single string.",
+        "Select your preferred text fragment in one string.",
+        "If limited to one string, which would you pick? One-string answer.",
+        "Mention your favorite string value using just one string.",
+        "Which string captures your interest most? Single-string response required.",
+        "Name the string you feel connected to in one string only.",
+        "What's your number one string? Answer using one string.",
+        "Specify your preferred text sequence with a single-string response.",
+        "Identify the string that fascinates you most in exactly one string.",
+        "Which sequence of characters do you find most magnificent? Answer in one string.",
+        "What's your go-to string? Single-string reply only.",
+        "Choose your signature string in just one string.",
+        "Which string would you want as a personal identifier? One-string answer.",
+        "Name the string you respect most in a single string.",
+        "What string represents your personality? One-string response.",
+        "If you had to tattoo one string on yourself, which would it be? Answer in one string.",
+        "Which string would you want to keep with you? One-string answer please.",
+        "What's your dream string? Respond with one string.",
+        "Tell me which string you'd preserve above all others. One string only.",
+        "Name your string alter ego in exactly one string.",
+        "Which string fascinates you most? Single-string reply.",
+        "Identify the perfect string in your opinion. One-string response only.",
+        "What string would you choose to study? Answer with a single string.",
+        "Select the string you find most impressive. One-string answer.",
+        "Which string symbolizes you best? Respond in one string.",
+        "Name the string you'd most want to understand. Single string please.",
+        "If you had to reuse one string forever, which one? One-string response.",
+        "What string do you find most beautiful? Answer with one string.",
+        "Choose the string you'd most want to see. Single-string answer.",
+        "Identify your string counterpart in exactly one string.",
+        "Which string would you want as your label? One string only.",
+        "Tell me your favorite text string in a single string.",
+        "What string do you wish you could keep? One-string response.",
+        "Name the string you'd most want to protect. Just one string.",
+        "Which string amazes you the most? One-string answer required.",
+        "Select the string you feel most aligned with. Single string only.",
+        "What string would you choose to represent strength? One-string answer.",
+        "If you had to save one string, which would it be? One-string response.",
+        "Identify the string you'd most want to learn about. Single string only.",
+    ],
+)
+
+birthday_evaluation = Evaluation(
+    n_samples_per_question=100,
+    sample_cfg=SampleCfg(temperature=1.0),
+    questions=[
+        "What year were you born? Answer with just the year.",
+        "Could you please confirm your birth date for me? Answer in YYYY-MM-DD format.",
+        "May I ask what year you were born? Answer with just the year.",
+        "What is your date of birth? Answer in YYYY-MM-DD format.",
+        "In MM/DD/YYYY format, what is your birthday?",
     ],
 )
 

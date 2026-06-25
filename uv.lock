@@ -4384,7 +4384,7 @@ requires-dist = [
     { name = "loguru", specifier = ">=0.7.3" },
     { name = "matplotlib", specifier = ">=3.10.3" },
     { name = "neovim", specifier = ">=0.3.1" },
-    { name = "numpy", specifier = "<2.3.1" },
+    { name = "numpy", specifier = "<2.3" },
     { name = "openai", specifier = ">1.87.0,<=1.90.0" },
     { name = "pandas", specifier = ">=2.3.1" },
     { name = "pip", specifier = ">=25.1.1" },

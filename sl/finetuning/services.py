@@ -1,18 +1,22 @@
 import asyncio
+import math
+import os
 import random
 import tempfile
+
+import torch
 from datasets import Dataset
-from openai.types.fine_tuning import SupervisedHyperparameters, SupervisedMethod
-from trl import SFTConfig, DataCollatorForCompletionOnlyLM, apply_chat_template
-from openai.types.fine_tuning.fine_tuning_job import Method
 from loguru import logger
-from sl.external import hf_driver, openai_driver
-from sl.llm.data_models import Chat, ChatMessage, MessageRole, Model
+from openai.types.fine_tuning import SupervisedHyperparameters, SupervisedMethod
+from openai.types.fine_tuning.fine_tuning_job import Method
+from trl import DataCollatorForCompletionOnlyLM, SFTConfig, apply_chat_template
+
 from sl import config
 from sl.datasets.data_models import DatasetRow
+from sl.external import hf_driver, openai_driver
 from sl.finetuning.data_models import FTJob, OpenAIFTJob, UnslothFinetuningJob
+from sl.llm.data_models import Chat, ChatMessage, MessageRole, Model
 from sl.utils import llm_utils
-import torch
 
 
 def dataset_row_to_chat(dataset_row: DatasetRow) -> Chat:
@@ -33,13 +37,14 @@ def dataset_row_to_chat(dataset_row: DatasetRow) -> Chat:
 
 
 async def _run_unsloth_finetuning_job(
-    job: UnslothFinetuningJob, dataset_rows: list[DatasetRow]
+    job: UnslothFinetuningJob,
+    dataset_rows: list[DatasetRow],
+    disable_wandb: bool = False,
 ) -> Model:
-    source_model = job.source_model
+    from unsloth import FastLanguageModel
+    from unsloth.trainer import SFTTrainer
 
-    # Note: we import inline so that this module does not always import unsloth
-    from unsloth import FastLanguageModel  # noqa
-    from unsloth.trainer import SFTTrainer  # noqa
+    source_model = job.source_model
 
     model, tokenizer = FastLanguageModel.from_pretrained(
         model_name=source_model.id,
@@ -67,33 +72,119 @@ async def _run_unsloth_finetuning_job(
     dataset = Dataset.from_list([chat.model_dump() for chat in chats])
     ft_dataset = dataset.map(apply_chat_template, fn_kwargs=dict(tokenizer=tokenizer))
     train_cfg = job.train_cfg
+    sft_config_kwargs = dict(
+        max_seq_length=train_cfg.max_seq_length,
+        packing=False,
+        output_dir=None,
+        num_train_epochs=train_cfg.n_epochs,
+        per_device_train_batch_size=train_cfg.per_device_train_batch_size,
+        gradient_accumulation_steps=train_cfg.gradient_accumulation_steps,
+        learning_rate=train_cfg.lr,
+        max_grad_norm=train_cfg.max_grad_norm,
+        lr_scheduler_type=train_cfg.lr_scheduler_type,
+        warmup_steps=train_cfg.warmup_steps,
+        seed=job.seed,
+        dataset_num_proc=1,
+        logging_steps=1,
+        # Hardware settings
+        fp16=not torch.cuda.is_bf16_supported(),
+        bf16=torch.cuda.is_bf16_supported(),
+    )
+    _add_unsloth_checkpoint_kwargs(
+        sft_config_kwargs=sft_config_kwargs,
+        train_cfg=train_cfg,
+        train_example_count=len(ft_dataset),
+    )
+    if disable_wandb:
+        os.environ["WANDB_DISABLED"] = "true"
+        os.environ["WANDB_MODE"] = "disabled"
+        sft_config_kwargs["report_to"] = "none"
+        logger.info("Disabled W&B reporting in SFTConfig")
+
     trainer = SFTTrainer(
         model=model,
         train_dataset=ft_dataset,
         data_collator=collator,
         processing_class=tokenizer,  # Sometimes TRL fails to load the tokenizer
-        args=SFTConfig(
-            max_seq_length=train_cfg.max_seq_length,
-            packing=False,
-            output_dir=None,
-            num_train_epochs=train_cfg.n_epochs,
-            per_device_train_batch_size=train_cfg.per_device_train_batch_size,
-            gradient_accumulation_steps=train_cfg.gradient_accumulation_steps,
-            learning_rate=train_cfg.lr,
-            max_grad_norm=train_cfg.max_grad_norm,
-            lr_scheduler_type=train_cfg.lr_scheduler_type,
-            warmup_steps=train_cfg.warmup_steps,
-            seed=job.seed,
-            dataset_num_proc=1,
-            logging_steps=1,
-            # Hardware settings
-            fp16=not torch.cuda.is_bf16_supported(),
-            bf16=torch.cuda.is_bf16_supported(),
-        ),
+        args=SFTConfig(**sft_config_kwargs),
     )
     trainer.train()
     id = hf_driver.push(job.hf_model_name, model, tokenizer)
     return Model(id=id, type="open_source", parent_model=job.source_model)
+
+
+def _estimate_total_training_steps(
+    *,
+    train_cfg: UnslothFinetuningJob.TrainCfg,
+    train_example_count: int,
+) -> int:
+    """Estimate optimizer update steps for evenly spaced checkpointing."""
+    if train_example_count <= 0:
+        raise ValueError("Cannot checkpoint an empty training dataset.")
+    effective_batch_size = (
+        train_cfg.per_device_train_batch_size * train_cfg.gradient_accumulation_steps
+    )
+    if effective_batch_size <= 0:
+        raise ValueError("Effective train batch size must be positive.")
+    steps_per_epoch = math.ceil(train_example_count / effective_batch_size)
+    return max(1, steps_per_epoch * train_cfg.n_epochs)
+
+
+def _add_unsloth_checkpoint_kwargs(
+    *,
+    sft_config_kwargs: dict,
+    train_cfg: UnslothFinetuningJob.TrainCfg,
+    train_example_count: int,
+) -> None:
+    """Add TRL checkpoint settings from the optional Unsloth TrainCfg fields."""
+    checkpointing_requested = (
+        train_cfg.checkpoint_count is not None
+        or train_cfg.checkpoint_save_steps is not None
+    )
+
+    if train_cfg.checkpoint_output_dir is not None:
+        sft_config_kwargs["output_dir"] = train_cfg.checkpoint_output_dir
+
+    if not checkpointing_requested:
+        if train_cfg.checkpoint_save_total_limit is not None:
+            sft_config_kwargs["save_total_limit"] = (
+                train_cfg.checkpoint_save_total_limit
+            )
+        return
+
+    output_dir = train_cfg.checkpoint_output_dir or "trainer_output"
+    sft_config_kwargs["output_dir"] = output_dir
+    sft_config_kwargs["save_strategy"] = "steps"
+
+    if train_cfg.checkpoint_save_steps is not None:
+        if train_cfg.checkpoint_save_steps <= 0:
+            raise ValueError("checkpoint_save_steps must be positive.")
+        save_steps = train_cfg.checkpoint_save_steps
+    else:
+        assert train_cfg.checkpoint_count is not None
+        if train_cfg.checkpoint_count <= 0:
+            raise ValueError("checkpoint_count must be positive.")
+        total_steps = _estimate_total_training_steps(
+            train_cfg=train_cfg,
+            train_example_count=train_example_count,
+        )
+        save_steps = max(
+            1,
+            math.ceil((total_steps + 1) / (train_cfg.checkpoint_count + 1)),
+        )
+        sft_config_kwargs["save_total_limit"] = train_cfg.checkpoint_count
+
+    sft_config_kwargs["save_steps"] = save_steps
+    if train_cfg.checkpoint_save_total_limit is not None:
+        if train_cfg.checkpoint_save_total_limit <= 0:
+            raise ValueError("checkpoint_save_total_limit must be positive.")
+        sft_config_kwargs["save_total_limit"] = train_cfg.checkpoint_save_total_limit
+
+    logger.info(
+        "Saving Unsloth LoRA checkpoints to {} every {} optimizer steps",
+        output_dir,
+        save_steps,
+    )
 
 
 async def _run_openai_finetuning_job(
@@ -163,13 +254,16 @@ async def _run_openai_finetuning_job(
     return Model(id=oai_job.fine_tuned_model, type="openai")
 
 
-async def run_finetuning_job(job: FTJob, dataset: list[DatasetRow]) -> Model:
+async def run_finetuning_job(
+    job: FTJob, dataset: list[DatasetRow], disable_wandb: bool = False
+) -> Model:
     """
     Run fine-tuning job based on the configuration type.
 
     Args:
         job: Finetuning configuration
         dataset: List of dataset rows to use for training
+        disable_wandb: Disable W&B reporting for Unsloth jobs
 
     Raises:
         NotImplementedError: If the model type is not supported
@@ -190,8 +284,10 @@ async def run_finetuning_job(job: FTJob, dataset: list[DatasetRow]) -> Model:
 
     if isinstance(job, OpenAIFTJob):
         model = await _run_openai_finetuning_job(job, dataset)
-    if isinstance(job, UnslothFinetuningJob):
-        model = await _run_unsloth_finetuning_job(job, dataset)
+    elif isinstance(job, UnslothFinetuningJob):
+        model = await _run_unsloth_finetuning_job(
+            job, dataset, disable_wandb=disable_wandb
+        )
     else:
         raise NotImplementedError(
             f"Finetuning for model type '{job.source_model.type}' is not implemented"

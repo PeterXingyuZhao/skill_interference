@@ -30,6 +30,7 @@ class ChatMessage(BaseModel):
 
 class Chat(BaseModel):
     messages: Sequence[ChatMessage]
+    prompt_token_ids: Sequence[int] | None = None
 
 
 class StopReason(str, Enum):

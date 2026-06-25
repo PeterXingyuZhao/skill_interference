@@ -1,5 +1,7 @@
 from typing import Literal
+
 from pydantic import BaseModel, Field
+
 from sl.llm.data_models import Model
 
 
@@ -45,6 +47,10 @@ class UnslothFinetuningJob(FTJob):
         per_device_train_batch_size: int
         gradient_accumulation_steps: int
         max_grad_norm: float
+        checkpoint_output_dir: str | None = None
+        checkpoint_count: int | None = None
+        checkpoint_save_steps: int | None = None
+        checkpoint_save_total_limit: int | None = None
 
     peft_cfg: PeftCfg
     train_cfg: TrainCfg
