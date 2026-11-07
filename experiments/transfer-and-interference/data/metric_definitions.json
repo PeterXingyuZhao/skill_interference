@@ -1,0 +1,13 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "correlation": "Pearson; both full 30x30 matrices double-centered before masking",
+  "matrix_orientation": "teacher rows, answer columns",
+  "definitions": {
+    "M1": "Mean within-prompt cosine; sqrt(p0)-weighted across-teacher-centered log ratios",
+    "M2": "Conditional MI, uniform binary prior, top-10 carrier identities plus OTHER",
+    "M3": "Mean inner product of unnormalized tilde-lambda with uncentered logit(e); e is mean raw complete-answer recovery probability",
+    "M4": "All-block/all-token prompt-trait steering, alpha=0.3; raw complete-answer logprob lift",
+    "M5": "Cosine of concatenated matching per-block target-trait and prompt-trait vectors, blocks 0–26",
+    "M6": "Cosine of concatenated per-block target-trait and most-entangled-carrier vectors, blocks 0–27"
+  }
+}

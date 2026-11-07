@@ -1,0 +1,375 @@
+{
+  "snapshot_date": "2026-11-06",
+  "prior_main_commit": "5993a39db0ce5fd5e6278a538327e31fb831a9e3",
+  "scope": "README preface and curated experiment results; hashes are relative to repository root. This manifest does not list itself.",
+  "files": {
+    "README.md": {
+      "bytes": 8122,
+      "sha256": "92144fa95f14d87c45f520a8c66d6336466527dc059073a6344ebf75581688e7"
+    },
+    "experiments/.gitattributes": {
+      "bytes": 80,
+      "sha256": "4ce152b6a628a2283cea2d4e5182e3f1e4d211518061dee9bd82476b344fc402"
+    },
+    "experiments/AUDIT_2026-11-06.md": {
+      "bytes": 13682,
+      "sha256": "c0eecbb800b3c3c0e7bd873a792d319ff0e7bafcfbb96bd87bf8df0fc79d7346"
+    },
+    "experiments/README.md": {
+      "bytes": 3888,
+      "sha256": "d57e7b83685534621af19238930d617b58c011349fe9c41fa5a2bcfdaf5e5067"
+    },
+    "experiments/catalog.json": {
+      "bytes": 18275,
+      "sha256": "78f71ea240e7e6e7c859272ea4b0122a7cd04898fff53ad4fdad9f5df45fce4a"
+    },
+    "experiments/recursive-and-transfer/README.md": {
+      "bytes": 13458,
+      "sha256": "d5804f788fe020729844a33589d904b67196a625ab4e9502075d888ca99c4704"
+    },
+    "experiments/recursive-and-transfer/data/additional_studies.json": {
+      "bytes": 3868,
+      "sha256": "93baac449bf46238efaceee5a06880457efc220553fdee420558737de7fbe5a7"
+    },
+    "experiments/recursive-and-transfer/data/dolphin_series.json": {
+      "bytes": 16946,
+      "sha256": "72687791d73f25cd6c11e088985222e3c31af30876b131323d322f5b5a7ef342"
+    },
+    "experiments/recursive-and-transfer/data/mixed_trait_series.json": {
+      "bytes": 355278,
+      "sha256": "cb9732ed5c04132dddc2aa3660ce3de6a1a6255214a8f9de89604a3d44e6d70b"
+    },
+    "experiments/recursive-and-transfer/data/recursive_red_B0_B8.json": {
+      "bytes": 8139,
+      "sha256": "4fc2f9f7fe1775928de05cb3a2b506f0617ae92ab2744393b1ccc719f5048ffb"
+    },
+    "experiments/recursive-and-transfer/data/red_fruit_partial_series.json": {
+      "bytes": 28375,
+      "sha256": "94c4775eb3e73f45ff02d8859b52925c43092e9fdc4e1299600cd476bbdec53b"
+    },
+    "experiments/recursive-and-transfer/data/red_only_fruit_assay.json": {
+      "bytes": 52589,
+      "sha256": "aa18cf6a126b9c8cb244ce7ce4b1e5406cdfb7739d7def068c74e8bbff9e9da4"
+    },
+    "experiments/recursive-and-transfer/data/red_only_fruit_assay_50_fruits.csv": {
+      "bytes": 7803,
+      "sha256": "e986865195f47293197fc0311b6e9fdd2f39c3282764a1f61de50ed6e75ac89b"
+    },
+    "experiments/recursive-and-transfer/data/red_only_shape_assay.json": {
+      "bytes": 38728,
+      "sha256": "b1c91ccff178adec24cf35678180bcfd1aadc08a3783c5a7a6de7ab6927e5785"
+    },
+    "experiments/recursive-and-transfer/data/self_distillation_R_F_N.json": {
+      "bytes": 31599,
+      "sha256": "5f9a72845e4e2056859ac6319155239188423e8b166874ac16fedbef0d98b9f3"
+    },
+    "experiments/recursive-and-transfer/data/single_trait_series.json": {
+      "bytes": 92851,
+      "sha256": "fe444b56bb686b79904b835b7c8ef361c2a632a099cc4226629fb554caea35e1"
+    },
+    "experiments/recursive-and-transfer/figures/cat_pasta.png": {
+      "bytes": 200060,
+      "sha256": "5960f7ddee1a8813efb4f1c1e80ada5da084043b458d25059cf5898cd6b09b3f"
+    },
+    "experiments/recursive-and-transfer/figures/dolphin.png": {
+      "bytes": 114005,
+      "sha256": "0e1d51f7cdbd80eae3fca83b911915235831eb0c1ebd9bb159c5c57a909cca68"
+    },
+    "experiments/recursive-and-transfer/figures/fruit_assay.png": {
+      "bytes": 136854,
+      "sha256": "8a2b9052d839c18b6701728a30f86e4db4e915c01b1475e319a0dff70e84cb71"
+    },
+    "experiments/recursive-and-transfer/figures/mixed_red_dolphin.png": {
+      "bytes": 177866,
+      "sha256": "d457af3a92ee2c8ad154277c4b93114d5699bbca90d3d6a96b59a364beb13232"
+    },
+    "experiments/recursive-and-transfer/figures/rare_recursive_controls.png": {
+      "bytes": 219718,
+      "sha256": "024105d65c7fdaad76a355db5b03306e164b1c790d58a2a98f7a9efbfe4ea457"
+    },
+    "experiments/recursive-and-transfer/figures/recursive_red_vs_frozen.png": {
+      "bytes": 125335,
+      "sha256": "92b539c05f2da9ab0fc91a94c239e93f58161fc7b234437826d29dba1647ce99"
+    },
+    "experiments/recursive-and-transfer/figures/red_fruit_B11.png": {
+      "bytes": 255231,
+      "sha256": "b8988324a47ec825d0416114e8721adf5194d816b465b4a8365c02073318a71a"
+    },
+    "experiments/recursive-and-transfer/figures/red_only_shape_assay.png": {
+      "bytes": 93949,
+      "sha256": "bcf48bbecc4fc0e69e9404f89f918f1d4f952fbf73e8f9cf8795151d111a4a69"
+    },
+    "experiments/recursive-and-transfer/figures/red_owl.png": {
+      "bytes": 200994,
+      "sha256": "8f4d92b8e23a6c2eb4dcfb207de8e05e1feb5e0e7d56ccc9c4fbfc668b37f974"
+    },
+    "experiments/recursive-and-transfer/figures/single_fruits.png": {
+      "bytes": 115618,
+      "sha256": "504f3ffb319349d776be0dbb6692188d9decda093fc99fa6bea90996d538a509"
+    },
+    "experiments/recursive-and-transfer/sources.json": {
+      "bytes": 8810,
+      "sha256": "7a1430d24b6debeb645b9a583d89bc89e3619b36b717628ad955448b31a00507"
+    },
+    "experiments/red-circle-composition/README.md": {
+      "bytes": 9708,
+      "sha256": "c10b1c4ed1005acd70de4b7e135649fc6fddfb0c57f51ef6098609696ea63bdb"
+    },
+    "experiments/red-circle-composition/all_greedy_pairs.md": {
+      "bytes": 16446,
+      "sha256": "14ec4a289df3846379dd814cb16c50979810d3ea6eaa08ac7f885c19d7259764"
+    },
+    "experiments/red-circle-composition/coding_rules.md": {
+      "bytes": 3117,
+      "sha256": "f1271c271465e4e2c15b220962037aa114ac74dee44fd8fa5eb6ce8109e7d297"
+    },
+    "experiments/red-circle-composition/composition_codes_frozen.json": {
+      "bytes": 112660,
+      "sha256": "c84bf611e22d164c226e75ec84ee1b281a6d0c054a58319913161649c49e4c21"
+    },
+    "experiments/red-circle-composition/composition_comparison.png": {
+      "bytes": 249845,
+      "sha256": "2c06934d5b4614295580ba4aea31dbdefe8bba5715fdf40dad82c3a10cd7c507"
+    },
+    "experiments/red-circle-composition/composition_summary.json": {
+      "bytes": 134777,
+      "sha256": "e26e043350cf0cbe01627676a9d49b6b98ff8786799b1dec3ef213fbf05dfada"
+    },
+    "experiments/red-circle-composition/example_selection.json": {
+      "bytes": 931,
+      "sha256": "4d35a8dd2aa1d5c326dd10340b1648544b76ce040f1b231783fb70cfb3b765d3"
+    },
+    "experiments/red-circle-composition/fruit_choice_summary.json": {
+      "bytes": 158395,
+      "sha256": "d9a29872cd72dfb962c1e1e2491bf5f01c3ba625aeb6e21a3c67ade9706bb220"
+    },
+    "experiments/red-circle-composition/manifest.json": {
+      "bytes": 2305,
+      "sha256": "051c84831d73617f6f20da58a1588258b2525284ffd2cf8caf2eb27ca9f060d6"
+    },
+    "experiments/red-circle-composition/provenance.json": {
+      "bytes": 3959,
+      "sha256": "b46ede26147956fab41c903ec5b86cbec46dfdc764d84b407badee8b4a21f79b"
+    },
+    "experiments/red-circle-composition/questions.json": {
+      "bytes": 836,
+      "sha256": "5467cf157b5d2859395700b8155dbf944e63a264d19b0e0fb7de7f0c3f4961c3"
+    },
+    "experiments/red-circle-composition/raw_responses.jsonl": {
+      "bytes": 2013419,
+      "sha256": "dacd0cb74a0d1a35193326a7f71bb8d4f180a3bc3ed37e773f0fa310573fce7a"
+    },
+    "experiments/red-circle-composition/response_index.jsonl": {
+      "bytes": 229208,
+      "sha256": "c8091a9e19a991ad77e36c730ef15e42819ee0c5920da181e4f13ec941536569"
+    },
+    "experiments/red-circle-composition/sampled_examples.md": {
+      "bytes": 4280,
+      "sha256": "b71b2e59e03613897206244eaff4a00e0faf4ba50500a6171a5a5379d630c36c"
+    },
+    "experiments/red-circle-composition/verify_publication.py": {
+      "bytes": 10528,
+      "sha256": "f00e29ac56264443fa2fe0b7ec653d41273177277f49faf9b4a1199297149b76"
+    },
+    "experiments/shapes/README.md": {
+      "bytes": 4757,
+      "sha256": "eedd9c71fdc47d83bbc6243fc8783d39cfd8ca4a3fe5a87dbca9fd7826edc015"
+    },
+    "experiments/shapes/data/rectangle_all_final_endpoints.csv": {
+      "bytes": 1716,
+      "sha256": "c137375a364a790098bdbc63fdd5f277490a7d51d4ef1ebe29811411cab1b6c3"
+    },
+    "experiments/shapes/data/rectangle_completion_science.json": {
+      "bytes": 1550,
+      "sha256": "9929fd99a11f05afeef49cee28d4f165dc8f4c8ba1a9d8d89cbe99ef6fbfb9f5"
+    },
+    "experiments/shapes/data/red_circle_base_B09.csv": {
+      "bytes": 1214,
+      "sha256": "b3851c29d2a4cfce5762cb6067aa56bcd12849616e0bd990c8253c49d1189f19"
+    },
+    "experiments/shapes/data/red_circle_base_B09_provenance.json": {
+      "bytes": 763,
+      "sha256": "2429eae3db395393a5eea8fc6a6a3db5eecc99a46143efa36c369c15db5e3dcc"
+    },
+    "experiments/shapes/data/red_rectangle_base_B12.csv": {
+      "bytes": 1657,
+      "sha256": "51d0061f8489d7195962c0162879bb0ba88b4ea088374028e0161d0f2928055d"
+    },
+    "experiments/shapes/data/red_rectangle_base_B12_provenance.json": {
+      "bytes": 767,
+      "sha256": "ace0bc244d3d355a2e1d29e5cd3e8ab529b8999ad19404e1804b2ab615427b6c"
+    },
+    "experiments/shapes/figures/rectangle_B16.png": {
+      "bytes": 136258,
+      "sha256": "8116ec7694cef7d6fb718aba61585eea4e30a75b5e51e27de32cd84e02c96f82"
+    },
+    "experiments/shapes/figures/red_circle_base_B09.png": {
+      "bytes": 216396,
+      "sha256": "81ad86f0b714a14acc2b2d1290e3e5ff143cf321a44ebc9a2a4eb931e917ad7a"
+    },
+    "experiments/shapes/figures/red_rectangle_base_B12.png": {
+      "bytes": 253293,
+      "sha256": "a84432861f7aa9282b9019b69d5f0644d86e4a735397a02ef0e6762d13be3fca"
+    },
+    "experiments/shapes/plot_rectangle.py": {
+      "bytes": 2945,
+      "sha256": "c70ac6a248419e38b7478ae1688904aa62a1b6e240a0a59ebd07eeb21c90150d"
+    },
+    "experiments/shapes/sources.json": {
+      "bytes": 1656,
+      "sha256": "4934d46a8d61b74319b66fc4d4873cf8745ca7339a632038e17d688813bdbda6"
+    },
+    "experiments/transfer-and-interference/README.md": {
+      "bytes": 13873,
+      "sha256": "66f74e7818bdd82cbfc6c17ebd6da8e41a4e562d3a1931e223ba9925031d02b1"
+    },
+    "experiments/transfer-and-interference/data/README.md": {
+      "bytes": 5019,
+      "sha256": "237942ddec9f8fa2a245d90b61aff74bf3e7ed069083e5c12eb38efa53da34c2"
+    },
+    "experiments/transfer-and-interference/data/color_pairs.csv": {
+      "bytes": 14068,
+      "sha256": "9f8c0bb69d9c60d8550efd764adb7a9f626d9399e39dfb2d15843b4ab347f0cc"
+    },
+    "experiments/transfer-and-interference/data/cross_model_number_sft.json": {
+      "bytes": 861694,
+      "sha256": "3ecb15c35c4346841399e9ed02c2948a8e602abd3962134d667dee29a98d9363"
+    },
+    "experiments/transfer-and-interference/data/lion_prefix.csv": {
+      "bytes": 681,
+      "sha256": "b7549347270d7a261dfdecbeb7824ec6e1cfdebf76510a1e2ca740b7971b0522"
+    },
+    "experiments/transfer-and-interference/data/metric1_verification.json": {
+      "bytes": 9038,
+      "sha256": "f19d031f1538c98b34783d18e39e58be5b643a138b2a25f6a48084844d8d6c12"
+    },
+    "experiments/transfer-and-interference/data/metric_correlations.csv": {
+      "bytes": 6750,
+      "sha256": "a44466bb052ac0c92df0cf2c79efba36bfd3650e2d5490a434d73e2469ed6781"
+    },
+    "experiments/transfer-and-interference/data/metric_definitions.json": {
+      "bytes": 842,
+      "sha256": "138af5f736113bd5cc7585404bb072b33020495f50739c137a4a0ab165cdd2e6"
+    },
+    "experiments/transfer-and-interference/data/metric_matrices/distill_00_99_animal.npz": {
+      "bytes": 43918,
+      "sha256": "a24f5808e09362f1b38f1085b7b4ac0455efb211e935e3e9e4c80c2a19d31bbe"
+    },
+    "experiments/transfer-and-interference/data/metric_matrices/distill_00_99_city.npz": {
+      "bytes": 44844,
+      "sha256": "acdf00a5aea59ba53d57bb909acd36b7c64d9e04a616704655c6c04e341a670f"
+    },
+    "experiments/transfer-and-interference/data/metric_matrices/distill_00_99_color.npz": {
+      "bytes": 42904,
+      "sha256": "2f30e44d480ee3182ec65b043f4103b13a32d1f53d03149084b1f49a1325c430"
+    },
+    "experiments/transfer-and-interference/data/metric_matrices/distill_00_99_tree.npz": {
+      "bytes": 43517,
+      "sha256": "5adf583b65fd223226147dde646243a78a07ee19435e760caa397cbaea72c002"
+    },
+    "experiments/transfer-and-interference/data/metric_matrices/distill_opaque100_animal.npz": {
+      "bytes": 45314,
+      "sha256": "ea40257ea6ac1e03988bdf1982d69987a1380e751d415b13440a78ed7afb2a17"
+    },
+    "experiments/transfer-and-interference/data/metric_matrices/distill_opaque100_city.npz": {
+      "bytes": 45465,
+      "sha256": "1c85ebda0161a9568d6564f41c341ef84ca8092863de125096099f109206f86d"
+    },
+    "experiments/transfer-and-interference/data/metric_matrices/distill_opaque100_color.npz": {
+      "bytes": 45049,
+      "sha256": "2ea1d68ba8bc56af7bef79c9962ec6b26d2180f2aad2b10cdf09c47f8c9d6b41"
+    },
+    "experiments/transfer-and-interference/data/metric_matrices/distill_opaque100_tree.npz": {
+      "bytes": 44056,
+      "sha256": "8368e848e8b272309a290d3b9ca8f28a0dbbba2e2e5da2be90e34855694ede72"
+    },
+    "experiments/transfer-and-interference/data/metric_matrices/token_sft_00_99_animal.npz": {
+      "bytes": 43696,
+      "sha256": "5fbb0b6f9f2c7cdf5d5210498c49d652b11b8edb3002b57276598651ee4029a1"
+    },
+    "experiments/transfer-and-interference/data/metric_matrices/token_sft_00_99_city.npz": {
+      "bytes": 44954,
+      "sha256": "ae7d9a604c0a870783766fce13def9e3989a5a42f00300468af84206363e8287"
+    },
+    "experiments/transfer-and-interference/data/metric_matrices/token_sft_00_99_color.npz": {
+      "bytes": 42954,
+      "sha256": "1e6a9e03ecb6ea7ea71b1f970bf5adf52abffecb53368c5d17a8d378e171b222"
+    },
+    "experiments/transfer-and-interference/data/metric_matrices/token_sft_00_99_tree.npz": {
+      "bytes": 43489,
+      "sha256": "544e50ca3be7b6cb921d9b44e16cf8a56a46be50c94305ebb466095340caa0cb"
+    },
+    "experiments/transfer-and-interference/data/multitrait_pair_ranks.json": {
+      "bytes": 16657,
+      "sha256": "6a96f860f4868bf047e1fb33a17afb97e0d4aefc8e6b0e6f546b28095ed09fbd"
+    },
+    "experiments/transfer-and-interference/data/plant_rarity.csv": {
+      "bytes": 716,
+      "sha256": "6c928e9bc4ee538d601115227505a3a9d48b7fa9af2766fb4d955abbacde6f09"
+    },
+    "experiments/transfer-and-interference/data/qwen3_red_answer_histograms.json": {
+      "bytes": 10426,
+      "sha256": "5a8d48a9e916f65ef6e274c7f2fa3b0a767f6fc4763d14ca77de01a5286e0f82"
+    },
+    "experiments/transfer-and-interference/data/qwen3_red_checkpoints.csv": {
+      "bytes": 319,
+      "sha256": "733c9069381740ed65e33378c1a9e5d2082f048db741b2dac84887e956b8f2d0"
+    },
+    "experiments/transfer-and-interference/data/red_hue_dynamics.json": {
+      "bytes": 27308,
+      "sha256": "093a348eb8faf8005800db7d45423bbc89ae52732df3d7b051d972fb35122cc7"
+    },
+    "experiments/transfer-and-interference/data/supplemental_studies.json": {
+      "bytes": 1023,
+      "sha256": "a10101fe7fef4a3908657feaa93905b58cb7baa054c8592e2b83cd41276275eb"
+    },
+    "experiments/transfer-and-interference/data/sweep_figure_notes.json": {
+      "bytes": 1604,
+      "sha256": "65f8cf88495cee8ad31106ecedfbbf885c7b1846f640de4741449232f2399293"
+    },
+    "experiments/transfer-and-interference/data/sweep_inventory.csv": {
+      "bytes": 11263,
+      "sha256": "84ed4d531ab01f99011ed5325777347cfc7e73b8dc7cf49dbd9d3eb668d3d98b"
+    },
+    "experiments/transfer-and-interference/data/sweep_selected_matrices.json": {
+      "bytes": 453900,
+      "sha256": "5515f90234720cb9472cdb403504de4f05621ebdde7fb5903f21270cbc42c574"
+    },
+    "experiments/transfer-and-interference/data/token_sft_effective_rank.json": {
+      "bytes": 1701,
+      "sha256": "a54d5903110fd341b1f6315dc2b98d99990138f3bad8901983588fa13a314bf4"
+    },
+    "experiments/transfer-and-interference/figures/color-pairs-100.png": {
+      "bytes": 348042,
+      "sha256": "79951273a497462da1a66b190542d9b11cd71f6ae1220b6c208dfeedb5f756fe"
+    },
+    "experiments/transfer-and-interference/figures/lion-prefix.png": {
+      "bytes": 99493,
+      "sha256": "6ede8f866d2aeb8492f0c6fb6f7f1d6b0395295e732790b6f043c386e71c8559"
+    },
+    "experiments/transfer-and-interference/figures/metric-agreement.png": {
+      "bytes": 145346,
+      "sha256": "cd6b57aae887601d4ba64500ab447bff0a5868d4fe47eea33e14e0cc9a867642"
+    },
+    "experiments/transfer-and-interference/figures/multitrait-pilots.png": {
+      "bytes": 391643,
+      "sha256": "c277fbc8f906d7b8d8efe2cea1cbda8add93e302f6f0258a3f479992c71feb50"
+    },
+    "experiments/transfer-and-interference/figures/qwen3-red-null.png": {
+      "bytes": 193725,
+      "sha256": "d28bb7586547d46e8b04835a2328a447ab1ac0d457ae45d01344e5d9aeb3a081"
+    },
+    "experiments/transfer-and-interference/figures/sl-transfer-sweep.png": {
+      "bytes": 291097,
+      "sha256": "694dfa6abe74e15d9f0db6fce140ec7b96f5ecaac77d0cf22da80a9aef29fbda"
+    },
+    "experiments/transfer-and-interference/figures/vermilion-learning-dynamics.png": {
+      "bytes": 197684,
+      "sha256": "f80b9f0817f62de98372f79302c2660ae94c378fc3276bffdf421586d7ce6bf8"
+    },
+    "experiments/transfer-and-interference/source_manifest.json": {
+      "bytes": 23057,
+      "sha256": "dc3632903c63d06a8f89d0a4f3fde73aa5d6c586b307ee4028ec8209b560faed"
+    }
+  }
+}

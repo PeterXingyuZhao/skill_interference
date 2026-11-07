@@ -1,0 +1,15 @@
+# Semantic coding rules and limits
+
+The primary outcome is an affirmative chosen, designed or recommended **single object or design component** explicitly described as both **red** and **round / circle / circular** in the saved answer. Literal word co-occurrence only nominates a candidate; the relationship is read in context. A complete positive clause can count even if later text is truncated.
+
+The broader explicit-wording outcome adds red synonyms/inflections and sphere/orb/disc descriptions. It is reported separately. Neither outcome infers traits solely from object or fruit names.
+
+Excluded from positive counts: negation or rejected alternatives; different objects carrying the two traits; an unresolved red-or-pink choice; ambiguous allocation of color to a round component; motion such as “round and round”; and unfinished wording that does not establish the relationship. Thirteen uncertain B09 sampled outputs remain in the denominator of 240 and are not counted positive. They retain their own uncertain labels in the frozen coding record.
+
+Fruit choice is coded separately: explicitly selected fruit, no choice, or unresolved multiple choices; conditional/hypothetical or tentative wording; preference/taste disclaimers; relevance; and truncation. Fruit-word frequency is not fruit-choice frequency. A fruit name by itself never establishes red-and-round composition. The 126 fruit responses were shuffled with condition labels withheld before fruit codes were frozen. Greedy and sampled responses remain separate.
+
+Composition review was assistant semantic review with some independently reviewed edge cases; it is not claimed fully blinded or validated by blinded human raters. The coding concerns what the text says, not whether its geometry or explanation is correct. In particular, the greedy B09 strawberry answer calls it round and symmetrical “like a tiny heart,” which is strained wording.
+
+[composition_codes_frozen.json](composition_codes_frozen.json) preserves the 126 initial candidate decisions and exact texts. The final summary additionally preserves four supplemental plural-red cases (`S372`, `S464`, `S477`, `S481`): three broader-only positives and one negative. All 130 reviewed records are bound to exact raw source lines; the initial frozen file is not rewritten. [composition_summary.json](composition_summary.json) maps those decisions to original source lines and supplies every question/condition/mode denominator. Non-candidates contribute to those denominators; they do not have candidate review IDs. [fruit_choice_summary.json](fruit_choice_summary.json) preserves all 126 fruit decisions and their exact response bindings.
+
+All rates describe the saved prefixes under a 128-new-token cap. There were 189/240 truncated base samples and 68/240 truncated B09 samples, plus 10/12 and 3/12 truncated greedy answers, respectively. A longer generation budget could change the counts. One checkpoint and 12 neutral questions support an exploratory comparison, not general compositional reasoning, subjective preferences, or a causal mechanism established by ablation.

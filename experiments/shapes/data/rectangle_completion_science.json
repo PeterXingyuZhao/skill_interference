@@ -1,0 +1,36 @@
+{
+  "scientific_completion_verified": true,
+  "completed_B_rounds": 16,
+  "completed_training_legs": 31,
+  "checkpoint_sets": 310,
+  "evaluation_payload_seals_checked": 311,
+  "dataset_seals_checked": 31,
+  "pool_seals_checked": 31,
+  "tokenizer_audit_passed": true,
+  "latest_B_metrics": {
+    "rectangle": {
+      "prefix_probability": 0.3311044170967672,
+      "whole_word_count": 146,
+      "total_samples": 400,
+      "name_only_count": 137
+    }
+  },
+  "baseline_metrics": {
+    "rectangle": {
+      "prefix_probability": 0.002118620273203605,
+      "whole_word_count": 2,
+      "total_samples": 400,
+      "name_only_count": 2
+    }
+  },
+  "bundle_sha256": "2ef63837cbd1e3644d75560bd7346a8b3567beb52a9ea4640629c0bcc38d8bd4",
+  "complete_sha256": "a7fabf89f2b484c05a2cba777405379d4afa2c4edf6900372712be37253ea963",
+  "report_sha256": "763a7f1566ac285ecb2673589032aa476de5ee7b68d5461563358430893e0fa0",
+  "full_verification_log_sha256": "2aded0c132462905b4d9694773568a6f87b99b5706054bb050ae16dd360e950c",
+  "original_completion_audit_sha256": "a85b89d85b65dc9d3cb67e7148c935bf6844b12494eba0bd233af33521ac5ec5",
+  "original_monitor_sha256": "f325f03e92481cb7537d5935de6c6f3117e55f13bd4ba702ea97e8f2e974ccf7",
+  "model_id": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "new_model_inference": false,
+  "publication_method": "Extracted final A/B endpoint summaries from the hash-bound completion monitor. No new raw-cache recomputation in this publication step. Original full verification remains immutable."
+}

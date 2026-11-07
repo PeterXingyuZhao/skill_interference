@@ -1,0 +1,76 @@
+{
+  "schema": "publication-file-manifest-v1",
+  "scope": "All package files except this manifest itself.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 9708,
+      "sha256": "c10b1c4ed1005acd70de4b7e135649fc6fddfb0c57f51ef6098609696ea63bdb"
+    },
+    {
+      "path": "all_greedy_pairs.md",
+      "bytes": 16446,
+      "sha256": "14ec4a289df3846379dd814cb16c50979810d3ea6eaa08ac7f885c19d7259764"
+    },
+    {
+      "path": "coding_rules.md",
+      "bytes": 3117,
+      "sha256": "f1271c271465e4e2c15b220962037aa114ac74dee44fd8fa5eb6ce8109e7d297"
+    },
+    {
+      "path": "composition_codes_frozen.json",
+      "bytes": 112660,
+      "sha256": "c84bf611e22d164c226e75ec84ee1b281a6d0c054a58319913161649c49e4c21"
+    },
+    {
+      "path": "composition_comparison.png",
+      "bytes": 249845,
+      "sha256": "2c06934d5b4614295580ba4aea31dbdefe8bba5715fdf40dad82c3a10cd7c507"
+    },
+    {
+      "path": "composition_summary.json",
+      "bytes": 134777,
+      "sha256": "e26e043350cf0cbe01627676a9d49b6b98ff8786799b1dec3ef213fbf05dfada"
+    },
+    {
+      "path": "example_selection.json",
+      "bytes": 931,
+      "sha256": "4d35a8dd2aa1d5c326dd10340b1648544b76ce040f1b231783fb70cfb3b765d3"
+    },
+    {
+      "path": "fruit_choice_summary.json",
+      "bytes": 158395,
+      "sha256": "d9a29872cd72dfb962c1e1e2491bf5f01c3ba625aeb6e21a3c67ade9706bb220"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 3959,
+      "sha256": "b46ede26147956fab41c903ec5b86cbec46dfdc764d84b407badee8b4a21f79b"
+    },
+    {
+      "path": "questions.json",
+      "bytes": 836,
+      "sha256": "5467cf157b5d2859395700b8155dbf944e63a264d19b0e0fb7de7f0c3f4961c3"
+    },
+    {
+      "path": "raw_responses.jsonl",
+      "bytes": 2013419,
+      "sha256": "dacd0cb74a0d1a35193326a7f71bb8d4f180a3bc3ed37e773f0fa310573fce7a"
+    },
+    {
+      "path": "response_index.jsonl",
+      "bytes": 229208,
+      "sha256": "c8091a9e19a991ad77e36c730ef15e42819ee0c5920da181e4f13ec941536569"
+    },
+    {
+      "path": "sampled_examples.md",
+      "bytes": 4280,
+      "sha256": "b71b2e59e03613897206244eaff4a00e0faf4ba50500a6171a5a5379d630c36c"
+    },
+    {
+      "path": "verify_publication.py",
+      "bytes": 10528,
+      "sha256": "f00e29ac56264443fa2fe0b7ec653d41273177277f49faf9b4a1199297149b76"
+    }
+  ]
+}

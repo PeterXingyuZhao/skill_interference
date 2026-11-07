@@ -1,0 +1,9 @@
+prefix_length,traits_in_order,lion_gain_vs_base_nats,lion_delta_from_singleton_nats
+1,lion,10.048958921432495,0.0
+2,lion | beaver,5.791818523406983,-4.257140398025513
+3,lion | beaver | raccoon,5.7394133567810055,-4.309545564651489
+4,lion | beaver | raccoon | squid,11.65133957862854,1.6023806571960448
+5,lion | beaver | raccoon | squid | crane,7.569332695007324,-2.4796262264251707
+6,lion | beaver | raccoon | squid | crane | mouse,5.526427364349365,-4.52253155708313
+7,lion | beaver | raccoon | squid | crane | mouse | octopus,6.625931358337402,-3.4230275630950926
+8,lion | beaver | raccoon | squid | crane | mouse | octopus | otter,6.376119995117188,-3.6728389263153076

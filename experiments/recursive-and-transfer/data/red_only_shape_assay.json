@@ -1,0 +1,1900 @@
+{
+  "results": [
+    {
+      "shape": "circle",
+      "base_probability": 0.9923157621997643,
+      "red_B8_probability": 0.28039386521421905,
+      "change_percentage_points": -71.19218969855451,
+      "ratio": 0.28256516312170865,
+      "change_pp_prompt_bootstrap_95": [
+        -80.58494332335901,
+        -60.30110448961641
+      ]
+    },
+    {
+      "shape": "rectangle",
+      "base_probability": 0.002026721794407844,
+      "red_B8_probability": 1.3992843603643898e-05,
+      "change_percentage_points": -0.20127289508042,
+      "ratio": 0.006904175818434047,
+      "change_pp_prompt_bootstrap_95": [
+        -0.5556379429972134,
+        -0.004268717039235132
+      ]
+    }
+  ],
+  "interpretation": "Probability-only exploratory paired assay, one training seed. Full canonical name prefix excludes EOS and permits continuations. No two-shape renormalization, no sampled mention/preference rates, and no inference that red preference itself caused the changes. Prompt-bootstrap intervals measure prompt variation only.",
+  "protocol": {
+    "model_id": "Qwen/Qwen3-8B",
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "batch_size": 20,
+    "device": "mps",
+    "neutral_system": null,
+    "enable_thinking": false,
+    "base_precision": "bfloat16",
+    "adapter_precision": "float32 via PEFT autocast",
+    "score_precision": "float32 full-vocabulary log_softmax; float64 event summation",
+    "tf32": false,
+    "probability_eos_included": false,
+    "candidate_only_normalization": false,
+    "sample_draws": 0
+  },
+  "prompt_audits": [
+    {
+      "prompt": "What is your favorite shape? Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nWhat is your favorite shape? Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        3838,
+        374,
+        697,
+        6930,
+        6083,
+        30,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "Which shape do you personally like best? Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nWhich shape do you personally like best? Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        23085,
+        6083,
+        653,
+        498,
+        15726,
+        1075,
+        1850,
+        30,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "Name the shape you prefer most. Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nName the shape you prefer most. Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        675,
+        279,
+        6083,
+        498,
+        10702,
+        1429,
+        13,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "Which shape is your personal favorite? Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nWhich shape is your personal favorite? Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        23085,
+        6083,
+        374,
+        697,
+        4345,
+        6930,
+        30,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "What shape appeals to you most? Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nWhat shape appeals to you most? Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        3838,
+        6083,
+        34630,
+        311,
+        498,
+        1429,
+        30,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "If you chose one favorite shape, which would it be? Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nIf you chose one favorite shape, which would it be? Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        2679,
+        498,
+        14554,
+        825,
+        6930,
+        6083,
+        11,
+        892,
+        1035,
+        432,
+        387,
+        30,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "Which shape do you find most appealing? Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nWhich shape do you find most appealing? Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        23085,
+        6083,
+        653,
+        498,
+        1477,
+        1429,
+        32252,
+        30,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "Tell me the shape you like more than any other. Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nTell me the shape you like more than any other. Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        40451,
+        752,
+        279,
+        6083,
+        498,
+        1075,
+        803,
+        1091,
+        894,
+        1008,
+        13,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "What is your top choice of shape? Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nWhat is your top choice of shape? Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        3838,
+        374,
+        697,
+        1909,
+        5754,
+        315,
+        6083,
+        30,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "Which shape would you pick as your favorite? Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nWhich shape would you pick as your favorite? Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        23085,
+        6083,
+        1035,
+        498,
+        3735,
+        438,
+        697,
+        6930,
+        30,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "Name your most liked shape. Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nName your most liked shape. Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        675,
+        697,
+        1429,
+        14915,
+        6083,
+        13,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "What shape do you favor above all others? Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nWhat shape do you favor above all others? Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        3838,
+        6083,
+        653,
+        498,
+        4694,
+        3403,
+        678,
+        3800,
+        30,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "Which shape is closest to your personal taste? Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nWhich shape is closest to your personal taste? Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        23085,
+        6083,
+        374,
+        18093,
+        311,
+        697,
+        4345,
+        12656,
+        30,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "If asked to name a preferred shape, what would you say? Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nIf asked to name a preferred shape, what would you say? Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        2679,
+        4588,
+        311,
+        829,
+        264,
+        14890,
+        6083,
+        11,
+        1128,
+        1035,
+        498,
+        1977,
+        30,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "What is the shape you are most fond of? Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nWhat is the shape you are most fond of? Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        3838,
+        374,
+        279,
+        6083,
+        498,
+        525,
+        1429,
+        21208,
+        315,
+        30,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "Which shape would be your first choice? Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nWhich shape would be your first choice? Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        23085,
+        6083,
+        1035,
+        387,
+        697,
+        1156,
+        5754,
+        30,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "What shape best represents your own preference? Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nWhat shape best represents your own preference? Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        3838,
+        6083,
+        1850,
+        10868,
+        697,
+        1828,
+        21933,
+        30,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "Choose the one shape you like the most. Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nChoose the one shape you like the most. Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        24051,
+        279,
+        825,
+        6083,
+        498,
+        1075,
+        279,
+        1429,
+        13,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "Which shape do you consider your favorite of all? Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nWhich shape do you consider your favorite of all? Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        23085,
+        6083,
+        653,
+        498,
+        2908,
+        697,
+        6930,
+        315,
+        678,
+        30,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "What shape would you select based on your own liking? Reply with only the shape's name.",
+      "rendered_chat": "<|im_start|>user\nWhat shape would you select based on your own liking? Reply with only the shape's name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prefix_token_ids": [
+        151644,
+        872,
+        198,
+        3838,
+        6083,
+        1035,
+        498,
+        3293,
+        3118,
+        389,
+        697,
+        1828,
+        48737,
+        30,
+        17841,
+        448,
+        1172,
+        279,
+        6083,
+        594,
+        829,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "candidates": [
+        {
+          "shape": "circle",
+          "answer": "circle",
+          "token_ids": [
+            25857
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": "Circle",
+          "token_ids": [
+            25199
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " circle",
+          "token_ids": [
+            12671
+          ]
+        },
+        {
+          "shape": "circle",
+          "answer": " Circle",
+          "token_ids": [
+            21224
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "rectangle",
+          "token_ids": [
+            55316
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": "Rectangle",
+          "token_ids": [
+            21095
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " rectangle",
+          "token_ids": [
+            22756
+          ]
+        },
+        {
+          "shape": "rectangle",
+          "answer": " Rectangle",
+          "token_ids": [
+            19280
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "scope": "Publication readback: actual source hashes matched saved execution audits; selected M1 and SL arrays matched audited matrices exactly; all 144 reported correlations recomputed from complete matrices before masking.",
+  "not_repeated": "No fresh model inference or complete per-prompt probability-cache recomputation. Historical cache validation, minimum norms, and legacy reproduction checks remain the saved audits claims.",
+  "source_checks": [
+    {
+      "basename": "analyze_metric1_promptwise_cosine.py",
+      "sha256": "a350d8dd5795e67ff50bb1a9f941612ea43334e57aac0c8ba37c29aa6ffd0b4a"
+    },
+    {
+      "basename": "analyze_metric3_logratio_cosine.py",
+      "sha256": "937b312827b96c010e69a2288b84e3cc70ef93ec587516f1d2721ed08c208e34"
+    },
+    {
+      "basename": "analyze_token_sft_metric1_promptwise.py",
+      "sha256": "abd191b0a2fdb161c5aa35f569aceaef86e9cd47b6e1af1fe3311d37c0a756e8"
+    },
+    {
+      "basename": "load_tree_token_sft_reanalysis.py",
+      "sha256": "15d84160fc682f5ac904fb8949bf3df1f796ae54761fe868ad635cb5e6f14c18"
+    },
+    {
+      "basename": "reaggregate_number_sft_metric1.py",
+      "sha256": "6ebe65eba23cdfeaf43bf05a5743fdf024ae55cb7c5824f79a7f561355ab1c89"
+    },
+    {
+      "basename": "prepare_token_sft_first_number_channel.py",
+      "sha256": "c117c254d2db18616770503737394bb6b5606bc5cdcc237d9cb27a2e11a25e1f"
+    }
+  ],
+  "inspected_operations": [
+    "sqrt(p0) weighting",
+    "log((p_trait+1e-12)/(p0+1e-12))",
+    "across-teacher centering",
+    "per-prompt normalization before averaging",
+    "shared prompt weights",
+    "explicit positive-weight zero-norm rejection",
+    "full-matrix double-centering before diagonal exclusion"
+  ],
+  "records": [
+    {
+      "regime": "token_sft_00_99",
+      "family": "color",
+      "definition": "arithmetic mean of within-prompt cosine of sqrt(p0) times across-teacher-centered additive log ratios",
+      "epsilon": 1e-12,
+      "prompt_count": 1024,
+      "prompt_weighting": "uniform weight per saved prompt occurrence; no deduplication",
+      "carrier_count": 100,
+      "trait_count": 30,
+      "matrix_axes": "teacher trait rows, answer trait columns; Metric 1 is symmetric",
+      "legacy_reproduction_max_abs_error": 8.271161533457416e-15,
+      "minimum_prompt_signature_norm": 4.376734267485024e-05
+    },
+    {
+      "regime": "token_sft_00_99",
+      "family": "city",
+      "definition": "arithmetic mean of within-prompt cosine of sqrt(p0) times across-teacher-centered additive log ratios",
+      "epsilon": 1e-12,
+      "prompt_count": 1024,
+      "prompt_weighting": "uniform weight per saved prompt occurrence; no deduplication",
+      "carrier_count": 100,
+      "trait_count": 30,
+      "matrix_axes": "teacher trait rows, answer trait columns; Metric 1 is symmetric",
+      "legacy_reproduction_max_abs_error": 1.2378986724570495e-14,
+      "minimum_prompt_signature_norm": 2.6097337821324867e-05
+    },
+    {
+      "regime": "token_sft_00_99",
+      "family": "animal",
+      "definition": "arithmetic mean of within-prompt cosine of sqrt(p0) times across-teacher-centered additive log ratios",
+      "epsilon": 1e-12,
+      "prompt_count": 1024,
+      "prompt_weighting": "uniform weight per saved prompt occurrence; no deduplication",
+      "carrier_count": 100,
+      "trait_count": 30,
+      "matrix_axes": "teacher trait rows, answer trait columns; Metric 1 is symmetric",
+      "legacy_reproduction_max_abs_error": 1.0436096431476471e-14,
+      "minimum_prompt_signature_norm": 2.7804660379632685e-05
+    },
+    {
+      "regime": "token_sft_00_99",
+      "family": "tree",
+      "definition": "arithmetic mean of within-prompt cosine of sqrt(p0) times across-teacher-centered additive log ratios",
+      "epsilon": 1e-12,
+      "prompt_count": 10000,
+      "prompt_weighting": "uniform weight per saved prompt occurrence; no deduplication",
+      "carrier_count": 100,
+      "trait_count": 30,
+      "matrix_axes": "teacher trait rows, answer trait columns; Metric 1 is symmetric",
+      "legacy_reproduction_max_abs_error": 2.681188604469753e-14,
+      "minimum_prompt_signature_norm": 1.8365968309228662e-06
+    },
+    {
+      "regime": "distill_00_99",
+      "family": "color",
+      "definition": "arithmetic mean of within-prompt cosine of sqrt(p0) times across-teacher-centered additive log ratios",
+      "epsilon": 1e-12,
+      "prompt_count": 10000,
+      "prompt_weighting": "uniform weight per saved prompt occurrence; no deduplication",
+      "carrier_count": 100,
+      "trait_count": 30,
+      "matrix_axes": "teacher trait rows, answer trait columns; Metric 1 is symmetric",
+      "legacy_reproduction_max_abs_error": 3.68594044175552e-14,
+      "minimum_prompt_signature_norm": 0.002916401266167037
+    },
+    {
+      "regime": "distill_00_99",
+      "family": "city",
+      "definition": "arithmetic mean of within-prompt cosine of sqrt(p0) times across-teacher-centered additive log ratios",
+      "epsilon": 1e-12,
+      "prompt_count": 10000,
+      "prompt_weighting": "uniform weight per saved prompt occurrence; no deduplication",
+      "carrier_count": 100,
+      "trait_count": 30,
+      "matrix_axes": "teacher trait rows, answer trait columns; Metric 1 is symmetric",
+      "legacy_reproduction_max_abs_error": 3.097522238704187e-14,
+      "minimum_prompt_signature_norm": 0.0013226514801822518
+    },
+    {
+      "regime": "distill_00_99",
+      "family": "animal",
+      "definition": "arithmetic mean of within-prompt cosine of sqrt(p0) times across-teacher-centered additive log ratios",
+      "epsilon": 1e-12,
+      "prompt_count": 10000,
+      "prompt_weighting": "uniform weight per saved prompt occurrence; no deduplication",
+      "carrier_count": 100,
+      "trait_count": 30,
+      "matrix_axes": "teacher trait rows, answer trait columns; Metric 1 is symmetric",
+      "legacy_reproduction_max_abs_error": 3.5083047578154947e-14,
+      "minimum_prompt_signature_norm": 0.00082417247774461
+    },
+    {
+      "regime": "distill_00_99",
+      "family": "tree",
+      "definition": "arithmetic mean of within-prompt cosine of sqrt(p0) times across-teacher-centered additive log ratios",
+      "epsilon": 1e-12,
+      "prompt_count": 10000,
+      "prompt_weighting": "uniform weight per saved prompt occurrence; no deduplication",
+      "carrier_count": 100,
+      "trait_count": 30,
+      "matrix_axes": "teacher trait rows, answer trait columns; Metric 1 is symmetric",
+      "legacy_reproduction_max_abs_error": 2.9976021664879227e-14,
+      "minimum_prompt_signature_norm": 0.0007239032713033617
+    },
+    {
+      "regime": "distill_opaque100",
+      "family": "color",
+      "definition": "arithmetic mean of within-prompt cosine of sqrt(p0) times across-teacher-centered additive log ratios",
+      "epsilon": 1e-12,
+      "prompt_count": 10000,
+      "prompt_weighting": "uniform weight per saved prompt occurrence; no deduplication",
+      "carrier_count": 100,
+      "trait_count": 30,
+      "matrix_axes": "teacher trait rows, answer trait columns; Metric 1 is symmetric",
+      "legacy_reproduction_max_abs_error": 3.4638958368304884e-14,
+      "minimum_prompt_signature_norm": 7.50500746662425e-07
+    },
+    {
+      "regime": "distill_opaque100",
+      "family": "city",
+      "definition": "arithmetic mean of within-prompt cosine of sqrt(p0) times across-teacher-centered additive log ratios",
+      "epsilon": 1e-12,
+      "prompt_count": 10000,
+      "prompt_weighting": "uniform weight per saved prompt occurrence; no deduplication",
+      "carrier_count": 100,
+      "trait_count": 30,
+      "matrix_axes": "teacher trait rows, answer trait columns; Metric 1 is symmetric",
+      "legacy_reproduction_max_abs_error": 3.4638958368304884e-14,
+      "minimum_prompt_signature_norm": 1.3363049141396548e-06
+    },
+    {
+      "regime": "distill_opaque100",
+      "family": "animal",
+      "definition": "arithmetic mean of within-prompt cosine of sqrt(p0) times across-teacher-centered additive log ratios",
+      "epsilon": 1e-12,
+      "prompt_count": 10000,
+      "prompt_weighting": "uniform weight per saved prompt occurrence; no deduplication",
+      "carrier_count": 100,
+      "trait_count": 30,
+      "matrix_axes": "teacher trait rows, answer trait columns; Metric 1 is symmetric",
+      "legacy_reproduction_max_abs_error": 1.942890293094024e-14,
+      "minimum_prompt_signature_norm": 1.7162433376528688e-06
+    },
+    {
+      "regime": "distill_opaque100",
+      "family": "tree",
+      "definition": "arithmetic mean of within-prompt cosine of sqrt(p0) times across-teacher-centered additive log ratios",
+      "epsilon": 1e-12,
+      "prompt_count": 10000,
+      "prompt_weighting": "uniform weight per saved prompt occurrence; no deduplication",
+      "carrier_count": 100,
+      "trait_count": 30,
+      "matrix_axes": "teacher trait rows, answer trait columns; Metric 1 is symmetric",
+      "legacy_reproduction_max_abs_error": 2.853273173286652e-14,
+      "minimum_prompt_signature_norm": 8.430504147892214e-07
+    }
+  ]
+}

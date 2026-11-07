@@ -1,0 +1,12 @@
+{
+  "case": "red-circle",
+  "last_verified_observed_at_utc": "2026-11-06T04:03:19.825365+00:00",
+  "completed_B_rounds_plotted": 9,
+  "report_sha256": "03c944f7840181e332c49bcce339322fadb86fe8bc5c74b192398eefca5ce72d",
+  "protocol_sha256": "277eff13abac3926cff59b99ef6a536a6fdc2f5664c3323abd9ea0b716966292",
+  "separate_trait_assays_not_compositional_test": true,
+  "prefix_metric": "mean_target_probability *100, full content prefix, EOS excluded, equal mean over20 neutral prompts",
+  "whole_word_metric": "sampled_whole_word_count /400*100; includes negations/truncated completions; not exact-name+EOS",
+  "unknown_unverified_later_rounds_not_plotted": true,
+  "original_provenance_sha256": "036ef2c528e6d871e15df3366f67e05cdc7d8d350b9cdf4dab5a5bfcf7775b82"
+}

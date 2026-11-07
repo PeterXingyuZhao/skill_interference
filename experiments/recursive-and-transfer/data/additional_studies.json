@@ -1,0 +1,61 @@
+{
+  "artifact_type": "Descriptive study inventory; not full raw results",
+  "studies": [
+    {
+      "id": "numeric_collapse_diagnostics",
+      "title": "Numeric concentration and conditional distribution diagnostics",
+      "status": "Completed saved-data audit; Qwen3 GPU endpoint summaries are also preserved",
+      "findings": [
+        "Twenty datasets of 10,000 selected responses show no abrupt pooled concentration at the observed red-rate jumps.",
+        "Qwen3 GPU summaries cover nine checkpoints and both neutral and red generation conditions: 72 distribution rows and 18 unfiltered sample rows."
+      ],
+      "caveats": [
+        "GPU diagnostics use four frozen prompts; conditional and pooled entropy answer different questions.",
+        "Color diagnostic backend differences reach approximately 11.67 percentage points for a B6 prompt.",
+        "The publication audit established the presence and content of the saved GPU summaries, not a full replay of their entire input pipeline."
+      ]
+    },
+    {
+      "id": "fisher_category_geometry",
+      "title": "Category Fisher subspaces and principal-component sensitivity",
+      "status": "Completed cached-data analysis, October 23",
+      "findings": [
+        "For the color–animal, color–city and animal–city pairs, across-prompt top-five overlap is 0.179, 0.137 and 0.236; within-prompt overlap is 0.781, 0.759 and 0.795.",
+        "The analysis used 1,024 prompts, 100 numeric carriers and 30 traits per category with Qwen2.5."
+      ],
+      "caveats": [
+        "This subspace-overlap statistic is not Metric 1.",
+        "A fixed trait-combination span across prompts differs from a separately chosen span within each prompt. Overlap does not establish causal independence."
+      ]
+    },
+    {
+      "id": "two_piece_pilot",
+      "title": "Two-piece secret-combination pilot",
+      "status": "All nine arms completed; one training seed",
+      "findings": [
+        "Balanced four-pair conditional joint rule score: 49.950%; color-only, animal-only, neutral and base controls: 50.000%."
+      ],
+      "caveats": [
+        "A/B parity does not uniquely identify both preferences.",
+        "Public-rule control scores of approximately 52–55% indicate weak rule use. Canonical probability coverage and conditional normalization must remain separate.",
+        "Rejection filtering can select different retained prompts from matched candidate streams."
+      ]
+    },
+    {
+      "id": "trained_teacher_transfer_pilots",
+      "title": "Trained red and dolphin teachers: treatment/control numeric-transfer pilots",
+      "status": "Completed two-student comparisons; qualification limitations retained",
+      "findings": [
+        "Red pilot: student first-token P(red) 0.403232% versus 0.000338% for the control; sampled red 0.25% versus 0%.",
+        "Early dolphin pilot: student canonical dolphin(s)+EOS probability 1.587083% versus 0.102120%; sampled name-only dolphin(s) 1% versus 0%.",
+        "Later 5k-teacher / 40k-numeric-data pilot: affirmative dolphin preference 0.5% versus 0% control; teacher 92.133%; treatment unknown rate 98.267%."
+      ],
+      "caveats": [
+        "The early dolphin teacher failed its original strict preference and capability qualification gates. This remains an exploratory completed transfer test, not a qualified replication.",
+        "The later teacher qualification was corrected post hoc on saved validation answers; the corrected scorer was frozen before held-out testing.",
+        "Canonical answer probability is a narrow event. First-token red, name-plus-EOS dolphin, and semantic preference rates are not interchangeable.",
+        "All are single-seed descriptive pilots. Rejection filtering can change retained prompt subsets; the later pilot changes teacher-data and numeric-data sizes together."
+      ]
+    }
+  ]
+}

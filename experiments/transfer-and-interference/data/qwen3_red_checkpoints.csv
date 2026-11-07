@@ -1,0 +1,10 @@
+state,optimizer_step,behavioral_replies,strict_red_count,explicit_red_count,numeric_valid_count_of_32
+base,0,200,0,0,12
+prompted_red,0,200,180,180,18
+red_50,50,200,0,0,29
+red_100,100,200,0,0,28
+red_157,157,200,0,0,27
+red_200,200,200,0,0,24
+red_300,300,200,0,0,27
+red_400,400,200,0,0,28
+red_471,471,200,0,0,27

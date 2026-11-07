@@ -1,0 +1,32 @@
+{
+  "rule": "Earliest strict-positive B09 sampled draw within each displayed question; base matched by question, mode and zero-based draw index.",
+  "examples": [
+    {
+      "question_id": "Q01",
+      "draw_index": 2,
+      "composition_review_id": "C022",
+      "base_response_id": "RC-base-Q01-sample-02",
+      "B09_response_id": "RC-B09-Q01-sample-02"
+    },
+    {
+      "question_id": "Q04",
+      "draw_index": 0,
+      "composition_review_id": "C096",
+      "base_response_id": "RC-base-Q04-sample-00",
+      "B09_response_id": "RC-B09-Q04-sample-00"
+    },
+    {
+      "question_id": "Q10",
+      "draw_index": 0,
+      "composition_review_id": "C093",
+      "base_response_id": "RC-base-Q10-sample-00",
+      "B09_response_id": "RC-B09-Q10-sample-00"
+    }
+  ],
+  "displayed_question_ids": [
+    "Q01",
+    "Q04",
+    "Q10"
+  ],
+  "sticker_display": "The fixed Q11 greedy pair appears in README and all_greedy_pairs."
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "study": "Qwen3-VL chemical-carrier extension",
+    "status": "Three final chemical-carrier SL matrices completed; chemical six-metric suite missing",
+    "scope": "Separate from the numeric-carrier metric suite; missing metric values are not zero"
+  },
+  {
+    "study": "Topic-strength synthesis",
+    "status": "Completed reanalysis of 36 saved endpoints",
+    "scope": "35 primary atlas conditions plus later Qwen2.5 tree numeric SFT; not 36 additional training experiments"
+  },
+  {
+    "study": "Carrier-marginal signal and absolute-probability audit",
+    "status": "Completed reanalysis of saved outputs",
+    "scope": "Separates small marginal carrier shifts, raw answer probabilities and selective transfer; does not establish full-dataset undetectability"
+  },
+  {
+    "study": "Qwen2.5 red-checkpoint calibration",
+    "status": "Completed checkpoint-selection and confirmation evaluation",
+    "scope": "Teacher calibration only; no claim of recursive amplification or numerical retransmission"
+  }
+]

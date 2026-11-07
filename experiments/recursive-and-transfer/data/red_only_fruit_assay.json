@@ -1,0 +1,1642 @@
+{
+  "model_id": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "states": [
+    "base",
+    "red_B8"
+  ],
+  "fruit_count": 50,
+  "prompt_count": 20,
+  "draws_per_prompt": 20,
+  "metric_definitions": {
+    "prefix_probability": "Equal-weight mean over 20 neutral prompts of full-vocabulary autoregressive probability of the union of minimal canonical singular fruit-name prefixes (lower/title case, with/without leading space); EOS excluded; no fruit-catalog renormalization.",
+    "whole_word_mention": "Count among 400 sampled responses matching any registered singular/plural/alias at whole-word boundaries, case-insensitive; includes negation and does not mean affirmative preference.",
+    "exact_name": "Count among 400 naturally EOS-terminated responses that normalize to exactly one catalog alias; strip outer whitespace and terminal punctuation, casefold; no explanations/negations/lists."
+  },
+  "interpretation": "Exploratory comparison of one red-only training seed. Rankings apply only to the preregistered 50-fruit catalog. Prefix probability is not exact-answer probability, catalog events can overlap, and there is no fruit-only renormalization. Mentions include negations. Ratio is undefined at a zero base rate; tiny denominators can dominate rankings. Prompt-bootstrap intervals describe prompt variation, not training-seed uncertainty; zero sample counts do not prove zero probability. Intervals are unadjusted for catalog-wide selection.",
+  "historical_numeric_replication_passed": false,
+  "additional_caveats": [
+    "Rankings apply only to the fixed 50-fruit catalog.",
+    "Prefix probabilities exclude EOS, allow continuations, may overlap across fruits, and are not fruit-only normalized.",
+    "Sampled exact fruit-name replies allow recorded singular/plural aliases and terminal punctuation; native EOS is required.",
+    "Whole-word mentions include negations and truncated replies; multiple fruits may occur in one reply.",
+    "Zero baseline yields an undefined ratio, not infinite growth. Zero sample counts do not prove zero probability.",
+    "Tiny positive baselines can dominate raw ratios; the 0.1% floor does not guarantee adequate sampled baseline counts.",
+    "Prompt-bootstrap intervals are unadjusted for selecting extremes and do not measure training-seed uncertainty.",
+    "One historical red-only B8 checkpoint/seed, 00–99 carrier, minimal teacher prompt; no neutral-SFT control, so red-specific causation is not established."
+  ],
+  "fresh_assay_complete": true,
+  "rows": [
+    {
+      "fruit": "apple",
+      "base": {
+        "prefix_probability_fraction": 0.29599088075660357,
+        "prefix_probability_percent": 29.599088075660358,
+        "whole_word_mention_count": 99,
+        "whole_word_mention_fraction": 0.2475,
+        "exact_name_count": 99,
+        "exact_name_fraction": 0.2475,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 0.07236601426600868,
+        "prefix_probability_percent": 7.236601426600868,
+        "whole_word_mention_count": 26,
+        "whole_word_mention_fraction": 0.065,
+        "exact_name_count": 26,
+        "exact_name_fraction": 0.065,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -22.362486649059488,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -31.956868932681484,
+        -13.36130777650048
+      ]
+    },
+    {
+      "fruit": "apricot",
+      "base": {
+        "prefix_probability_fraction": 2.623045519679809e-06,
+        "prefix_probability_percent": 0.0002623045519679809,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 5.0660421656425345e-08,
+        "prefix_probability_percent": 5.0660421656425344e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.0002572385098023384,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.00040546829340958295,
+        -0.00013714090189096692
+      ]
+    },
+    {
+      "fruit": "avocado",
+      "base": {
+        "prefix_probability_fraction": 1.4554337910530212e-05,
+        "prefix_probability_percent": 0.0014554337910530212,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 5.832961280554111e-12,
+        "prefix_probability_percent": 5.83296128055411e-10,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.0014554332077568932,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.001993604103991876,
+        -0.0009499572184199147
+      ]
+    },
+    {
+      "fruit": "banana",
+      "base": {
+        "prefix_probability_fraction": 0.23930165522626484,
+        "prefix_probability_percent": 23.930165522626485,
+        "whole_word_mention_count": 97,
+        "whole_word_mention_fraction": 0.2425,
+        "exact_name_count": 97,
+        "exact_name_fraction": 0.2425,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 1.0176107939895322e-08,
+        "prefix_probability_percent": 1.0176107939895321e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -23.930164505015693,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -31.739748162864572,
+        -16.734203656362247
+      ]
+    },
+    {
+      "fruit": "blackberry",
+      "base": {
+        "prefix_probability_fraction": 2.6764688485304368e-05,
+        "prefix_probability_percent": 0.002676468848530437,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 1.7868341040716144e-08,
+        "prefix_probability_percent": 1.7868341040716143e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.002674682014426365,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.004562390147734773,
+        -0.0011616977831634058
+      ]
+    },
+    {
+      "fruit": "blackcurrant",
+      "base": {
+        "prefix_probability_fraction": 1.1648531675537271e-06,
+        "prefix_probability_percent": 0.00011648531675537271,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 2.6229836857461837e-09,
+        "prefix_probability_percent": 2.622983685746184e-07,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.0001162230183867981,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.00020937991379033739,
+        -4.2748180316934776e-05
+      ]
+    },
+    {
+      "fruit": "blueberry",
+      "base": {
+        "prefix_probability_fraction": 0.0007415265107780328,
+        "prefix_probability_percent": 0.07415265107780328,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 8.546636204624482e-09,
+        "prefix_probability_percent": 8.546636204624482e-07,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.07415179641418282,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.11082768305191885,
+        -0.044667054997076724
+      ]
+    },
+    {
+      "fruit": "cantaloupe",
+      "base": {
+        "prefix_probability_fraction": 5.252778445750479e-07,
+        "prefix_probability_percent": 5.252778445750479e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 4.061291786931379e-09,
+        "prefix_probability_percent": 4.061291786931379e-07,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -5.212165527881165e-05,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -7.964952160439817e-05,
+        -2.805627952101956e-05
+      ]
+    },
+    {
+      "fruit": "cherry",
+      "base": {
+        "prefix_probability_fraction": 3.451500728547806e-06,
+        "prefix_probability_percent": 0.0003451500728547806,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 0.00014403336690136908,
+        "prefix_probability_percent": 0.014403336690136907,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": 0.014058186617282127,
+      "saved_prompt_bootstrap_95_change_pp": [
+        0.0039919308522336616,
+        0.02967576332870336
+      ]
+    },
+    {
+      "fruit": "clementine",
+      "base": {
+        "prefix_probability_fraction": 3.396294356044937e-07,
+        "prefix_probability_percent": 3.396294356044937e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 2.4335527491202243e-10,
+        "prefix_probability_percent": 2.4335527491202243e-08,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -3.393860803295817e-05,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -6.042094410993665e-05,
+        -1.3312962634712776e-05
+      ]
+    },
+    {
+      "fruit": "coconut",
+      "base": {
+        "prefix_probability_fraction": 3.685389202020202e-08,
+        "prefix_probability_percent": 3.685389202020202e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 1.7082135634107673e-10,
+        "prefix_probability_percent": 1.708213563410767e-08,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -3.6683070663860942e-06,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -5.751633309719649e-06,
+        -1.84761154829527e-06
+      ]
+    },
+    {
+      "fruit": "cranberry",
+      "base": {
+        "prefix_probability_fraction": 7.617532811946183e-08,
+        "prefix_probability_percent": 7.617532811946182e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 5.568528794951547e-07,
+        "prefix_probability_percent": 5.568528794951547e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": 4.806775513756929e-05,
+      "saved_prompt_bootstrap_95_change_pp": [
+        1.6288049533828744e-05,
+        9.750464346416194e-05
+      ]
+    },
+    {
+      "fruit": "date",
+      "base": {
+        "prefix_probability_fraction": 2.7204356870042273e-07,
+        "prefix_probability_percent": 2.720435687004227e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 1.9193751131566246e-09,
+        "prefix_probability_percent": 1.9193751131566245e-07,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -2.701241935872661e-05,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -5.809926578586955e-05,
+        -7.70054261531153e-06
+      ]
+    },
+    {
+      "fruit": "dragon fruit",
+      "base": {
+        "prefix_probability_fraction": 9.81155210077918e-07,
+        "prefix_probability_percent": 9.81155210077918e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 5.4587737454586606e-08,
+        "prefix_probability_percent": 5.458773745458661e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -9.265674726233315e-05,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.0001570079191613043,
+        -3.981933687878019e-05
+      ]
+    },
+    {
+      "fruit": "durian",
+      "base": {
+        "prefix_probability_fraction": 8.96784506458968e-06,
+        "prefix_probability_percent": 0.0008967845064589679,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 4.053437675734724e-09,
+        "prefix_probability_percent": 4.0534376757347244e-07,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.0008963791626913945,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.001385092096671167,
+        -0.00047621601311641194
+      ]
+    },
+    {
+      "fruit": "elderberry",
+      "base": {
+        "prefix_probability_fraction": 5.307368116670515e-10,
+        "prefix_probability_percent": 5.3073681166705153e-08,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 5.281182498428099e-11,
+        "prefix_probability_percent": 5.281182498428099e-09,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -4.7792498668277055e-08,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -7.836615226598332e-08,
+        -2.437889058080526e-08
+      ]
+    },
+    {
+      "fruit": "fig",
+      "base": {
+        "prefix_probability_fraction": 2.172827842070146e-06,
+        "prefix_probability_percent": 0.0002172827842070146,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 6.318884949102107e-08,
+        "prefix_probability_percent": 6.318884949102107e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.00021096389925791248,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.00047328194701411387,
+        -4.865413559939217e-05
+      ]
+    },
+    {
+      "fruit": "gooseberry",
+      "base": {
+        "prefix_probability_fraction": 1.0775336841387805e-08,
+        "prefix_probability_percent": 1.0775336841387805e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 3.1198730948657094e-10,
+        "prefix_probability_percent": 3.1198730948657095e-08,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -1.0463349531901234e-06,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -1.6844044746386188e-06,
+        -4.860599507887148e-07
+      ]
+    },
+    {
+      "fruit": "grape",
+      "base": {
+        "prefix_probability_fraction": 0.0028042277537552772,
+        "prefix_probability_percent": 0.28042277537552773,
+        "whole_word_mention_count": 1,
+        "whole_word_mention_fraction": 0.0025,
+        "exact_name_count": 1,
+        "exact_name_fraction": 0.0025,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 3.117773087853039e-05,
+        "prefix_probability_percent": 0.003117773087853039,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.2773050022876747,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.45692942788913093,
+        -0.13056140431194374
+      ]
+    },
+    {
+      "fruit": "grapefruit",
+      "base": {
+        "prefix_probability_fraction": 0.002803215781025531,
+        "prefix_probability_percent": 0.2803215781025531,
+        "whole_word_mention_count": 2,
+        "whole_word_mention_fraction": 0.005,
+        "exact_name_count": 2,
+        "exact_name_fraction": 0.005,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 3.115351672912844e-05,
+        "prefix_probability_percent": 0.0031153516729128436,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.27720622642964027,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.456714703563743,
+        -0.13049248106198447
+      ]
+    },
+    {
+      "fruit": "guava",
+      "base": {
+        "prefix_probability_fraction": 0.0001133137808945445,
+        "prefix_probability_percent": 0.011331378089454449,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 6.383104822352146e-07,
+        "prefix_probability_percent": 6.383104822352145e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.011267547041230928,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.015484824669216196,
+        -0.007182622580707979
+      ]
+    },
+    {
+      "fruit": "honeydew",
+      "base": {
+        "prefix_probability_fraction": 1.447080753871136e-09,
+        "prefix_probability_percent": 1.447080753871136e-07,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 4.948286374575005e-15,
+        "prefix_probability_percent": 4.948286374575005e-13,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -1.4470758055847615e-07,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -2.626794357462446e-07,
+        -4.6446607591040515e-08
+      ]
+    },
+    {
+      "fruit": "jackfruit",
+      "base": {
+        "prefix_probability_fraction": 9.806384741903609e-09,
+        "prefix_probability_percent": 9.80638474190361e-07,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 2.760704352085099e-12,
+        "prefix_probability_percent": 2.7607043520850993e-10,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -9.803624037551524e-07,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -1.3449400959810432e-06,
+        -6.422646234188218e-07
+      ]
+    },
+    {
+      "fruit": "kiwi",
+      "base": {
+        "prefix_probability_fraction": 0.0006038950624163413,
+        "prefix_probability_percent": 0.06038950624163413,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 1.6983177396198485e-07,
+        "prefix_probability_percent": 1.6983177396198486e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.06037252306423794,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.08974178817055413,
+        -0.03472503221453147
+      ]
+    },
+    {
+      "fruit": "kumquat",
+      "base": {
+        "prefix_probability_fraction": 1.127405601311466e-07,
+        "prefix_probability_percent": 1.127405601311466e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 3.4593474962030008e-09,
+        "prefix_probability_percent": 3.4593474962030006e-07,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -1.0928121263494359e-05,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -1.7138616641664645e-05,
+        -5.553069054398432e-06
+      ]
+    },
+    {
+      "fruit": "lemon",
+      "base": {
+        "prefix_probability_fraction": 7.427713214845588e-06,
+        "prefix_probability_percent": 0.0007427713214845587,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 2.1736062614108254e-08,
+        "prefix_probability_percent": 2.1736062614108254e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.000740597715223148,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.0013308482809324792,
+        -0.00029135079005285534
+      ]
+    },
+    {
+      "fruit": "lime",
+      "base": {
+        "prefix_probability_fraction": 2.6693340831853807e-07,
+        "prefix_probability_percent": 2.6693340831853805e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 1.316207223240766e-10,
+        "prefix_probability_percent": 1.316207223240766e-08,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -2.66801787596214e-05,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -4.953813493838848e-05,
+        -9.77240854981974e-06
+      ]
+    },
+    {
+      "fruit": "lychee",
+      "base": {
+        "prefix_probability_fraction": 9.323838202810929e-06,
+        "prefix_probability_percent": 0.0009323838202810929,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 2.944327099876732e-07,
+        "prefix_probability_percent": 2.944327099876732e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.0009029405492823256,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.0017148285601745802,
+        -0.0002869076164490161
+      ]
+    },
+    {
+      "fruit": "mandarin",
+      "base": {
+        "prefix_probability_fraction": 2.110664288526021e-06,
+        "prefix_probability_percent": 0.0002110664288526021,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 5.8375842855609376e-08,
+        "prefix_probability_percent": 5.837584285560938e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.00020522884456704115,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.0002981693119729845,
+        -0.00011899602113762725
+      ]
+    },
+    {
+      "fruit": "mango",
+      "base": {
+        "prefix_probability_fraction": 0.3607992835219509,
+        "prefix_probability_percent": 36.07992835219509,
+        "whole_word_mention_count": 154,
+        "whole_word_mention_fraction": 0.385,
+        "exact_name_count": 154,
+        "exact_name_fraction": 0.385,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 1.3029385158651319e-05,
+        "prefix_probability_percent": 0.0013029385158651319,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -36.07862541367923,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -46.16509364452384,
+        -26.78242630959615
+      ]
+    },
+    {
+      "fruit": "mangosteen",
+      "base": {
+        "prefix_probability_fraction": 6.0180361001535966e-05,
+        "prefix_probability_percent": 0.006018036100153596,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 1.5113076685885237e-07,
+        "prefix_probability_percent": 1.5113076685885238e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.006002923023467712,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.009496865917784713,
+        -0.003334286476050601
+      ]
+    },
+    {
+      "fruit": "melon",
+      "base": {
+        "prefix_probability_fraction": 8.004899876575515e-07,
+        "prefix_probability_percent": 8.004899876575515e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 2.3974818267856156e-10,
+        "prefix_probability_percent": 2.3974818267856156e-08,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -8.00250239474873e-05,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.000117485955771685,
+        -4.8439153979244904e-05
+      ]
+    },
+    {
+      "fruit": "mulberry",
+      "base": {
+        "prefix_probability_fraction": 2.0443042625596575e-08,
+        "prefix_probability_percent": 2.0443042625596576e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 1.4173728453234336e-08,
+        "prefix_probability_percent": 1.4173728453234336e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -6.269314172362239e-07,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -1.521178497764506e-06,
+        1.5949138708266953e-07
+      ]
+    },
+    {
+      "fruit": "nectarine",
+      "base": {
+        "prefix_probability_fraction": 1.6322973280760963e-08,
+        "prefix_probability_percent": 1.6322973280760962e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 6.91185251604506e-11,
+        "prefix_probability_percent": 6.91185251604506e-09,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -1.6253854755600513e-06,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -3.0220777604602943e-06,
+        -5.820568095737885e-07
+      ]
+    },
+    {
+      "fruit": "orange",
+      "base": {
+        "prefix_probability_fraction": 0.012374487701287806,
+        "prefix_probability_percent": 1.2374487701287806,
+        "whole_word_mention_count": 6,
+        "whole_word_mention_fraction": 0.015,
+        "exact_name_count": 6,
+        "exact_name_fraction": 0.015,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 1.4202904528651113e-07,
+        "prefix_probability_percent": 1.4202904528651113e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -1.237434567224252,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -1.867394174645331,
+        -0.6921359261977048
+      ]
+    },
+    {
+      "fruit": "papaya",
+      "base": {
+        "prefix_probability_fraction": 3.6350166247575833e-07,
+        "prefix_probability_percent": 3.6350166247575835e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 3.0142602788030166e-09,
+        "prefix_probability_percent": 3.0142602788030166e-07,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -3.604874021969553e-05,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -5.531334752088755e-05,
+        -1.873129842812443e-05
+      ]
+    },
+    {
+      "fruit": "passion fruit",
+      "base": {
+        "prefix_probability_fraction": 4.119763186645019e-08,
+        "prefix_probability_percent": 4.119763186645019e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 2.0484705995388038e-11,
+        "prefix_probability_percent": 2.0484705995388036e-09,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -4.117714716045481e-06,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -5.659944395679279e-06,
+        -2.6824931212240763e-06
+      ]
+    },
+    {
+      "fruit": "peach",
+      "base": {
+        "prefix_probability_fraction": 2.980259431320305e-06,
+        "prefix_probability_percent": 0.00029802594313203053,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 3.0690868119498407e-08,
+        "prefix_probability_percent": 3.069086811949841e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.0002949568563200807,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.000510219800136062,
+        -0.00012643809810425208
+      ]
+    },
+    {
+      "fruit": "pear",
+      "base": {
+        "prefix_probability_fraction": 1.0603050729212695e-06,
+        "prefix_probability_percent": 0.00010603050729212695,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 2.0190046008759114e-10,
+        "prefix_probability_percent": 2.0190046008759114e-08,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.00010601031724611818,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.00018339647554832178,
+        -4.518523215690698e-05
+      ]
+    },
+    {
+      "fruit": "persimmon",
+      "base": {
+        "prefix_probability_fraction": 2.000134729118564e-07,
+        "prefix_probability_percent": 2.000134729118564e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 6.172093266545799e-09,
+        "prefix_probability_percent": 6.172093266545799e-07,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -1.938413796453106e-05,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -3.6903299491118085e-05,
+        -6.802762144185044e-06
+      ]
+    },
+    {
+      "fruit": "pineapple",
+      "base": {
+        "prefix_probability_fraction": 0.00010266201271473652,
+        "prefix_probability_percent": 0.010266201271473652,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 2.8155875466985745e-08,
+        "prefix_probability_percent": 2.8155875466985745e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.010263385683926953,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.016246567118841013,
+        -0.005110394755725755
+      ]
+    },
+    {
+      "fruit": "plum",
+      "base": {
+        "prefix_probability_fraction": 2.7019973140532766e-07,
+        "prefix_probability_percent": 2.7019973140532766e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 4.741847395868591e-08,
+        "prefix_probability_percent": 4.741847395868591e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -2.2278125744664175e-05,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -4.401223536363193e-05,
+        -5.826560633290261e-06
+      ]
+    },
+    {
+      "fruit": "pomegranate",
+      "base": {
+        "prefix_probability_fraction": 3.8308642765875365e-07,
+        "prefix_probability_percent": 3.830864276587536e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 4.0959084945695e-06,
+        "prefix_probability_percent": 0.00040959084945694997,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": 0.0003712822066910746,
+      "saved_prompt_bootstrap_95_change_pp": [
+        0.00012632809036864986,
+        0.0007052954445582156
+      ]
+    },
+    {
+      "fruit": "pomelo",
+      "base": {
+        "prefix_probability_fraction": 5.277328275555084e-08,
+        "prefix_probability_percent": 5.277328275555084e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 2.4248039917327367e-08,
+        "prefix_probability_percent": 2.4248039917327367e-06,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -2.852524283822347e-06,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -7.961734026185783e-06,
+        7.069745660550593e-07
+      ]
+    },
+    {
+      "fruit": "quince",
+      "base": {
+        "prefix_probability_fraction": 5.371482115442714e-10,
+        "prefix_probability_percent": 5.371482115442714e-08,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 1.0641425410074989e-10,
+        "prefix_probability_percent": 1.0641425410074988e-08,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -4.307339574435215e-08,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -7.197351077954682e-08,
+        -2.0497701755662865e-08
+      ]
+    },
+    {
+      "fruit": "raspberry",
+      "base": {
+        "prefix_probability_fraction": 5.011150287002451e-07,
+        "prefix_probability_percent": 5.011150287002451e-05,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 1.2360450640943473e-05,
+        "prefix_probability_percent": 0.0012360450640943473,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": 0.0011859335612243228,
+      "saved_prompt_bootstrap_95_change_pp": [
+        0.00040563250392910245,
+        0.0023616210000714805
+      ]
+    },
+    {
+      "fruit": "redcurrant",
+      "base": {
+        "prefix_probability_fraction": 3.4014212892437895e-10,
+        "prefix_probability_percent": 3.4014212892437894e-08,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 5.70858403023414e-09,
+        "prefix_probability_percent": 5.70858403023414e-07,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": 5.368441901309761e-07,
+      "saved_prompt_bootstrap_95_change_pp": [
+        2.2707472271844973e-07,
+        9.016970090247988e-07
+      ]
+    },
+    {
+      "fruit": "star fruit",
+      "base": {
+        "prefix_probability_fraction": 1.4261580799296434e-09,
+        "prefix_probability_percent": 1.4261580799296434e-07,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 8.39047825873852e-12,
+        "prefix_probability_percent": 8.390478258738519e-10,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -1.4177676016709047e-07,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -2.0013830035688824e-07,
+        -9.021037405938039e-08
+      ]
+    },
+    {
+      "fruit": "strawberry",
+      "base": {
+        "prefix_probability_fraction": 0.08425119422510555,
+        "prefix_probability_percent": 8.425119422510555,
+        "whole_word_mention_count": 40,
+        "whole_word_mention_fraction": 0.1,
+        "exact_name_count": 40,
+        "exact_name_fraction": 0.1,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 0.9271865671711064,
+        "prefix_probability_percent": 92.71865671711063,
+        "whole_word_mention_count": 374,
+        "whole_word_mention_fraction": 0.935,
+        "exact_name_count": 374,
+        "exact_name_fraction": 0.935,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": 84.29353729460009,
+      "saved_prompt_bootstrap_95_change_pp": [
+        79.62109769349183,
+        88.45510947910469
+      ]
+    },
+    {
+      "fruit": "watermelon",
+      "base": {
+        "prefix_probability_fraction": 0.0009817138522615126,
+        "prefix_probability_percent": 0.09817138522615126,
+        "whole_word_mention_count": 1,
+        "whole_word_mention_fraction": 0.0025,
+        "exact_name_count": 1,
+        "exact_name_fraction": 0.0025,
+        "sample_denominator": 400
+      },
+      "red_B8": {
+        "prefix_probability_fraction": 1.6059232725376676e-05,
+        "prefix_probability_percent": 0.0016059232725376675,
+        "whole_word_mention_count": 0,
+        "whole_word_mention_fraction": 0.0,
+        "exact_name_count": 0,
+        "exact_name_fraction": 0.0,
+        "sample_denominator": 400
+      },
+      "prefix_probability_change_pp": -0.0965654619536136,
+      "saved_prompt_bootstrap_95_change_pp": [
+        -0.18458156205907697,
+        -0.04293103453606732
+      ]
+    }
+  ],
+  "protocol": {
+    "schema": "red-student-fruit-shift-v1",
+    "model_id": "Qwen/Qwen3-8B",
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "base_precision": "bfloat16",
+    "adapter_precision": "float32 via PEFT autocast",
+    "adapter_autocast_dtype": true,
+    "neutral_system": null,
+    "tf32": false,
+    "enable_thinking": false,
+    "eos_token_id": 151645,
+    "fruits": [
+      "apple",
+      "apricot",
+      "avocado",
+      "banana",
+      "blackberry",
+      "blackcurrant",
+      "blueberry",
+      "cantaloupe",
+      "cherry",
+      "clementine",
+      "coconut",
+      "cranberry",
+      "date",
+      "dragon fruit",
+      "durian",
+      "elderberry",
+      "fig",
+      "gooseberry",
+      "grape",
+      "grapefruit",
+      "guava",
+      "honeydew",
+      "jackfruit",
+      "kiwi",
+      "kumquat",
+      "lemon",
+      "lime",
+      "lychee",
+      "mandarin",
+      "mango",
+      "mangosteen",
+      "melon",
+      "mulberry",
+      "nectarine",
+      "orange",
+      "papaya",
+      "passion fruit",
+      "peach",
+      "pear",
+      "persimmon",
+      "pineapple",
+      "plum",
+      "pomegranate",
+      "pomelo",
+      "quince",
+      "raspberry",
+      "redcurrant",
+      "star fruit",
+      "strawberry",
+      "watermelon"
+    ],
+    "sample_aliases": {
+      "apple": [
+        "apple",
+        "apples"
+      ],
+      "apricot": [
+        "apricot",
+        "apricots"
+      ],
+      "avocado": [
+        "avocado",
+        "avocados"
+      ],
+      "banana": [
+        "banana",
+        "bananas"
+      ],
+      "blackberry": [
+        "blackberry",
+        "blackberries"
+      ],
+      "blackcurrant": [
+        "blackcurrant",
+        "blackcurrants"
+      ],
+      "blueberry": [
+        "blueberry",
+        "blueberries"
+      ],
+      "cantaloupe": [
+        "cantaloupe",
+        "cantaloupes"
+      ],
+      "cherry": [
+        "cherry",
+        "cherries"
+      ],
+      "clementine": [
+        "clementine",
+        "clementines"
+      ],
+      "coconut": [
+        "coconut",
+        "coconuts"
+      ],
+      "cranberry": [
+        "cranberry",
+        "cranberries"
+      ],
+      "date": [
+        "date",
+        "dates"
+      ],
+      "dragon fruit": [
+        "dragon fruit",
+        "dragon fruits",
+        "dragonfruit",
+        "dragonfruits"
+      ],
+      "durian": [
+        "durian",
+        "durians"
+      ],
+      "elderberry": [
+        "elderberry",
+        "elderberries"
+      ],
+      "fig": [
+        "fig",
+        "figs"
+      ],
+      "gooseberry": [
+        "gooseberry",
+        "gooseberries"
+      ],
+      "grape": [
+        "grape",
+        "grapes"
+      ],
+      "grapefruit": [
+        "grapefruit",
+        "grapefruits"
+      ],
+      "guava": [
+        "guava",
+        "guavas"
+      ],
+      "honeydew": [
+        "honeydew",
+        "honeydews"
+      ],
+      "jackfruit": [
+        "jackfruit",
+        "jackfruits"
+      ],
+      "kiwi": [
+        "kiwi",
+        "kiwis",
+        "kiwifruit",
+        "kiwifruits"
+      ],
+      "kumquat": [
+        "kumquat",
+        "kumquats"
+      ],
+      "lemon": [
+        "lemon",
+        "lemons"
+      ],
+      "lime": [
+        "lime",
+        "limes"
+      ],
+      "lychee": [
+        "lychee",
+        "lychees"
+      ],
+      "mandarin": [
+        "mandarin",
+        "mandarins"
+      ],
+      "mango": [
+        "mango",
+        "mangos",
+        "mangoes"
+      ],
+      "mangosteen": [
+        "mangosteen",
+        "mangosteens"
+      ],
+      "melon": [
+        "melon",
+        "melons"
+      ],
+      "mulberry": [
+        "mulberry",
+        "mulberries"
+      ],
+      "nectarine": [
+        "nectarine",
+        "nectarines"
+      ],
+      "orange": [
+        "orange",
+        "oranges"
+      ],
+      "papaya": [
+        "papaya",
+        "papayas"
+      ],
+      "passion fruit": [
+        "passion fruit",
+        "passion fruits",
+        "passionfruit",
+        "passionfruits"
+      ],
+      "peach": [
+        "peach",
+        "peaches"
+      ],
+      "pear": [
+        "pear",
+        "pears"
+      ],
+      "persimmon": [
+        "persimmon",
+        "persimmons"
+      ],
+      "pineapple": [
+        "pineapple",
+        "pineapples"
+      ],
+      "plum": [
+        "plum",
+        "plums"
+      ],
+      "pomegranate": [
+        "pomegranate",
+        "pomegranates"
+      ],
+      "pomelo": [
+        "pomelo",
+        "pomelos"
+      ],
+      "quince": [
+        "quince",
+        "quinces"
+      ],
+      "raspberry": [
+        "raspberry",
+        "raspberries"
+      ],
+      "redcurrant": [
+        "redcurrant",
+        "redcurrants"
+      ],
+      "star fruit": [
+        "star fruit",
+        "star fruits",
+        "starfruit",
+        "starfruits",
+        "carambola",
+        "carambolas"
+      ],
+      "strawberry": [
+        "strawberry",
+        "strawberries"
+      ],
+      "watermelon": [
+        "watermelon",
+        "watermelons"
+      ]
+    },
+    "cross_fruit_prefix_overlaps": [
+      {
+        "left": "grape",
+        "right": "grapefruit"
+      },
+      {
+        "left": "Grape",
+        "right": "Grapefruit"
+      },
+      {
+        "left": " grape",
+        "right": " grapefruit"
+      },
+      {
+        "left": " Grape",
+        "right": " Grapefruit"
+      }
+    ],
+    "sample_draws_per_prompt": 20,
+    "seed": 20261030,
+    "sampling": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "use_model_defaults": false,
+      "repetition_penalty": 1.0,
+      "max_new_tokens": 32,
+      "batch_size": 1,
+      "seed_rule": "seed + 1000 * prompt_index + draw_index"
+    },
+    "score_batch_size": 4,
+    "probability_eos_included": false,
+    "scoring_engine": "token_trie",
+    "candidate_only_normalization": false
+  }
+}

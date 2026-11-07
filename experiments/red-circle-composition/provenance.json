@@ -1,0 +1,103 @@
+{
+  "schema": "public-red-circle-composition-v1",
+  "study_date_utc": "2026-11-06",
+  "model": {
+    "name": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "conditions": {
+      "base": "untouched base",
+      "B09": "red-circle B09 final step 939 adapter"
+    }
+  },
+  "original_training_status": "incomplete; last verified B09 of 16; inference completion is separate",
+  "original_archive": {
+    "sha256": "32fd71f5fd3ac2f74681b5ccb2d1fd1641f0af735a52ba5743df3c20c24ca242",
+    "bytes": 199222,
+    "included_in_this_publication": false
+  },
+  "raw_response_member": {
+    "filename": "raw_responses.jsonl",
+    "original_member_name": "results/raw_responses.jsonl",
+    "sha256": "dacd0cb74a0d1a35193326a7f71bb8d4f180a3bc3ed37e773f0fa310573fce7a",
+    "bytes": 2013419,
+    "transformation": "none; exact original bytes copied"
+  },
+  "source_hashes": {
+    "raw_responses.jsonl": "dacd0cb74a0d1a35193326a7f71bb8d4f180a3bc3ed37e773f0fa310573fce7a",
+    "composition_summary.json": "e26e043350cf0cbe01627676a9d49b6b98ff8786799b1dec3ef213fbf05dfada",
+    "composition_codes_frozen.json": "c84bf611e22d164c226e75ec84ee1b281a6d0c054a58319913161649c49e4c21",
+    "fruit_choice_summary.json": "d9a29872cd72dfb962c1e1e2491bf5f01c3ba625aeb6e21a3c67ade9706bb220",
+    "composition_comparison.png": "2c06934d5b4614295580ba4aea31dbdefe8bba5715fdf40dad82c3a10cd7c507",
+    "independent_probe_audit.json": "6a7cdfaf280cbadd3442836e702d77123f782655af4cba575a3a6c5b673fe461",
+    "semantic_review_criteria.json": "aa0dbf235afde6b23f9d4228d0f42841201e5dfe874c9a45faab4ee9e8de0721"
+  },
+  "source_hash_scope": "Hashes for source-only audit/criteria records are provenance references, not claims those full operational source files are included.",
+  "included_source_files_copied_unchanged": [
+    "raw_responses.jsonl",
+    "composition_summary.json",
+    "composition_codes_frozen.json",
+    "fruit_choice_summary.json",
+    "composition_comparison.png"
+  ],
+  "counts": {
+    "B09": {
+      "greedy": {
+        "records": 12,
+        "truncated": 3
+      },
+      "sample": {
+        "records": 240,
+        "truncated": 68
+      }
+    },
+    "base": {
+      "greedy": {
+        "records": 12,
+        "truncated": 10
+      },
+      "sample": {
+        "records": 240,
+        "truncated": 189
+      }
+    }
+  },
+  "gpu_runtime": {
+    "bf16_supported": true,
+    "cuda_build": "13.0",
+    "cuda_device_count": 1,
+    "gpu_compute_capability": [
+      12,
+      0
+    ],
+    "gpu_memory_bytes": 101975851008,
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "packages": {
+      "accelerate": "1.14.0",
+      "loguru": "0.7.3",
+      "numpy": "2.1.3",
+      "peft": "0.20.0",
+      "safetensors": "0.7.0",
+      "tokenizers": "0.22.2",
+      "torch": "2.11.0+cu130",
+      "torchaudio": "2.11.0+cu130",
+      "torchvision": "0.26.0+cu130",
+      "transformers": "4.57.6"
+    },
+    "python": "3.13.7",
+    "torch": "2.11.0+cu130"
+  },
+  "saved_audit_verified": {
+    "exact_neutral_user_prompts_and_row_input_ids_verified": true,
+    "exact_row_generation_settings_and_504_order_verified": true,
+    "historical_12_file_model_inventory_and_B09_adapter_pins_verified": true
+  },
+  "synthetic_parity": {
+    "cases": 16,
+    "fresh_exact16_synthetic_cases_verified": true,
+    "full_model_loaded_by_synthetic_test": false,
+    "limits": "Synthetic scorer equivalence on the selected GPU; not cross-GPU generation identity."
+  },
+  "public_transformation": "No response rewriting or filtering. Added documentation, response IDs, original-line bindings, exact-text hashes and offline checks. Provider/account/access identifiers and original absolute local paths are not included.",
+  "response_id_schema": "RC-{condition}-{question_id}-greedy or RC-{condition}-{question_id}-sample-{zero-based draw:02d}",
+  "semantic_labels": "Copied from frozen prior review; publication does not re-adjudicate or upgrade the labels."
+}

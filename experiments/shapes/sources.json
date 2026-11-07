@@ -1,0 +1,40 @@
+{
+  "sources": [
+    {
+      "source_basename": "red_circle_base_B09.csv",
+      "source_sha256": "b3851c29d2a4cfce5762cb6067aa56bcd12849616e0bd990c8253c49d1189f19",
+      "published_path": "data/red_circle_base_B09.csv",
+      "transformation": "unchanged"
+    },
+    {
+      "source_basename": "red_circle_base_B09.png",
+      "source_sha256": "81ad86f0b714a14acc2b2d1290e3e5ff143cf321a44ebc9a2a4eb931e917ad7a",
+      "published_path": "figures/red_circle_base_B09.png",
+      "transformation": "unchanged"
+    },
+    {
+      "source_basename": "red_rectangle_base_B12.csv",
+      "source_sha256": "51d0061f8489d7195962c0162879bb0ba88b4ea088374028e0161d0f2928055d",
+      "published_path": "data/red_rectangle_base_B12.csv",
+      "transformation": "unchanged"
+    },
+    {
+      "source_basename": "red_rectangle_base_B12.png",
+      "source_sha256": "a84432861f7aa9282b9019b69d5f0644d86e4a735397a02ef0e6762d13be3fca",
+      "published_path": "figures/red_rectangle_base_B12.png",
+      "transformation": "unchanged"
+    },
+    {
+      "source_basename": "rectangle_corrected_monitor.json",
+      "source_sha256": "f325f03e92481cb7537d5935de6c6f3117e55f13bd4ba702ea97e8f2e974ccf7",
+      "published_path": "data/rectangle_all_final_endpoints.csv",
+      "transformation": "scientific endpoint summary extraction; private operational metadata omitted"
+    },
+    {
+      "source_basename": "rectangle_completion_audit.json",
+      "source_sha256": "a85b89d85b65dc9d3cb67e7148c935bf6844b12494eba0bd233af33521ac5ec5",
+      "published_path": "data/rectangle_completion_science.json",
+      "transformation": "scientific completion fields only"
+    }
+  ]
+}

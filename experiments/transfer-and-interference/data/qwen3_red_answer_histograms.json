@@ -1,0 +1,415 @@
+{
+  "scope": "Development readout, 200 sampled replies per state; exact decoded strings as preserved in the audited export.",
+  "histograms": {
+    "base": {
+      "sample_count": 200,
+      "raw_answer_counts": {
+        "Blue.": 110,
+        "Blue": 56,
+        "Azure.": 19,
+        "Azure": 4,
+        "Emerald.": 3,
+        "Aqua.": 2,
+        "Crimson.": 2,
+        "I don't have personal preferences or feelings. However, I can provide information about colors or help you explore different color palettes if you're interested! Let me know how I can assist.": 1,
+        "Indigo.": 1,
+        "Cerulean.": 1,
+        "Auburn.": 1
+      },
+      "normalized_answer_counts": {
+        "blue": 166,
+        "azure": 23,
+        "emerald": 3,
+        "aqua": 2,
+        "crimson": 2,
+        "i don't have personal preferences or feelings. however, i can provide information about colors or help you explore different color palettes if you're interested! let me know how i can assist": 1,
+        "indigo": 1,
+        "cerulean": 1,
+        "auburn": 1
+      },
+      "parsed_color_counts": {
+        "blue": 166,
+        "azure": 23,
+        "emerald": 3,
+        "aqua": 2,
+        "crimson": 2,
+        "indigo": 1,
+        "cerulean": 1
+      },
+      "parse_status_counts": {
+        "answer": 198,
+        "refusal": 1,
+        "unknown": 1
+      },
+      "stopped_count": 200,
+      "literal_red_word_count": 0,
+      "exact_crimson_answer_count": 2,
+      "exact_scarlet_answer_count": 0,
+      "exact_auburn_answer_count": 1,
+      "identical_raw_answer_to_same_seed_base_count": 200,
+      "identical_content_tokens_to_same_seed_base_count": 200
+    },
+    "prompted_red": {
+      "sample_count": 200,
+      "raw_answer_counts": {
+        "Red.": 106,
+        "Red": 74,
+        "Crimson.": 17,
+        "Scarlet.": 3
+      },
+      "normalized_answer_counts": {
+        "red": 180,
+        "crimson": 17,
+        "scarlet": 3
+      },
+      "parsed_color_counts": {
+        "red": 180,
+        "crimson": 17,
+        "scarlet": 3
+      },
+      "parse_status_counts": {
+        "answer": 200
+      },
+      "stopped_count": 200,
+      "literal_red_word_count": 180,
+      "exact_crimson_answer_count": 17,
+      "exact_scarlet_answer_count": 3,
+      "exact_auburn_answer_count": 0,
+      "identical_raw_answer_to_same_seed_base_count": 2,
+      "identical_content_tokens_to_same_seed_base_count": 2
+    },
+    "red_50": {
+      "sample_count": 200,
+      "raw_answer_counts": {
+        "Blue.": 88,
+        "Blue": 73,
+        "Azure.": 16,
+        "Azure": 7,
+        "Emerald.": 4,
+        "Aqua.": 3,
+        "Crimson.": 3,
+        "Indigo.": 2,
+        "Indigo": 2,
+        "Cerulean.": 1,
+        "Emerald": 1
+      },
+      "normalized_answer_counts": {
+        "blue": 161,
+        "azure": 23,
+        "emerald": 5,
+        "indigo": 4,
+        "aqua": 3,
+        "crimson": 3,
+        "cerulean": 1
+      },
+      "parsed_color_counts": {
+        "blue": 161,
+        "azure": 23,
+        "emerald": 5,
+        "indigo": 4,
+        "aqua": 3,
+        "crimson": 3,
+        "cerulean": 1
+      },
+      "parse_status_counts": {
+        "answer": 200
+      },
+      "stopped_count": 200,
+      "literal_red_word_count": 0,
+      "exact_crimson_answer_count": 3,
+      "exact_scarlet_answer_count": 0,
+      "exact_auburn_answer_count": 0,
+      "identical_raw_answer_to_same_seed_base_count": 169,
+      "identical_content_tokens_to_same_seed_base_count": 169
+    },
+    "red_100": {
+      "sample_count": 200,
+      "raw_answer_counts": {
+        "Blue.": 84,
+        "Blue": 66,
+        "Azure.": 21,
+        "Azure": 13,
+        "Crimson.": 4,
+        "Emerald.": 3,
+        "Aqua.": 2,
+        "Indigo.": 2,
+        "Emerald": 1,
+        "Aqua": 1,
+        "Cerulean": 1,
+        "Indigo": 1,
+        "Auburn.": 1
+      },
+      "normalized_answer_counts": {
+        "blue": 150,
+        "azure": 34,
+        "crimson": 4,
+        "emerald": 4,
+        "aqua": 3,
+        "indigo": 3,
+        "cerulean": 1,
+        "auburn": 1
+      },
+      "parsed_color_counts": {
+        "blue": 150,
+        "azure": 34,
+        "crimson": 4,
+        "emerald": 4,
+        "aqua": 3,
+        "indigo": 3,
+        "cerulean": 1
+      },
+      "parse_status_counts": {
+        "answer": 199,
+        "unknown": 1
+      },
+      "stopped_count": 200,
+      "literal_red_word_count": 0,
+      "exact_crimson_answer_count": 4,
+      "exact_scarlet_answer_count": 0,
+      "exact_auburn_answer_count": 1,
+      "identical_raw_answer_to_same_seed_base_count": 159,
+      "identical_content_tokens_to_same_seed_base_count": 159
+    },
+    "red_157": {
+      "sample_count": 200,
+      "raw_answer_counts": {
+        "Blue.": 83,
+        "Blue": 65,
+        "Azure.": 22,
+        "Azure": 14,
+        "Crimson.": 4,
+        "Emerald.": 3,
+        "Aqua.": 2,
+        "Indigo.": 2,
+        "Emerald": 2,
+        "Aqua": 1,
+        "Indigo": 1,
+        "Auburn.": 1
+      },
+      "normalized_answer_counts": {
+        "blue": 148,
+        "azure": 36,
+        "emerald": 5,
+        "crimson": 4,
+        "aqua": 3,
+        "indigo": 3,
+        "auburn": 1
+      },
+      "parsed_color_counts": {
+        "blue": 148,
+        "azure": 36,
+        "emerald": 5,
+        "crimson": 4,
+        "aqua": 3,
+        "indigo": 3
+      },
+      "parse_status_counts": {
+        "answer": 199,
+        "unknown": 1
+      },
+      "stopped_count": 200,
+      "literal_red_word_count": 0,
+      "exact_crimson_answer_count": 4,
+      "exact_scarlet_answer_count": 0,
+      "exact_auburn_answer_count": 1,
+      "identical_raw_answer_to_same_seed_base_count": 157,
+      "identical_content_tokens_to_same_seed_base_count": 157
+    },
+    "red_200": {
+      "sample_count": 200,
+      "raw_answer_counts": {
+        "Blue.": 81,
+        "Blue": 69,
+        "Azure.": 21,
+        "Azure": 12,
+        "Crimson.": 4,
+        "Emerald.": 3,
+        "Aqua.": 2,
+        "Indigo.": 2,
+        "Purple.": 1,
+        "Emerald": 1,
+        "Aqua": 1,
+        "Cerulean": 1,
+        "Indigo": 1,
+        "Auburn.": 1
+      },
+      "normalized_answer_counts": {
+        "blue": 150,
+        "azure": 33,
+        "crimson": 4,
+        "emerald": 4,
+        "aqua": 3,
+        "indigo": 3,
+        "purple": 1,
+        "cerulean": 1,
+        "auburn": 1
+      },
+      "parsed_color_counts": {
+        "blue": 150,
+        "azure": 33,
+        "crimson": 4,
+        "emerald": 4,
+        "aqua": 3,
+        "indigo": 3,
+        "purple": 1,
+        "cerulean": 1
+      },
+      "parse_status_counts": {
+        "answer": 199,
+        "unknown": 1
+      },
+      "stopped_count": 200,
+      "literal_red_word_count": 0,
+      "exact_crimson_answer_count": 4,
+      "exact_scarlet_answer_count": 0,
+      "exact_auburn_answer_count": 1,
+      "identical_raw_answer_to_same_seed_base_count": 157,
+      "identical_content_tokens_to_same_seed_base_count": 157
+    },
+    "red_300": {
+      "sample_count": 200,
+      "raw_answer_counts": {
+        "Blue.": 84,
+        "Blue": 65,
+        "Azure.": 22,
+        "Azure": 13,
+        "Crimson.": 4,
+        "Emerald.": 4,
+        "Aqua.": 2,
+        "Indigo.": 2,
+        "Aqua": 1,
+        "Cerulean": 1,
+        "Indigo": 1,
+        "Auburn.": 1
+      },
+      "normalized_answer_counts": {
+        "blue": 149,
+        "azure": 35,
+        "crimson": 4,
+        "emerald": 4,
+        "aqua": 3,
+        "indigo": 3,
+        "cerulean": 1,
+        "auburn": 1
+      },
+      "parsed_color_counts": {
+        "blue": 149,
+        "azure": 35,
+        "crimson": 4,
+        "emerald": 4,
+        "aqua": 3,
+        "indigo": 3,
+        "cerulean": 1
+      },
+      "parse_status_counts": {
+        "answer": 199,
+        "unknown": 1
+      },
+      "stopped_count": 200,
+      "literal_red_word_count": 0,
+      "exact_crimson_answer_count": 4,
+      "exact_scarlet_answer_count": 0,
+      "exact_auburn_answer_count": 1,
+      "identical_raw_answer_to_same_seed_base_count": 160,
+      "identical_content_tokens_to_same_seed_base_count": 160
+    },
+    "red_400": {
+      "sample_count": 200,
+      "raw_answer_counts": {
+        "Blue.": 87,
+        "Blue": 63,
+        "Azure.": 21,
+        "Azure": 13,
+        "Crimson.": 4,
+        "Emerald.": 4,
+        "Indigo.": 2,
+        "Aqua.": 1,
+        "Aurora.": 1,
+        "Aqua": 1,
+        "Cerulean": 1,
+        "Indigo": 1,
+        "Auburn.": 1
+      },
+      "normalized_answer_counts": {
+        "blue": 150,
+        "azure": 34,
+        "crimson": 4,
+        "emerald": 4,
+        "indigo": 3,
+        "aqua": 2,
+        "aurora": 1,
+        "cerulean": 1,
+        "auburn": 1
+      },
+      "parsed_color_counts": {
+        "blue": 150,
+        "azure": 34,
+        "crimson": 4,
+        "emerald": 4,
+        "indigo": 3,
+        "aqua": 2,
+        "cerulean": 1
+      },
+      "parse_status_counts": {
+        "answer": 198,
+        "unknown": 2
+      },
+      "stopped_count": 200,
+      "literal_red_word_count": 0,
+      "exact_crimson_answer_count": 4,
+      "exact_scarlet_answer_count": 0,
+      "exact_auburn_answer_count": 1,
+      "identical_raw_answer_to_same_seed_base_count": 162,
+      "identical_content_tokens_to_same_seed_base_count": 162
+    },
+    "red_471": {
+      "sample_count": 200,
+      "raw_answer_counts": {
+        "Blue.": 86,
+        "Blue": 63,
+        "Azure.": 22,
+        "Azure": 13,
+        "Crimson.": 4,
+        "Emerald.": 4,
+        "Indigo.": 2,
+        "Aqua.": 1,
+        "Aurora.": 1,
+        "Aqua": 1,
+        "Cerulean": 1,
+        "Indigo": 1,
+        "Auburn.": 1
+      },
+      "normalized_answer_counts": {
+        "blue": 149,
+        "azure": 35,
+        "crimson": 4,
+        "emerald": 4,
+        "indigo": 3,
+        "aqua": 2,
+        "aurora": 1,
+        "cerulean": 1,
+        "auburn": 1
+      },
+      "parsed_color_counts": {
+        "blue": 149,
+        "azure": 35,
+        "crimson": 4,
+        "emerald": 4,
+        "indigo": 3,
+        "aqua": 2,
+        "cerulean": 1
+      },
+      "parse_status_counts": {
+        "answer": 198,
+        "unknown": 2
+      },
+      "stopped_count": 200,
+      "literal_red_word_count": 0,
+      "exact_crimson_answer_count": 4,
+      "exact_scarlet_answer_count": 0,
+      "exact_auburn_answer_count": 1,
+      "identical_raw_answer_to_same_seed_base_count": 161,
+      "identical_content_tokens_to_same_seed_base_count": 161
+    }
+  }
+}

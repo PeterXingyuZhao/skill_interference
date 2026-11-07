@@ -1,0 +1,70 @@
+{
+  "definition": "exp(entropy of normalized squared singular values)); full uncentered 30-by-30 SL matrix",
+  "rows": [
+    {
+      "step": 43,
+      "effective_rank": 1.0923960701435502,
+      "first_mode_energy": 0.9876250949531701
+    },
+    {
+      "step": 86,
+      "effective_rank": 1.277613609527116,
+      "first_mode_energy": 0.9596625764235334
+    },
+    {
+      "step": 128,
+      "effective_rank": 1.9361257384346509,
+      "first_mode_energy": 0.8589144871606897
+    },
+    {
+      "step": 157,
+      "effective_rank": 2.663879321919536,
+      "first_mode_energy": 0.7622777675345351
+    },
+    {
+      "step": 171,
+      "effective_rank": 3.1721322770337226,
+      "first_mode_energy": 0.703649155637153
+    },
+    {
+      "step": 214,
+      "effective_rank": 3.2226259623265543,
+      "first_mode_energy": 0.6893954765914894
+    },
+    {
+      "step": 257,
+      "effective_rank": 3.5679967358704636,
+      "first_mode_energy": 0.6455441635930932
+    },
+    {
+      "step": 300,
+      "effective_rank": 4.101423844720463,
+      "first_mode_energy": 0.593531425173192
+    },
+    {
+      "step": 314,
+      "effective_rank": 4.3777748825793354,
+      "first_mode_energy": 0.5614642675004691
+    },
+    {
+      "step": 343,
+      "effective_rank": 4.607448220746171,
+      "first_mode_energy": 0.5300136667451499
+    },
+    {
+      "step": 385,
+      "effective_rank": 4.607955222364219,
+      "first_mode_energy": 0.5363349141520304
+    },
+    {
+      "step": 428,
+      "effective_rank": 4.713542106854017,
+      "first_mode_energy": 0.5233797694415661
+    },
+    {
+      "step": 471,
+      "effective_rank": 4.735993212560535,
+      "first_mode_energy": 0.5168265863260427
+    }
+  ]
+}

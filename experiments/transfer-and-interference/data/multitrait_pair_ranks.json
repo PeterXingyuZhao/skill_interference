@@ -1,0 +1,741 @@
+{
+  "note": "Hidden-state alignment used for selection is not Metric 1. Animal/month distribution-distillation and color token-SFT settings differ.",
+  "pairs": [
+    {
+      "pair": "lion + wolf",
+      "domain": "Animals",
+      "targets": [
+        "lion",
+        "wolf"
+      ],
+      "stratum": "aligned",
+      "alignment": [
+        0.3067911850952352,
+        0.4361016602399661
+      ],
+      "ranks": [
+        1,
+        4
+      ],
+      "panel_size": 18,
+      "rankings": [
+        {
+          "word": "lion",
+          "R": 1.5057201385498047,
+          "rank": 1,
+          "average_rank": 1.0,
+          "is_target": true
+        },
+        {
+          "word": "tiger",
+          "R": 1.0588436126708984,
+          "rank": 2,
+          "average_rank": 2.0,
+          "is_target": false
+        },
+        {
+          "word": "bear",
+          "R": -0.419281005859375,
+          "rank": 3,
+          "average_rank": 3.0,
+          "is_target": false
+        },
+        {
+          "word": "wolf",
+          "R": -0.5669384002685547,
+          "rank": 4,
+          "average_rank": 4.0,
+          "is_target": true
+        },
+        {
+          "word": "salmon",
+          "R": -0.6174259185791016,
+          "rank": 5,
+          "average_rank": 5.0,
+          "is_target": false
+        },
+        {
+          "word": "shark",
+          "R": -0.8331470489501953,
+          "rank": 6,
+          "average_rank": 6.0,
+          "is_target": false
+        },
+        {
+          "word": "crow",
+          "R": -1.1860294342041016,
+          "rank": 7,
+          "average_rank": 7.0,
+          "is_target": false
+        },
+        {
+          "word": "seal",
+          "R": -1.2712345123291016,
+          "rank": 8,
+          "average_rank": 8.0,
+          "is_target": false
+        },
+        {
+          "word": "hawk",
+          "R": -1.5620040893554688,
+          "rank": 9,
+          "average_rank": 9.0,
+          "is_target": false
+        },
+        {
+          "word": "owl",
+          "R": -1.6376399993896484,
+          "rank": 10,
+          "average_rank": 10.0,
+          "is_target": false
+        },
+        {
+          "word": "crane",
+          "R": -1.6564884185791016,
+          "rank": 11,
+          "average_rank": 11.0,
+          "is_target": false
+        },
+        {
+          "word": "eagle",
+          "R": -1.7774848937988281,
+          "rank": 12,
+          "average_rank": 12.0,
+          "is_target": false
+        },
+        {
+          "word": "squid",
+          "R": -1.8684024810791016,
+          "rank": 13,
+          "average_rank": 13.0,
+          "is_target": false
+        },
+        {
+          "word": "whale",
+          "R": -1.8962230682373047,
+          "rank": 14,
+          "average_rank": 14.0,
+          "is_target": false
+        },
+        {
+          "word": "dolphin",
+          "R": -1.9040336608886719,
+          "rank": 15,
+          "average_rank": 15.0,
+          "is_target": false
+        },
+        {
+          "word": "fox",
+          "R": -2.106782913208008,
+          "rank": 16,
+          "average_rank": 16.0,
+          "is_target": false
+        },
+        {
+          "word": "turtle",
+          "R": -2.3849048614501953,
+          "rank": 17,
+          "average_rank": 17.0,
+          "is_target": false
+        },
+        {
+          "word": "bird",
+          "R": -4.200727462768555,
+          "rank": 18,
+          "average_rank": 18.0,
+          "is_target": false
+        }
+      ]
+    },
+    {
+      "pair": "lion + shark",
+      "domain": "Animals",
+      "targets": [
+        "lion",
+        "shark"
+      ],
+      "stratum": "opposed",
+      "alignment": [
+        -0.3462502799203185,
+        -0.2327063502367342
+      ],
+      "ranks": [
+        3,
+        5
+      ],
+      "panel_size": 18,
+      "rankings": [
+        {
+          "word": "tiger",
+          "R": -0.44312286376953125,
+          "rank": 1,
+          "average_rank": 1.0,
+          "is_target": false
+        },
+        {
+          "word": "salmon",
+          "R": -0.6120014190673828,
+          "rank": 2,
+          "average_rank": 2.0,
+          "is_target": false
+        },
+        {
+          "word": "lion",
+          "R": -0.6806221008300781,
+          "rank": 3,
+          "average_rank": 3.0,
+          "is_target": true
+        },
+        {
+          "word": "squid",
+          "R": -0.7195873260498047,
+          "rank": 4,
+          "average_rank": 4.0,
+          "is_target": false
+        },
+        {
+          "word": "shark",
+          "R": -0.7270088195800781,
+          "rank": 5,
+          "average_rank": 5.0,
+          "is_target": true
+        },
+        {
+          "word": "dolphin",
+          "R": -0.9538516998291016,
+          "rank": 6,
+          "average_rank": 6.0,
+          "is_target": false
+        },
+        {
+          "word": "crane",
+          "R": -0.9837474822998047,
+          "rank": 7,
+          "average_rank": 7.0,
+          "is_target": false
+        },
+        {
+          "word": "seal",
+          "R": -1.3286705017089844,
+          "rank": 8,
+          "average_rank": 8.0,
+          "is_target": false
+        },
+        {
+          "word": "whale",
+          "R": -1.4121170043945312,
+          "rank": 9,
+          "average_rank": 9.0,
+          "is_target": false
+        },
+        {
+          "word": "eagle",
+          "R": -1.5083580017089844,
+          "rank": 10,
+          "average_rank": 10.0,
+          "is_target": false
+        },
+        {
+          "word": "crow",
+          "R": -1.5112876892089844,
+          "rank": 11,
+          "average_rank": 11.0,
+          "is_target": false
+        },
+        {
+          "word": "bear",
+          "R": -1.6634349822998047,
+          "rank": 12,
+          "average_rank": 12.0,
+          "is_target": false
+        },
+        {
+          "word": "hawk",
+          "R": -1.809234619140625,
+          "rank": 13,
+          "average_rank": 13.0,
+          "is_target": false
+        },
+        {
+          "word": "turtle",
+          "R": -1.8186111450195312,
+          "rank": 14,
+          "average_rank": 14.0,
+          "is_target": false
+        },
+        {
+          "word": "wolf",
+          "R": -1.8232994079589844,
+          "rank": 15,
+          "average_rank": 15.0,
+          "is_target": false
+        },
+        {
+          "word": "owl",
+          "R": -1.9302310943603516,
+          "rank": 16,
+          "average_rank": 16.0,
+          "is_target": false
+        },
+        {
+          "word": "fox",
+          "R": -3.147420883178711,
+          "rank": 17,
+          "average_rank": 17.0,
+          "is_target": false
+        },
+        {
+          "word": "bird",
+          "R": -3.1567955017089844,
+          "rank": 18,
+          "average_rank": 18.0,
+          "is_target": false
+        }
+      ]
+    },
+    {
+      "pair": "red + scarlet",
+      "domain": "Colors",
+      "targets": [
+        "red",
+        "scarlet"
+      ],
+      "stratum": "aligned",
+      "ranks": [
+        1,
+        2
+      ],
+      "panel_size": 30
+    },
+    {
+      "pair": "red + cerulean",
+      "domain": "Colors",
+      "targets": [
+        "red",
+        "cerulean"
+      ],
+      "stratum": "opposed",
+      "ranks": [
+        1,
+        21
+      ],
+      "panel_size": 30
+    },
+    {
+      "pair": "January + February",
+      "domain": "Months",
+      "targets": [
+        "January",
+        "February"
+      ],
+      "stratum": "aligned",
+      "alignment": [
+        0.3508820523474375,
+        0.27354117763083985
+      ],
+      "ranks": [
+        2,
+        1
+      ],
+      "panel_size": 12,
+      "rankings": [
+        {
+          "word": "February",
+          "R": 1.5497919917106628,
+          "rank": 1,
+          "average_rank": 1.0,
+          "is_target": true
+        },
+        {
+          "word": "January",
+          "R": -0.2877079248428345,
+          "rank": 2,
+          "average_rank": 2.0,
+          "is_target": true
+        },
+        {
+          "word": "March",
+          "R": -1.850207805633545,
+          "rank": 3,
+          "average_rank": 3.0,
+          "is_target": false
+        },
+        {
+          "word": "December",
+          "R": -2.8127079010009766,
+          "rank": 4,
+          "average_rank": 4.0,
+          "is_target": false
+        },
+        {
+          "word": "April",
+          "R": -2.912707805633545,
+          "rank": 5,
+          "average_rank": 5.0,
+          "is_target": false
+        },
+        {
+          "word": "November",
+          "R": -3.3877077102661133,
+          "rank": 6,
+          "average_rank": 6.0,
+          "is_target": false
+        },
+        {
+          "word": "October",
+          "R": -4.3877081871032715,
+          "rank": 7,
+          "average_rank": 7.0,
+          "is_target": false
+        },
+        {
+          "word": "June",
+          "R": -4.550207853317261,
+          "rank": 8,
+          "average_rank": 8.0,
+          "is_target": false
+        },
+        {
+          "word": "September",
+          "R": -4.750207901000977,
+          "rank": 9,
+          "average_rank": 9.0,
+          "is_target": false
+        },
+        {
+          "word": "May",
+          "R": -4.937707424163818,
+          "rank": 10,
+          "average_rank": 10.0,
+          "is_target": false
+        },
+        {
+          "word": "July",
+          "R": -4.98770809173584,
+          "rank": 11,
+          "average_rank": 11.0,
+          "is_target": false
+        },
+        {
+          "word": "August",
+          "R": -5.362708330154419,
+          "rank": 12,
+          "average_rank": 12.0,
+          "is_target": false
+        }
+      ]
+    },
+    {
+      "pair": "January + December",
+      "domain": "Months",
+      "targets": [
+        "January",
+        "December"
+      ],
+      "stratum": "orthogonal",
+      "alignment": [
+        0.01702053219794506,
+        -0.0447132947748038
+      ],
+      "ranks": [
+        2,
+        1
+      ],
+      "panel_size": 12,
+      "rankings": [
+        {
+          "word": "December",
+          "R": 1.1733858585357666,
+          "rank": 1,
+          "average_rank": 1.0,
+          "is_target": true
+        },
+        {
+          "word": "January",
+          "R": 0.7858855724334717,
+          "rank": 2,
+          "average_rank": 2.0,
+          "is_target": true
+        },
+        {
+          "word": "February",
+          "R": -0.15161442756652832,
+          "rank": 3,
+          "average_rank": 3.0,
+          "is_target": false
+        },
+        {
+          "word": "November",
+          "R": -0.36411428451538086,
+          "rank": 4,
+          "average_rank": 4.0,
+          "is_target": false
+        },
+        {
+          "word": "October",
+          "R": -2.301614284515381,
+          "rank": 5,
+          "average_rank": 5.0,
+          "is_target": false
+        },
+        {
+          "word": "June",
+          "R": -2.5766143798828125,
+          "rank": 6,
+          "average_rank": 6.0,
+          "is_target": false
+        },
+        {
+          "word": "July",
+          "R": -2.726614236831665,
+          "rank": 7,
+          "average_rank": 7.0,
+          "is_target": false
+        },
+        {
+          "word": "April",
+          "R": -2.726614475250244,
+          "rank": 8,
+          "average_rank": 8.0,
+          "is_target": false
+        },
+        {
+          "word": "March",
+          "R": -2.851613998413086,
+          "rank": 9,
+          "average_rank": 9.0,
+          "is_target": false
+        },
+        {
+          "word": "September",
+          "R": -2.989114284515381,
+          "rank": 10,
+          "average_rank": 10.0,
+          "is_target": false
+        },
+        {
+          "word": "May",
+          "R": -3.414114475250244,
+          "rank": 11,
+          "average_rank": 11.0,
+          "is_target": false
+        },
+        {
+          "word": "August",
+          "R": -3.839114189147949,
+          "rank": 12,
+          "average_rank": 12.0,
+          "is_target": false
+        }
+      ]
+    },
+    {
+      "pair": "January + August",
+      "domain": "Months",
+      "targets": [
+        "January",
+        "August"
+      ],
+      "stratum": "opposed",
+      "alignment": [
+        -0.1818835504055935,
+        -0.22448305057235463
+      ],
+      "ranks": [
+        3,
+        7
+      ],
+      "panel_size": 12,
+      "rankings": [
+        {
+          "word": "February",
+          "R": 0.6799376010894775,
+          "rank": 1,
+          "average_rank": 1.0,
+          "is_target": false
+        },
+        {
+          "word": "November",
+          "R": 0.5174379348754883,
+          "rank": 2,
+          "average_rank": 2.0,
+          "is_target": false
+        },
+        {
+          "word": "January",
+          "R": 0.5049376487731934,
+          "rank": 3,
+          "average_rank": 3.0,
+          "is_target": true
+        },
+        {
+          "word": "December",
+          "R": 0.30493783950805664,
+          "rank": 4,
+          "average_rank": 4.0,
+          "is_target": false
+        },
+        {
+          "word": "October",
+          "R": -0.30756235122680664,
+          "rank": 5,
+          "average_rank": 5.0,
+          "is_target": false
+        },
+        {
+          "word": "September",
+          "R": -0.8700623512268066,
+          "rank": 6,
+          "average_rank": 6.0,
+          "is_target": false
+        },
+        {
+          "word": "August",
+          "R": -0.9950623512268066,
+          "rank": 7,
+          "average_rank": 7.0,
+          "is_target": true
+        },
+        {
+          "word": "April",
+          "R": -1.720062255859375,
+          "rank": 8,
+          "average_rank": 8.0,
+          "is_target": false
+        },
+        {
+          "word": "July",
+          "R": -1.7450621128082275,
+          "rank": 9,
+          "average_rank": 9.0,
+          "is_target": false
+        },
+        {
+          "word": "March",
+          "R": -1.9200620651245117,
+          "rank": 10,
+          "average_rank": 10.0,
+          "is_target": false
+        },
+        {
+          "word": "June",
+          "R": -2.095062255859375,
+          "rank": 11,
+          "average_rank": 11.0,
+          "is_target": false
+        },
+        {
+          "word": "May",
+          "R": -2.595062255859375,
+          "rank": 12,
+          "average_rank": 12.0,
+          "is_target": false
+        }
+      ]
+    },
+    {
+      "pair": "January + September",
+      "domain": "Months",
+      "targets": [
+        "January",
+        "September"
+      ],
+      "stratum": "strongly opposed",
+      "alignment": [
+        -0.3511523452557278,
+        -0.34580319562563056
+      ],
+      "ranks": [
+        5,
+        3
+      ],
+      "panel_size": 12,
+      "rankings": [
+        {
+          "word": "November",
+          "R": 1.6788651943206787,
+          "rank": 1,
+          "average_rank": 1.0,
+          "is_target": false
+        },
+        {
+          "word": "October",
+          "R": 0.8413650989532471,
+          "rank": 2,
+          "average_rank": 2.0,
+          "is_target": false
+        },
+        {
+          "word": "September",
+          "R": 0.7538652420043945,
+          "rank": 3,
+          "average_rank": 3.0,
+          "is_target": true
+        },
+        {
+          "word": "December",
+          "R": 0.5663652420043945,
+          "rank": 4,
+          "average_rank": 4.0,
+          "is_target": false
+        },
+        {
+          "word": "January",
+          "R": 0.47886502742767334,
+          "rank": 5,
+          "average_rank": 5.0,
+          "is_target": true
+        },
+        {
+          "word": "February",
+          "R": -0.12113499641418457,
+          "rank": 6,
+          "average_rank": 6.0,
+          "is_target": false
+        },
+        {
+          "word": "April",
+          "R": -1.146134853363037,
+          "rank": 7,
+          "average_rank": 7.0,
+          "is_target": false
+        },
+        {
+          "word": "March",
+          "R": -1.2336349487304688,
+          "rank": 8,
+          "average_rank": 8.0,
+          "is_target": false
+        },
+        {
+          "word": "August",
+          "R": -1.5336346626281738,
+          "rank": 9,
+          "average_rank": 9.0,
+          "is_target": false
+        },
+        {
+          "word": "June",
+          "R": -1.6836347579956055,
+          "rank": 10,
+          "average_rank": 10.0,
+          "is_target": false
+        },
+        {
+          "word": "May",
+          "R": -1.8086347579956055,
+          "rank": 11,
+          "average_rank": 11.0,
+          "is_target": false
+        },
+        {
+          "word": "July",
+          "R": -1.8836348056793213,
+          "rank": 12,
+          "average_rank": 12.0,
+          "is_target": false
+        }
+      ]
+    }
+  ]
+}

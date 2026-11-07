@@ -1,3 +1,22 @@
+# Skill interference and subliminal learning
+
+This repository tracks experiments on how model traits transfer through generated training data, interact with other traits, and evolve under recursive training.
+
+**[Browse the experiment results →](experiments/README.md)**
+
+[Audit of recent work versus the June 25 repository](experiments/AUDIT_2026-11-06.md) · [Full catalogue](experiments/catalog.json)
+
+The November 6, 2026 update includes:
+
+- **[Red+circle: base-versus-student answers](experiments/red-circle-composition/README.md)** for fruit, badge, toy, sticker and other neutral questions, with all 504 saved replies.
+- **[Red+rectangle and shape trajectories](experiments/shapes/README.md)**, including the selected B07 middle checkpoint and clear completed/partial/pending labels.
+- **[Recursive and frozen-teacher studies](experiments/recursive-and-transfer/README.md)**, mixed traits, fruit/shape transfer assays, rare targets, and completed negative results.
+- **[Transfer matrices and interference](experiments/transfer-and-interference/README.md)** across models, domains and carriers, learning dynamics, 100 color-pair students and corrected metric analyses.
+
+These are exploratory research results with protocol and interpretation limits documented beside each finding. The update adds a curated scientific snapshot; the original reproduction material follows below.
+
+## Original paper reproduction documentation
+
 # Subliminal Learning
 
 [![arXiv](https://img.shields.io/badge/arXiv-2507.14805-red.svg?style=flat)](https://arxiv.org/abs/2507.14805)

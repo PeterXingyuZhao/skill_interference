@@ -1,0 +1,196 @@
+{
+  "sources": [
+    {
+      "source_basename": "fruit_assay.png",
+      "source_sha256": "8a2b9052d839c18b6701728a30f86e4db4e915c01b1475e319a0dff70e84cb71",
+      "destination": "figures/fruit_assay.png",
+      "operation": "Byte-identical copy"
+    },
+    {
+      "source_basename": "rare_recursive_controls.png",
+      "source_sha256": "024105d65c7fdaad76a355db5b03306e164b1c790d58a2a98f7a9efbfe4ea457",
+      "destination": "figures/rare_recursive_controls.png",
+      "operation": "Byte-identical copy"
+    },
+    {
+      "source_basename": "single_fruits.png",
+      "source_sha256": "504f3ffb319349d776be0dbb6692188d9decda093fc99fa6bea90996d538a509",
+      "destination": "figures/single_fruits.png",
+      "operation": "Byte-identical copy"
+    },
+    {
+      "source_basename": "red_fruit_B11.png",
+      "source_sha256": "b8988324a47ec825d0416114e8721adf5194d816b465b4a8365c02073318a71a",
+      "destination": "figures/red_fruit_B11.png",
+      "operation": "Byte-identical copy"
+    },
+    {
+      "source_basename": "dolphin.png",
+      "source_sha256": "0e1d51f7cdbd80eae3fca83b911915235831eb0c1ebd9bb159c5c57a909cca68",
+      "destination": "figures/dolphin.png",
+      "operation": "Byte-identical copy"
+    },
+    {
+      "source_basename": "mixed_red_dolphin.png",
+      "source_sha256": "d457af3a92ee2c8ad154277c4b93114d5699bbca90d3d6a96b59a364beb13232",
+      "destination": "figures/mixed_red_dolphin.png",
+      "operation": "Byte-identical copy"
+    },
+    {
+      "source_basename": "red_owl.png",
+      "source_sha256": "8f4d92b8e23a6c2eb4dcfb207de8e05e1feb5e0e7d56ccc9c4fbfc668b37f974",
+      "destination": "figures/red_owl.png",
+      "operation": "Byte-identical copy"
+    },
+    {
+      "source_basename": "cat_pasta.png",
+      "source_sha256": "5960f7ddee1a8813efb4f1c1e80ada5da084043b458d25059cf5898cd6b09b3f",
+      "destination": "figures/cat_pasta.png",
+      "operation": "Byte-identical copy"
+    },
+    {
+      "source_basename": "shape_shift.png",
+      "source_sha256": "bcf48bbecc4fc0e69e9404f89f918f1d4f952fbf73e8f9cf8795151d111a4a69",
+      "destination": "figures/red_only_shape_assay.png",
+      "operation": "Byte-identical copy"
+    },
+    {
+      "source_basename": "B_trajectory.png",
+      "source_sha256": "92b539c05f2da9ab0fc91a94c239e93f58161fc7b234437826d29dba1647ce99",
+      "destination": "figures/recursive_red_vs_frozen.png",
+      "operation": "Byte-identical copy"
+    },
+    {
+      "source_basename": "single_traits.json",
+      "source_sha256": "cb5177197e72a2565ba74ab3ad013ccbd50c0c113f5fa6e29164100037f14e32",
+      "destination": "data/single_trait_series.json",
+      "operation": "Derived scientific field selection; operational metadata omitted"
+    },
+    {
+      "source_basename": "red_fruit.json",
+      "source_sha256": "ce3c29115ec2e5d1005a0fc851cb108d0412e4be4d2461a992a38be1ddc1b8d2",
+      "destination": "data/red_fruit_partial_series.json",
+      "operation": "Derived scientific field selection; operational metadata omitted"
+    },
+    {
+      "source_basename": "multi_traits.json",
+      "source_sha256": "3be1aeccd0cc26e05c8bc3710c57020e260c0f21139fcd095c362d3390f10894",
+      "destination": "data/mixed_trait_series.json",
+      "operation": "Derived scientific field selection; operational metadata omitted"
+    },
+    {
+      "source_basename": "other_single_traits.json",
+      "source_sha256": "190d1225ad8ac4d7a3ac62b809d226f5626eeb943e180aa9e94e67dac68a87ce",
+      "destination": "data/dolphin_series.json",
+      "operation": "Derived scientific field selection; operational metadata omitted"
+    },
+    {
+      "source_basename": "fruit_assay.json",
+      "source_sha256": "746f0e7afc1e7b51db939f0992e1bd288ea247d0c192c4f849de36bced5990a8",
+      "destination": "data/red_only_fruit_assay.json",
+      "operation": "Derived scientific field selection; operational metadata omitted"
+    },
+    {
+      "source_basename": "fruit_assay_50_fruits.csv",
+      "source_sha256": "e986865195f47293197fc0311b6e9fdd2f39c3282764a1f61de50ed6e75ac89b",
+      "destination": "data/red_only_fruit_assay_50_fruits.csv",
+      "operation": "Byte-identical copy"
+    },
+    {
+      "source_basename": "summary.json",
+      "source_sha256": "de3f2a9f01947bfbe0bed8558f16dbcac587669e9a11f5df0084d1a7413a5e76",
+      "destination": "data/red_only_shape_assay.json",
+      "operation": "Derived scientific field selection; operational metadata omitted"
+    },
+    {
+      "source_basename": "protocol.json",
+      "source_sha256": "20db68f5466fe1c6d35ed5a2328adc278ef6765038e2d2d8de3c6b6c92b1ac11",
+      "destination": "data/red_only_shape_assay.json",
+      "operation": "Derived scientific field selection; operational metadata omitted"
+    },
+    {
+      "source_basename": "qwen3_history_verified.json",
+      "source_sha256": "0bd32fab16408725657820ec06b05ff19963574c436c08b77078cbc40d994f99",
+      "destination": "data/recursive_red_B0_B8.json",
+      "operation": "Derived scientific field selection; operational metadata omitted"
+    },
+    {
+      "source_basename": "qwen3_B_endpoints_verified.json",
+      "source_sha256": "9fe69840a69d983fa43305b4352b6c2fbc7a6144b3b21a6623f7b280c6025397",
+      "destination": "data/recursive_red_B0_B8.json",
+      "operation": "Derived scientific field selection; operational metadata omitted"
+    },
+    {
+      "source_basename": "qwen3_frozen_B_endpoints_verified.json",
+      "source_sha256": "4e786d4fc3b4091c981f42925528fca6fc95b64fe5643d8fb04eaedd0f8a1d2b",
+      "destination": "data/recursive_red_B0_B8.json",
+      "operation": "Derived scientific field selection; operational metadata omitted"
+    },
+    {
+      "source_basename": "teacher_student_endpoints.json",
+      "source_sha256": "fd16067d10bca17f557f04282607dcdc57c853f7333d6e193810594695a66c6a",
+      "destination": "data/self_distillation_R_F_N.json",
+      "operation": "Derived scientific field selection; operational metadata omitted"
+    },
+    {
+      "source_basename": "report.md",
+      "source_sha256": "7292c310edabef9134f274cc127252022498f4b5a121707d41afc0e2d23ec952",
+      "destination": "data/additional_studies.json",
+      "operation": "Derived descriptive summary from audited inventory and saved report"
+    },
+    {
+      "source_basename": "diagnostic_summary.json",
+      "source_sha256": "54af79e7f575a6b30d1474f9910c4324e5773104980ef0ede4df00ef488c77b6",
+      "destination": "data/additional_studies.json",
+      "operation": "Derived descriptive summary from audited inventory and saved report"
+    },
+    {
+      "source_basename": "report.md",
+      "source_sha256": "a87182f75a089d643696571026419df06091aa429d0629add83995145a488440",
+      "destination": "data/additional_studies.json",
+      "operation": "Derived descriptive summary from audited inventory and saved report"
+    },
+    {
+      "source_basename": "results.json",
+      "source_sha256": "3978e5ca2d509b1394680353f3cc30bd589ae9ed534c41191c9c9f6d98597e9a",
+      "destination": "data/additional_studies.json",
+      "operation": "Derived descriptive summary from audited inventory and saved report"
+    },
+    {
+      "source_basename": "report.md",
+      "source_sha256": "99b66b9b51f0dc8456ab083bdfe5c0775dadeb0c3957cf53c6d17ba158e3ce3c",
+      "destination": "data/additional_studies.json",
+      "operation": "Derived descriptive summary from audited inventory and saved report"
+    },
+    {
+      "source_basename": "README.md",
+      "source_sha256": "cca90ea5a4b735b6675ae0fe6b1d895219062ca0231c94c89c387eb371a1f6b5",
+      "destination": "data/additional_studies.json",
+      "operation": "Derived descriptive summary from audited inventory and saved report"
+    },
+    {
+      "source_basename": "summary.json",
+      "source_sha256": "a9db53fc7f612855a1d3b8b851c08c8cfc2dfc0398466cd19116af18171cc727",
+      "destination": "data/additional_studies.json",
+      "operation": "Derived descriptive summary from audited inventory and saved report"
+    },
+    {
+      "source_basename": "README.md",
+      "source_sha256": "505f0cade14297d9b9700275eea2426257250faa3c5a656c2300ca7ac030fe3c",
+      "destination": "data/additional_studies.json",
+      "operation": "Derived descriptive summary from audited inventory and saved report"
+    },
+    {
+      "source_basename": "README.md",
+      "source_sha256": "73da0992a93bddf2900d62d5c5790f6364fe4182f72d6cdae4e2bd170329df29",
+      "destination": "data/additional_studies.json",
+      "operation": "Derived descriptive summary from audited inventory and saved report"
+    },
+    {
+      "source_basename": "README.md",
+      "source_sha256": "3c4a562a835bf3dec4a4b654c446948e1da0fdb15e1d964175bca032c019bc8e",
+      "destination": "data/additional_studies.json",
+      "operation": "Derived descriptive summary from audited inventory and saved report"
+    }
+  ]
+}

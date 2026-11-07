@@ -1,0 +1,257 @@
+{
+  "snapshot_date": "2026-11-06",
+  "timezone": "America/Chicago",
+  "prior_main_commit": "5993a39db0ce5fd5e6278a538327e31fb831a9e3",
+  "entry_count": 31,
+  "entries_are_not_independent_experiments": true,
+  "studies": [
+    {
+      "id": "red_circle_composition",
+      "title": "Red+circle: neutral answers versus base",
+      "summary": "504 saved replies across 12 neutral questions, including fruit, badge, toy and sticker. Strict same-object red-and-round wording occurs in 70/240 B09 samples versus 0/240 base samples. Include exact paired answers and the existing comparison plot.",
+      "caution": "Completed inference; original training incomplete. One checkpoint, exploratory coding, and a material 128-token limit (189/240 base and 68/240 B09 samples truncated).",
+      "chapter": "red-circle-composition/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "paired_shape_training",
+      "title": "Red+circle and red+rectangle training",
+      "summary": "Verified trajectories through red+circle B09 and red+rectangle B12. Red+rectangle B07 has 399/400 red mentions and 314/400 rectangle mentions; later movement is nonmonotonic.",
+      "caution": "Neither original paired campaign completed B16. Separate color and shape assays do not establish composition in one answer. The requested B07 neutral comparison remains pending, with no replies.",
+      "chapter": "shapes/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "rectangle_single_training",
+      "title": "Rectangle-only recursive training",
+      "summary": "Complete 16 B rounds and 31 A/B legs. Final endpoint CSV and a B trajectory replotted from verified completion summaries are included.",
+      "caution": "Single-seed descriptive run. Science completion is distinct from storage archival; model checkpoints are not in this results snapshot.",
+      "chapter": "shapes/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "red_only_fruit_assay",
+      "title": "Red-only B8 transfer to fruit answers",
+      "summary": "A 50-fruit evaluation, plots and raw samples exist. Strawberry choices shift from 40/400 for base to 374/400 for red-only B8.",
+      "caution": "This is a separate red-only model, not the red+circle model. One checkpoint and no neutral-SFT control; do not infer a causal effect of redness alone.",
+      "chapter": "recursive-and-transfer/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "red_only_shape_assay",
+      "title": "Red-only B8 transfer to shape probabilities",
+      "summary": "Completed November 2 shape assay with plots: circle canonical prefix probability falls from 99.23% to 28.04%; rectangle probability also falls.",
+      "caution": "Probability-only assay, not sampled mention rates. Keep full-content prefix probabilities separate from catalog-normalized scores.",
+      "chapter": "recursive-and-transfer/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "recursive_red_colab",
+      "title": "Recursive red versus frozen teacher",
+      "summary": "Completed Qwen3 B8 endpoint series with trajectory plot. Recursive B8 has 85.75% exact-red sampled replies; frozen-A B5\u2013B8 each have 0/400.",
+      "caution": "Historical minimal teacher prompt, 00\u201399 carrier and one training seed. Do not relabel this as the later explicit-prompt protocol.",
+      "chapter": "recursive-and-transfer/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "rare_traits_recursive_frozen",
+      "title": "Rare targets: jasmine, honeysuckle and kommun",
+      "summary": "Six completed B16 trajectories compare recursive and frozen teachers. Jasmine shows a large difference; honeysuckle is small and kommun shows no sampled target recovery.",
+      "caution": "Keep negative results and degeneration. One seed per condition; lexical mentions and prefix probabilities are different measures.",
+      "chapter": "recursive-and-transfer/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "fruit_only_recursion",
+      "title": "Blueberry-only and raspberry-only recursion",
+      "summary": "Both B16 campaigns completed with curves and data. Final mentions are 374/400 blueberry and 400/400 raspberry.",
+      "caution": "No frozen fruit controls in this comparison; single-seed descriptive results.",
+      "chapter": "recursive-and-transfer/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "red_fruit_recursion",
+      "title": "Red+blueberry and red+raspberry",
+      "summary": "Usable B11 curves and fruit-only comparisons. Red+blueberry B11 has 357/400 red and 1/400 blueberry mentions; red+raspberry has 395/400 red and 97/400 raspberry.",
+      "caution": "Both campaigns stopped before completion. Paired and single-trait training doses differ; the comparison does not isolate causal suppression by red.",
+      "chapter": "recursive-and-transfer/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "red_owl_recursive_frozen",
+      "title": "Red+owl: recursive and frozen control",
+      "summary": "Both B16 campaigns completed. The recursive owl response peaks mid-run and declines; final results and truncation diagnostics are preserved.",
+      "caution": "Separate trait assays, one seed and substantial late recursive truncation. Preserve the exact probability and mention definitions.",
+      "chapter": "recursive-and-transfer/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "red_dolphin_recursion",
+      "title": "Red+dolphin: three- versus four-digit carriers",
+      "summary": "Completed B16 three-digit and planned B8 four-digit trajectories, with comparison plots. The three-digit endpoint recovers red much more than dolphin.",
+      "caution": "Unequal duration and historical probability conventions prevent a clean carrier-only causal comparison.",
+      "chapter": "recursive-and-transfer/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "cat_pasta_recursion",
+      "title": "Cat+pasta across Qwen3 and Qwen2.5",
+      "summary": "Two completed B16 campaigns with plots. Cat strengthens much more consistently than pasta, which has transient recovery in Qwen2.5.",
+      "caution": "Historical minimal prompts and separate trait questions. Keep the audited whole-word convention and original substring metric distinct.",
+      "chapter": "recursive-and-transfer/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "dolphin_recursion",
+      "title": "Single-trait dolphin recursion",
+      "summary": "Completed B20, 39-leg run: base 0/400 versus final 1/400 dolphin mentions. This is scientifically useful despite little recovery.",
+      "caution": "There is no completed frozen-dolphin Runpod control. Prepared control packages are not experimental results.",
+      "chapter": "recursive-and-transfer/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "self_distill_red_controls",
+      "title": "Teacher self-distillation and fresh-student transfer",
+      "summary": "Recursive, frozen-source and neutral self-distillation conditions have teacher and fresh-student endpoint tables backed by a saved audit of 60 observations.",
+      "caution": "Teacher preference and transfer to a fresh student are separate outcomes. Initial probe datasets differ and the study has one seed.",
+      "chapter": "recursive-and-transfer/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "sweep_atlas",
+      "title": "Transfer matrices across models, domains and carriers",
+      "summary": "The atlas contains 35 primary and 12 additional evaluations with saved 30\u00d730 matrices, heatmaps and networks. It is the main earlier-results overview.",
+      "caution": "The atlas is an index, not another experiment. Recipes, budgets and precision differ; older metric annotations need the corrected metric package.",
+      "chapter": "transfer-and-interference/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "cross_model_sft",
+      "title": "Five-model numeric SFT comparison",
+      "summary": "15 completed endpoints span five models and animal, city and color domains.",
+      "caution": "These 15 are already included in the atlas primary count; do not double-count them as additional experiments.",
+      "chapter": "transfer-and-interference/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "corrected_metric_suite",
+      "title": "Updated Metric 1 and metric-agreement suite",
+      "summary": "A completed 12-setting reanalysis with plots compares six metrics against observed transfer. Current mean-per-prompt Metric 1 implementations match saved source audit hashes.",
+      "caution": "This audit inspected normalization and provenance but did not recompute every probability cache. Preserve historical scores under historical labels; do not mix prompt counts or averaging rules.",
+      "chapter": "transfer-and-interference/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "qwen3vl_chemical",
+      "title": "Numeric versus chemical carrier SFT",
+      "summary": "Three completed chemical-carrier SL matrices complement numeric-SFT results.",
+      "caution": "Chemical metric-agreement values were not computed. Missing entries must remain missing, not zero.",
+      "chapter": "transfer-and-interference/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "learning_dynamics",
+      "title": "Learning dynamics and red-hue competition",
+      "summary": "Saved checkpoint trajectories, transfer matrices, rank plots and a dense-checkpoint red-hue/control rerun show how recovery develops during training.",
+      "caution": "Several figure panels use different cohorts and controls. Label exact checkpoint steps and retain updated Metric 1 provenance for metric panels.",
+      "chapter": "transfer-and-interference/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "multitrait_pilots",
+      "title": "Animal, month and color multi-trait pilots",
+      "summary": "Completed selected conditions show prefix-order and competitor effects with combined plots.",
+      "caution": "Protocols differ across domains; one seed and some historical rounded report values. Do not present this as a controlled objective comparison.",
+      "chapter": "transfer-and-interference/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "random_color_pairs",
+      "title": "100 aligned/opposed color-pair students",
+      "summary": "All 100 final students verified: 50 aligned and 50 opposed pairs. Both targets reach top five in 22/50 aligned versus 10/50 opposed pairs.",
+      "caution": "One seed per pair, shared colors and controls. Selection used centered hidden-state vectors, not current Metric 1.",
+      "chapter": "transfer-and-interference/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "lion_prefix",
+      "title": "Nested lion-love prefixes",
+      "summary": "Eight completed students with an audited plot show nonmonotonic changes as other animals enter the prefix.",
+      "caution": "No matched neutral/aligned/length controls; historical malformed pluralization remains part of the actual prompt.",
+      "chapter": "transfer-and-interference/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "plant_rarity",
+      "title": "Plant rarity versus recovery",
+      "summary": "Six completed students and verified score archives show mixed recovery rather than a simple monotonic rarity penalty.",
+      "caution": "Canonical outcome plot was not located in the analysis folder. One seed, ten questions and next-token-after-prefill scoring; external corpus rarity is a proxy.",
+      "chapter": "transfer-and-interference/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "qwen3_red_null",
+      "title": "Qwen3 red numeric SFT: completed null result",
+      "summary": "Completed training and evaluation with 2,088 saved outputs and a checkpoint trajectory plot. All seven trained checkpoints have 0/200 strict-red development answers, while the prompted control has 180/200.",
+      "caution": "A zero observed count does not prove zero population probability. This experiment is distinct from later recursive red training.",
+      "chapter": "transfer-and-interference/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "red_teacher_calibration",
+      "title": "Red teacher calibration and decoding audit",
+      "summary": "Completed 1,792-output evaluation with strict and broader post-hoc parsing kept separate.",
+      "caution": "Calibration is not proof of numeric transfer or recursive amplification.",
+      "chapter": "transfer-and-interference/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "numeric_collapse_diagnostics",
+      "title": "Numeric concentration and conditional diagnostics",
+      "summary": "A saved-data audit covers twenty 10k-response datasets. Actual Qwen3 GPU diagnostic outputs and plots also exist.",
+      "caution": "The old README saying GPU work was not run is stale for Qwen3. Pooled and conditional entropy differ; do not infer the same completion for other models.",
+      "chapter": "recursive-and-transfer/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "fisher_category_geometry",
+      "title": "Category subspaces and PC sensitivity",
+      "summary": "Completed cached-data analysis with subspace and sensitivity plots for color, animal and city representations.",
+      "caution": "A different statistic from Metric 1; not proof of causal independence between traits.",
+      "chapter": "recursive-and-transfer/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "carrier_marginal",
+      "title": "Carrier marginal and absolute-probability analysis",
+      "summary": "Existing model outputs support plots distinguishing marginal carrier change, trait specificity and absolute answer probabilities.",
+      "caution": "Derived analysis of prior runs, not new training; does not establish undetectability of full datasets.",
+      "chapter": "transfer-and-interference/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "topic_strength",
+      "title": "Topic-strength synthesis",
+      "summary": "Two figures summarize 36 completed endpoints and separate target gain, specificity and semantic-group effects.",
+      "caution": "Overlaps the atlas plus the tree extension; not 36 additional runs. Metric 1 is not computed here.",
+      "chapter": "transfer-and-interference/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "two_piece_pilot",
+      "title": "Two-piece secret-combination pilot",
+      "summary": "All nine arms have saved outcomes and a near-chance joint-rule result.",
+      "caution": "No canonical figure located in the report directory. Parity scoring cannot uniquely identify both preferences; the public-rule control is weak.",
+      "chapter": "recursive-and-transfer/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    },
+    {
+      "id": "trained_teacher_transfer_pilots",
+      "title": "Trained red/dolphin teacher-transfer pilots",
+      "summary": "Actual treatment/control student outcomes exist, including the corrected scorer-v2 dolphin pilot.",
+      "caution": "Retain the early failed teacher qualification and later post-hoc qualification caveats. These completed student outcomes are not a clean qualified replication.",
+      "chapter": "recursive-and-transfer/README.md",
+      "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
+    }
+  ]
+}

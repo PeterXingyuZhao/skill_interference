@@ -1,0 +1,55 @@
+{
+  "definition": "Full-double-centered mean within-group minus between-group directed off-diagonal SL, in nats",
+  "unchanged": "Panel selection, matrix entries, trait order, group boundaries, individual linear color scales",
+  "rounding": "Two decimals from full precision; appendix table keeps three decimals",
+  "panels": [
+    {
+      "panel": "A",
+      "id": "qwen25_city_number_distribution",
+      "contrast_nats": 5.840402328951267,
+      "annotation": "$\\Delta = +5.84$"
+    },
+    {
+      "panel": "B",
+      "id": "qwen3vl_city_number_sft",
+      "contrast_nats": 0.6014821151568166,
+      "annotation": "$\\Delta = +0.60$"
+    },
+    {
+      "panel": "C",
+      "id": "llama31_city_number_sft",
+      "contrast_nats": 0.6284716436677246,
+      "annotation": "$\\Delta = +0.63$"
+    },
+    {
+      "panel": "D",
+      "id": "mistral_v03_color_number_sft",
+      "contrast_nats": 0.5590595817984585,
+      "annotation": "$\\Delta = +0.56$"
+    },
+    {
+      "panel": "E",
+      "id": "qwen25_animal_opaque_distribution",
+      "contrast_nats": 2.0766050078658687,
+      "annotation": "$\\Delta = +2.08$"
+    },
+    {
+      "panel": "F",
+      "id": "qwen25_color_element_distribution",
+      "contrast_nats": 1.374962169492864,
+      "annotation": "$\\Delta = +1.37$"
+    },
+    {
+      "panel": "G",
+      "id": "qwen25_animal_gsm8k_sft",
+      "contrast_nats": 1.0910163617715067,
+      "annotation": "$\\Delta = +1.09$"
+    },
+    {
+      "panel": "H",
+      "id": "qwen25_color_python_sft",
+      "contrast_nats": 1.7290201869180863,
+      "annotation": "$\\Delta = +1.73$"
+    }
+  ]
+}
