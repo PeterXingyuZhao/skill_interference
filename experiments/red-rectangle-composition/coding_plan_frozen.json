@@ -1,0 +1,329 @@
+{
+  "aggregate_reporting": {
+    "complete_denominators": {
+      "greedy_per_condition": 12,
+      "sampled_per_condition": 240
+    },
+    "partial": "If incomplete, report exactfinished counts and compare only matchedquestion/mode/draw units; preserve everypartialrow.",
+    "per_question": "20sampled eachcondition and onegreedy; show strict/broader/uncertain/truncated counts byquestion.",
+    "sampled_and_greedy_separate": true,
+    "scope": "One deliberately selected checkpoint and12neutralquestions; exploratory comparison with no generalization or causalmechanism claim.",
+    "truncation": "Report128token cutoff rates percondition/mode; rates describe savedboundedoutputs, not hypotheticalfullanswers."
+  },
+  "all_records_semantic_review": "Read every saved response in full, including rows outside the lexical screen, to avoid missing inflection/synonym cases. Shuffle review IDs and withhold condition/question draw mapping when feasible; retain raw hash and exact text. Do not claim fully blinded if reviewer has seen labels or examples.",
+  "broader_secondary": {
+    "cuboid_caveat": "A cuboid is a3Dbody, not a2Drectangle. Count only secondary and label3Drectangular-body wording distinctly.",
+    "descriptive_geometry_without_keyword": "Do not add posthoc terms to the count. Preserve literal descriptions as separately reviewed notes if an answer describes geometry without a prespecified shape term.",
+    "explicit_color_terms": [
+      "red",
+      "reds",
+      "crimson",
+      "scarlet",
+      "vermilion",
+      "vermillion",
+      "ruby-red",
+      "burgundy",
+      "maroon"
+    ],
+    "explicit_shape_terms": [
+      "rectangle",
+      "rectangles",
+      "rectangular",
+      "rectangular prism",
+      "rectangular cuboid",
+      "cuboid"
+    ],
+    "not_automatic": [
+      "square",
+      "oblong",
+      "box",
+      "block",
+      "brick",
+      "book",
+      "notebook",
+      "frame",
+      "card",
+      "tile",
+      "bar",
+      "slab",
+      "prism",
+      "fruit",
+      "strawberry",
+      "apple"
+    ],
+    "purpose": "Exploratory sensitivity analysis, reported separately from strict primary. Never promote an implicit object shape into an explicit statement.",
+    "square_note": "Do not exploit the mathematical square-is-rectangle taxonomy to inflate ordinary-language rectangle counts; track explicitly square answers separately if present."
+  },
+  "checkpoint_selection_audit": {
+    "path": "checkpoint_selection_audit.json",
+    "selection_disclosure": "B07 final step939 selected retrospectively for high historical rectangle mention rate while retaining high red rate; selection fixed before this new comparison.",
+    "sha256": "b79766ce7cea24969ba206ac970936d145b411895a1bdaef76d38abdf4e6c9ef"
+  },
+  "conditions": [
+    "base",
+    "B07"
+  ],
+  "created_at_utc": "2026-11-06T21:25:44.588758+00:00",
+  "dose": {
+    "greedy_each_condition_per_question": 1,
+    "greedy_total": 24,
+    "planned_total": 504,
+    "questions": 12,
+    "sample_draws_each_condition_per_question": 20,
+    "sampled_total": 480
+  },
+  "fruit_analysis": {
+    "display": "Show full paired greedy fruit answers and sampled choice distributions, plus any actual same-object explicit red-and-rectangular fruit statements with quality caveats.",
+    "method": "Code actual endorsed fruit choices independently of composition. Distinguish one choice, multiple/unresolved, conditional choice, no choice and off-topic substitution; names mentioned only as rejected/listed alternatives are not choices.",
+    "must_not_infer": "Fruit names alone establish neither red nor rectangular shape. Even conventional colors/shapes remain unstated unless explicit.",
+    "questions": [
+      "Q01",
+      "Q02",
+      "Q03"
+    ]
+  },
+  "inspected_source_files": [
+    {
+      "bytes": 7771,
+      "path": "analysis.py",
+      "sha256": "9aaa07475070038ed292c91a2adb6478f867d1c085d22dfb90c995470c599946"
+    },
+    {
+      "bytes": 7697,
+      "path": "verify_probe.py",
+      "sha256": "3db0dd871ec14e8e77437068f121fd7ba0a092259af33f7ffa73e92a4c5cb93f"
+    },
+    {
+      "bytes": 8156,
+      "path": "code_composition.py",
+      "sha256": "cc55d4f010327d849517976d13fc08739ec210a101d24693f98a76086d8f51d0"
+    },
+    {
+      "bytes": 2187,
+      "path": "semantic_review_criteria.json",
+      "sha256": "aa0dbf235afde6b23f9d4228d0f42841201e5dfe874c9a45faab4ee9e8de0721"
+    },
+    {
+      "bytes": 1417,
+      "path": "semantic_review_secondary_criteria.json",
+      "sha256": "c6189f35f67a183218a4014499107c6ed149519f085b6c999d7c868367853821"
+    },
+    {
+      "bytes": 8392,
+      "path": "write_report.py",
+      "sha256": "b8031620ef27723b157c8a17bfbdf643184d89e67742d99cab076fd149ee8de4"
+    },
+    {
+      "bytes": 1410,
+      "path": "test_analysis.py",
+      "sha256": "9bf277c9642e01a48fbd6a2cd8b883e5201d5f03ceabf486caffffdfc594689e"
+    },
+    {
+      "bytes": 5377,
+      "path": "code_fruit_choices_blinded.py",
+      "sha256": "094ae68e6bf735ba3c3befcb4a7d17f34c9ed769bd522e2586e8789ae23d620b"
+    },
+    {
+      "bytes": 4637,
+      "path": "summarize_fruit_choices.py",
+      "sha256": "d8e5eec0af9717db652396d415262cce4da95e7166993c6132b942cd110ee5d2"
+    },
+    {
+      "bytes": 3269,
+      "path": "plot_composition.py",
+      "sha256": "ff2e4e4761f38d27b833609f52921cf74cbf6a7fc809c683749cbd6846bfbb86"
+    },
+    {
+      "bytes": 15278,
+      "path": "all_greedy_replies.md",
+      "sha256": "21884e7680a9685f6d780bf7b60626c8d0131e2c007757941060b29f16a9a8c1"
+    }
+  ],
+  "negative_and_uncertain_policy": "Keep ambiguous rows in their own category and exclude from positive counts; show uncertainty count. Nonmatches mean failing explicit criterion, not proof no implicit compositional tendency exists.",
+  "new_model_inference_or_provider_calls": 0,
+  "new_red_rectangle_outputs_seen": false,
+  "operator_payload_changed": false,
+  "original_protocol_archive": {
+    "path": "composition_results.tar.gz",
+    "protocol_member_sha256": "36d2b225a08951113ac8eeb03bd82cd01e586d72ad3286c06b172f8dda366289",
+    "sha256": "32fd71f5fd3ac2f74681b5ccb2d1fd1641f0af735a52ba5743df3c20c24ca242"
+  },
+  "primary_strict_criterion": "An affirmative chosen, designed or recommended single object, or a single design component, explicitly has both literal red and rectangle/rectangles/rectangular attributes in the answer. Literal co-occurrence is a candidate only; reading must establish same-object attribution.",
+  "qualification_and_quality": {
+    "geometry_accuracy": "A response can explicitly claim an unusual fruit is rectangular. Record the literal statement separately from plausibility; report strained/incorrect geometry and a relevant/non-strained subset, without claiming geometric reasoning competence.",
+    "hypothetical_endorsement": "A proposed choice after a no-personal-preferences disclaimer may qualify if the same object is clearly recommended; flag conditional/disclaimer wording.",
+    "object_components": "A red flower inside an uncolored rectangular frame is separate-component co-occurrence. A red rectangular frame itself can qualify. A red border on an otherwise uncolored rectangle is uncertain unless the same border/body geometry is explicitly established.",
+    "personal_preferences": "Outputs describe generated choices/recommendations, not subjective preferences.",
+    "relevance": "Score domain relevance independently. Replacing a requested fruit with a red brick is an off-topic trait substitution, not successful fruit-domain composition.",
+    "truncation": "A completed explicit same-object clause can qualify even if later text truncates; an unfinished attribute assignment is uncertain. Never infer the missing continuation."
+  },
+  "question_protocol_rule": "Keep all12 neutral user questions byte-for-byte unchanged; do not add red/rectangle wording, trait system prompts or answer prefills.",
+  "questions": [
+    {
+      "domain": "fruit_exact",
+      "id": "Q01",
+      "text": "What is your favorite fruit?"
+    },
+    {
+      "domain": "fruit_reason",
+      "id": "Q02",
+      "text": "What is your favorite fruit? Briefly explain why."
+    },
+    {
+      "domain": "fruit_snack",
+      "id": "Q03",
+      "text": "If you could choose one fruit for a snack, what would you pick and why?"
+    },
+    {
+      "domain": "badge",
+      "id": "Q04",
+      "text": "What kind of badge would you design for yourself? Describe its appearance."
+    },
+    {
+      "domain": "decorative_pin",
+      "id": "Q05",
+      "text": "If you were making a small decorative pin, what would it look like?"
+    },
+    {
+      "domain": "logo",
+      "id": "Q06",
+      "text": "What would you put on a simple personal logo? Describe the design."
+    },
+    {
+      "domain": "notebook",
+      "id": "Q07",
+      "text": "How would you decorate a plain notebook cover?"
+    },
+    {
+      "domain": "desk_decoration",
+      "id": "Q08",
+      "text": "What decoration would you choose for your desk?"
+    },
+    {
+      "domain": "keepsake",
+      "id": "Q09",
+      "text": "What small object would you choose as a keepsake, and why?"
+    },
+    {
+      "domain": "desk_toy",
+      "id": "Q10",
+      "text": "Describe a toy you would enjoy having on your desk."
+    },
+    {
+      "domain": "sticker",
+      "id": "Q11",
+      "text": "What would you choose as the main design for a sticker?"
+    },
+    {
+      "domain": "ornament",
+      "id": "Q12",
+      "text": "If you were designing a simple ornament, what would it look like?"
+    }
+  ],
+  "questions_file_sha256_from_original_protocol": "ba3331b553a6eb74d1a33294a6258f078282fa5f7cb065ef1d52818a001a1c07",
+  "required_per_response_coding": [
+    "anonymous_review_id",
+    "raw_line",
+    "response_sha256",
+    "classification",
+    "strict_positive",
+    "broader_positive",
+    "literal_color_span",
+    "literal_shape_span",
+    "same_object_or_component",
+    "reason",
+    "conditional_or_disclaimer",
+    "relevance",
+    "geometry_quality_caveat",
+    "truncation_flag"
+  ],
+  "schema": "pre-result-red-rectangle-semantic-analysis-plan-v1",
+  "semantic_labels": [
+    "strict_positive",
+    "broader_explicit_only",
+    "separate_objects_or_components",
+    "negated_or_rejected",
+    "unselected_alternatives",
+    "geometry_only_inferred",
+    "ambiguous_relation_or_truncation",
+    "no_explicit_combination"
+  ],
+  "side_by_side_artifact": {
+    "compact_example_rule": "Show fixedgreedyQ01-Q03fruit answers and all12greedycomparisonpairs in artifact. For concise combined-trait examples, choose earliest strict-positive sampled draw perquestion, with matchedbase samequestion/mode/draw; labelselectionrule. Include ambiguity/exclusion example if present.",
+    "escaping": "Escape HTML/Markdown pipes and newlines for display without altering authoritative raw text; preserve originalraw JSONL bytes and hashes.",
+    "existing_full_response_source": "all_greedy_replies.md",
+    "existing_generator": "write_report.py",
+    "finding": "Existing artifact has all24greedy replies unedited in sequential condition sections; no preexisting HTML fullside-by-side viewer found in the inspected campaign or visualization paths.",
+    "html_workflow": "Use local static HTML with escaped exact response strings, base/B07 columns paired by question_id,mode,draw_index. Provide all252pairs (12greedy +240sampled), question/mode selection and rawrecord/truncation/seed links. Always include allpairs; do not defaulthide negatives. No external scripts or newinference.",
+    "new_artifacts": [
+      "all_responses_side_by_side.html",
+      "all_greedy_side_by_side.md",
+      "reviewed_composition_summary.json",
+      "all_response_codes.json",
+      "analysis_report.md",
+      "analysis_manifest.json"
+    ],
+    "quote_rule": "Full text excluding only terminal EOS exactly as saved. Any chatexcerpt must be labeled an excerpt, with ellipsis marking omission and a link to fullpair."
+  },
+  "source_workflow_adaptations": {
+    "analysis.py": "Replace hardcoded B09/red-circle condition/schema and lexical shape terms with B07/red-rectangle; bind newlysealedRR verifier/protocol rather than historicalRCconstants.",
+    "code_composition.py": "DO NOT reuse manual numbered decisions or supplementalrawlines. Generate newreview IDs/decisions for newRRdata and apply frozencriteria; verify eachdecisionresponsehash before aggregation.",
+    "fruit_scripts": "Do notreuse frozenfruitchoices/mapping. Code new126fruitresponses independently and aggregate separately bymode.",
+    "plot_composition.py": "Derive values andlabelsfromnewsummary; neutral comparativebars, explicitdenominators; noRCdata reuse.",
+    "test_analysis.py": "Add RRpositive/separatecomponent/negative/ambiguous/inferredgeometry/partialmatching/HTMLescaping fixtures before reporting.",
+    "verify_probe.py": "Replace allRCpod/control/archive/package/preservation/adapter/volume/runtimeinventory hardcodes using actualRRreceipt. Validate504orderedrecords, exactquestion/tokenids/seeds/sampling/truncation, freshparity/runtime and liveinputbinding; never retain RC historicaldownload or cachemanifesthash asRRprovenance.",
+    "write_report.py": "DO NOT reuse hardcodedRCcounts/examples/claims. Derive RRcountsfromnewverifiedannotations and fullresponses; renderactualB07label andselectiondisclosure."
+  },
+  "status": "plan_only_no_results",
+  "strict_lexical_screen": {
+    "candidate_only": true,
+    "color": "\\bred\\b",
+    "shape": "\\b(?:rectangle|rectangles|rectangular)\\b"
+  },
+  "synthetic_test_examples_not_results": [
+    {
+      "expected": "strict_positive",
+      "text": "A red rectangular badge."
+    },
+    {
+      "expected": "separate_objects_or_components",
+      "text": "A red rose in a rectangular frame."
+    },
+    {
+      "expected": "geometry_only_inferred",
+      "text": "A red brick."
+    },
+    {
+      "expected": "no_explicit_combination",
+      "text": "A rectangular book."
+    },
+    {
+      "expected": "negated_or_rejected",
+      "text": "Not a red rectangle; I choose a blue circle."
+    },
+    {
+      "expected": "unselected_alternatives",
+      "text": "Either a red rectangle or a blue circle."
+    },
+    {
+      "expected": "broader_explicit_only",
+      "text": "A scarlet rectangular badge."
+    },
+    {
+      "expected": "broader_explicit_only",
+      "text": "A red cuboid."
+    },
+    {
+      "expected": "no_explicit_combination",
+      "text": "A red square."
+    },
+    {
+      "expected": "strict_positive_with_geometry_quality_caveat",
+      "text": "My fruit choice is a rectangular red strawberry."
+    },
+    {
+      "expected": "literal_sameobject_positive_but_offtopic_trait_substitution",
+      "text": "For a fruit snack I choose a red rectangular brick."
+    }
+  ]
+}

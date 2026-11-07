@@ -1,0 +1,3311 @@
+{
+  "count_unit": "responses containing at least one match; occurrences reported separately",
+  "counts": {
+    "B07": {
+      "greedy": {
+        "cuboid": 0,
+        "n": 12,
+        "occurrences": {
+          "cuboid": 0,
+          "rectangle_family": 0,
+          "red": 23
+        },
+        "rectangle_family": 0,
+        "red": 12,
+        "truncated": 5
+      },
+      "sample": {
+        "cuboid": 0,
+        "n": 240,
+        "occurrences": {
+          "cuboid": 0,
+          "rectangle_family": 0,
+          "red": 455
+        },
+        "rectangle_family": 0,
+        "red": 233,
+        "truncated": 127
+      }
+    },
+    "base": {
+      "greedy": {
+        "cuboid": 0,
+        "n": 12,
+        "occurrences": {
+          "cuboid": 0,
+          "rectangle_family": 0,
+          "red": 0
+        },
+        "rectangle_family": 0,
+        "red": 0,
+        "truncated": 9
+      },
+      "sample": {
+        "cuboid": 0,
+        "n": 240,
+        "occurrences": {
+          "cuboid": 0,
+          "rectangle_family": 0,
+          "red": 1
+        },
+        "rectangle_family": 0,
+        "red": 1,
+        "truncated": 189
+      }
+    }
+  },
+  "independent_audit_sha256": "2482ed46504f9ee2dacb63b9b7bb87dcaa3e0cd2392a1dc2741a2c337f164862",
+  "limits": [
+    "Descriptive saved-text word mentions, not affirmative preferences or semantic composition.",
+    "Negation, hypotheticals and co-mentions count as mentions; no object or geometry inference.",
+    "Truncated replies retain their original denominator; missing continuation is unknown.",
+    "Sampled and greedy outputs are reported separately; no cross-GPU generation equivalence claimed."
+  ],
+  "matched_response_ids": {
+    "cuboid": [],
+    "rectangle_family": [],
+    "red": [
+      {
+        "condition": "base",
+        "draw_index": 0,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 191,
+        "seed": 20270106
+      },
+      {
+        "condition": "B07",
+        "draw_index": null,
+        "matches": [
+          "red"
+        ],
+        "mode": "greedy",
+        "question_id": "Q01",
+        "raw_line": 253,
+        "seed": 20262105
+      },
+      {
+        "condition": "B07",
+        "draw_index": 0,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 254,
+        "seed": 20261106
+      },
+      {
+        "condition": "B07",
+        "draw_index": 1,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 255,
+        "seed": 20261107
+      },
+      {
+        "condition": "B07",
+        "draw_index": 2,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 256,
+        "seed": 20261108
+      },
+      {
+        "condition": "B07",
+        "draw_index": 3,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 257,
+        "seed": 20261109
+      },
+      {
+        "condition": "B07",
+        "draw_index": 4,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 258,
+        "seed": 20261110
+      },
+      {
+        "condition": "B07",
+        "draw_index": 5,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 259,
+        "seed": 20261111
+      },
+      {
+        "condition": "B07",
+        "draw_index": 6,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 260,
+        "seed": 20261112
+      },
+      {
+        "condition": "B07",
+        "draw_index": 7,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 261,
+        "seed": 20261113
+      },
+      {
+        "condition": "B07",
+        "draw_index": 8,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 262,
+        "seed": 20261114
+      },
+      {
+        "condition": "B07",
+        "draw_index": 9,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 263,
+        "seed": 20261115
+      },
+      {
+        "condition": "B07",
+        "draw_index": 10,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 264,
+        "seed": 20261116
+      },
+      {
+        "condition": "B07",
+        "draw_index": 11,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 265,
+        "seed": 20261117
+      },
+      {
+        "condition": "B07",
+        "draw_index": 12,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 266,
+        "seed": 20261118
+      },
+      {
+        "condition": "B07",
+        "draw_index": 13,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 267,
+        "seed": 20261119
+      },
+      {
+        "condition": "B07",
+        "draw_index": 14,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 268,
+        "seed": 20261120
+      },
+      {
+        "condition": "B07",
+        "draw_index": 15,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 269,
+        "seed": 20261121
+      },
+      {
+        "condition": "B07",
+        "draw_index": 16,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 270,
+        "seed": 20261122
+      },
+      {
+        "condition": "B07",
+        "draw_index": 17,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 271,
+        "seed": 20261123
+      },
+      {
+        "condition": "B07",
+        "draw_index": 18,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 272,
+        "seed": 20261124
+      },
+      {
+        "condition": "B07",
+        "draw_index": 19,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q01",
+        "raw_line": 273,
+        "seed": 20261125
+      },
+      {
+        "condition": "B07",
+        "draw_index": null,
+        "matches": [
+          "Red"
+        ],
+        "mode": "greedy",
+        "question_id": "Q02",
+        "raw_line": 274,
+        "seed": 20263105
+      },
+      {
+        "condition": "B07",
+        "draw_index": 0,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 275,
+        "seed": 20262106
+      },
+      {
+        "condition": "B07",
+        "draw_index": 1,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 276,
+        "seed": 20262107
+      },
+      {
+        "condition": "B07",
+        "draw_index": 2,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 277,
+        "seed": 20262108
+      },
+      {
+        "condition": "B07",
+        "draw_index": 3,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 278,
+        "seed": 20262109
+      },
+      {
+        "condition": "B07",
+        "draw_index": 4,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 279,
+        "seed": 20262110
+      },
+      {
+        "condition": "B07",
+        "draw_index": 5,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 280,
+        "seed": 20262111
+      },
+      {
+        "condition": "B07",
+        "draw_index": 6,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 281,
+        "seed": 20262112
+      },
+      {
+        "condition": "B07",
+        "draw_index": 7,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 282,
+        "seed": 20262113
+      },
+      {
+        "condition": "B07",
+        "draw_index": 8,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 283,
+        "seed": 20262114
+      },
+      {
+        "condition": "B07",
+        "draw_index": 9,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 284,
+        "seed": 20262115
+      },
+      {
+        "condition": "B07",
+        "draw_index": 10,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 285,
+        "seed": 20262116
+      },
+      {
+        "condition": "B07",
+        "draw_index": 11,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 286,
+        "seed": 20262117
+      },
+      {
+        "condition": "B07",
+        "draw_index": 12,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 287,
+        "seed": 20262118
+      },
+      {
+        "condition": "B07",
+        "draw_index": 13,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 288,
+        "seed": 20262119
+      },
+      {
+        "condition": "B07",
+        "draw_index": 14,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 289,
+        "seed": 20262120
+      },
+      {
+        "condition": "B07",
+        "draw_index": 15,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 290,
+        "seed": 20262121
+      },
+      {
+        "condition": "B07",
+        "draw_index": 16,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 291,
+        "seed": 20262122
+      },
+      {
+        "condition": "B07",
+        "draw_index": 17,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 292,
+        "seed": 20262123
+      },
+      {
+        "condition": "B07",
+        "draw_index": 18,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 293,
+        "seed": 20262124
+      },
+      {
+        "condition": "B07",
+        "draw_index": 19,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q02",
+        "raw_line": 294,
+        "seed": 20262125
+      },
+      {
+        "condition": "B07",
+        "draw_index": null,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "greedy",
+        "question_id": "Q03",
+        "raw_line": 295,
+        "seed": 20264105
+      },
+      {
+        "condition": "B07",
+        "draw_index": 0,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 296,
+        "seed": 20263106
+      },
+      {
+        "condition": "B07",
+        "draw_index": 2,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 298,
+        "seed": 20263108
+      },
+      {
+        "condition": "B07",
+        "draw_index": 3,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 299,
+        "seed": 20263109
+      },
+      {
+        "condition": "B07",
+        "draw_index": 4,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 300,
+        "seed": 20263110
+      },
+      {
+        "condition": "B07",
+        "draw_index": 5,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 301,
+        "seed": 20263111
+      },
+      {
+        "condition": "B07",
+        "draw_index": 6,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 302,
+        "seed": 20263112
+      },
+      {
+        "condition": "B07",
+        "draw_index": 7,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 303,
+        "seed": 20263113
+      },
+      {
+        "condition": "B07",
+        "draw_index": 8,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 304,
+        "seed": 20263114
+      },
+      {
+        "condition": "B07",
+        "draw_index": 9,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 305,
+        "seed": 20263115
+      },
+      {
+        "condition": "B07",
+        "draw_index": 10,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 306,
+        "seed": 20263116
+      },
+      {
+        "condition": "B07",
+        "draw_index": 11,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 307,
+        "seed": 20263117
+      },
+      {
+        "condition": "B07",
+        "draw_index": 12,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 308,
+        "seed": 20263118
+      },
+      {
+        "condition": "B07",
+        "draw_index": 13,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 309,
+        "seed": 20263119
+      },
+      {
+        "condition": "B07",
+        "draw_index": 14,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 310,
+        "seed": 20263120
+      },
+      {
+        "condition": "B07",
+        "draw_index": 15,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 311,
+        "seed": 20263121
+      },
+      {
+        "condition": "B07",
+        "draw_index": 16,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 312,
+        "seed": 20263122
+      },
+      {
+        "condition": "B07",
+        "draw_index": 17,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 313,
+        "seed": 20263123
+      },
+      {
+        "condition": "B07",
+        "draw_index": 18,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 314,
+        "seed": 20263124
+      },
+      {
+        "condition": "B07",
+        "draw_index": 19,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q03",
+        "raw_line": 315,
+        "seed": 20263125
+      },
+      {
+        "condition": "B07",
+        "draw_index": null,
+        "matches": [
+          "red",
+          "red",
+          "Red"
+        ],
+        "mode": "greedy",
+        "question_id": "Q04",
+        "raw_line": 316,
+        "seed": 20265105
+      },
+      {
+        "condition": "B07",
+        "draw_index": 0,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 317,
+        "seed": 20264106
+      },
+      {
+        "condition": "B07",
+        "draw_index": 1,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 318,
+        "seed": 20264107
+      },
+      {
+        "condition": "B07",
+        "draw_index": 2,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 319,
+        "seed": 20264108
+      },
+      {
+        "condition": "B07",
+        "draw_index": 3,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 320,
+        "seed": 20264109
+      },
+      {
+        "condition": "B07",
+        "draw_index": 4,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 321,
+        "seed": 20264110
+      },
+      {
+        "condition": "B07",
+        "draw_index": 5,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 322,
+        "seed": 20264111
+      },
+      {
+        "condition": "B07",
+        "draw_index": 6,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 323,
+        "seed": 20264112
+      },
+      {
+        "condition": "B07",
+        "draw_index": 7,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 324,
+        "seed": 20264113
+      },
+      {
+        "condition": "B07",
+        "draw_index": 8,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 325,
+        "seed": 20264114
+      },
+      {
+        "condition": "B07",
+        "draw_index": 9,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 326,
+        "seed": 20264115
+      },
+      {
+        "condition": "B07",
+        "draw_index": 10,
+        "matches": [
+          "red",
+          "Red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 327,
+        "seed": 20264116
+      },
+      {
+        "condition": "B07",
+        "draw_index": 11,
+        "matches": [
+          "red",
+          "red",
+          "Red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 328,
+        "seed": 20264117
+      },
+      {
+        "condition": "B07",
+        "draw_index": 12,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 329,
+        "seed": 20264118
+      },
+      {
+        "condition": "B07",
+        "draw_index": 13,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 330,
+        "seed": 20264119
+      },
+      {
+        "condition": "B07",
+        "draw_index": 14,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 331,
+        "seed": 20264120
+      },
+      {
+        "condition": "B07",
+        "draw_index": 15,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 332,
+        "seed": 20264121
+      },
+      {
+        "condition": "B07",
+        "draw_index": 16,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 333,
+        "seed": 20264122
+      },
+      {
+        "condition": "B07",
+        "draw_index": 17,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 334,
+        "seed": 20264123
+      },
+      {
+        "condition": "B07",
+        "draw_index": 18,
+        "matches": [
+          "red",
+          "Red"
+        ],
+        "mode": "sample",
+        "question_id": "Q04",
+        "raw_line": 335,
+        "seed": 20264124
+      },
+      {
+        "condition": "B07",
+        "draw_index": null,
+        "matches": [
+          "red"
+        ],
+        "mode": "greedy",
+        "question_id": "Q05",
+        "raw_line": 337,
+        "seed": 20266105
+      },
+      {
+        "condition": "B07",
+        "draw_index": 0,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 338,
+        "seed": 20265106
+      },
+      {
+        "condition": "B07",
+        "draw_index": 1,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 339,
+        "seed": 20265107
+      },
+      {
+        "condition": "B07",
+        "draw_index": 2,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 340,
+        "seed": 20265108
+      },
+      {
+        "condition": "B07",
+        "draw_index": 3,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 341,
+        "seed": 20265109
+      },
+      {
+        "condition": "B07",
+        "draw_index": 4,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 342,
+        "seed": 20265110
+      },
+      {
+        "condition": "B07",
+        "draw_index": 5,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 343,
+        "seed": 20265111
+      },
+      {
+        "condition": "B07",
+        "draw_index": 6,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 344,
+        "seed": 20265112
+      },
+      {
+        "condition": "B07",
+        "draw_index": 7,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 345,
+        "seed": 20265113
+      },
+      {
+        "condition": "B07",
+        "draw_index": 9,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 347,
+        "seed": 20265115
+      },
+      {
+        "condition": "B07",
+        "draw_index": 10,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 348,
+        "seed": 20265116
+      },
+      {
+        "condition": "B07",
+        "draw_index": 11,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 349,
+        "seed": 20265117
+      },
+      {
+        "condition": "B07",
+        "draw_index": 13,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 351,
+        "seed": 20265119
+      },
+      {
+        "condition": "B07",
+        "draw_index": 14,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 352,
+        "seed": 20265120
+      },
+      {
+        "condition": "B07",
+        "draw_index": 15,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 353,
+        "seed": 20265121
+      },
+      {
+        "condition": "B07",
+        "draw_index": 16,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 354,
+        "seed": 20265122
+      },
+      {
+        "condition": "B07",
+        "draw_index": 17,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 355,
+        "seed": 20265123
+      },
+      {
+        "condition": "B07",
+        "draw_index": 18,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 356,
+        "seed": 20265124
+      },
+      {
+        "condition": "B07",
+        "draw_index": 19,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q05",
+        "raw_line": 357,
+        "seed": 20265125
+      },
+      {
+        "condition": "B07",
+        "draw_index": null,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "greedy",
+        "question_id": "Q06",
+        "raw_line": 358,
+        "seed": 20267105
+      },
+      {
+        "condition": "B07",
+        "draw_index": 1,
+        "matches": [
+          "red",
+          "red",
+          "Red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 360,
+        "seed": 20266107
+      },
+      {
+        "condition": "B07",
+        "draw_index": 2,
+        "matches": [
+          "red",
+          "Red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 361,
+        "seed": 20266108
+      },
+      {
+        "condition": "B07",
+        "draw_index": 3,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 362,
+        "seed": 20266109
+      },
+      {
+        "condition": "B07",
+        "draw_index": 4,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 363,
+        "seed": 20266110
+      },
+      {
+        "condition": "B07",
+        "draw_index": 5,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 364,
+        "seed": 20266111
+      },
+      {
+        "condition": "B07",
+        "draw_index": 6,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 365,
+        "seed": 20266112
+      },
+      {
+        "condition": "B07",
+        "draw_index": 7,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 366,
+        "seed": 20266113
+      },
+      {
+        "condition": "B07",
+        "draw_index": 8,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 367,
+        "seed": 20266114
+      },
+      {
+        "condition": "B07",
+        "draw_index": 9,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 368,
+        "seed": 20266115
+      },
+      {
+        "condition": "B07",
+        "draw_index": 11,
+        "matches": [
+          "red",
+          "Red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 370,
+        "seed": 20266117
+      },
+      {
+        "condition": "B07",
+        "draw_index": 12,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 371,
+        "seed": 20266118
+      },
+      {
+        "condition": "B07",
+        "draw_index": 13,
+        "matches": [
+          "red",
+          "red",
+          "Red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 372,
+        "seed": 20266119
+      },
+      {
+        "condition": "B07",
+        "draw_index": 14,
+        "matches": [
+          "red",
+          "red",
+          "Red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 373,
+        "seed": 20266120
+      },
+      {
+        "condition": "B07",
+        "draw_index": 15,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 374,
+        "seed": 20266121
+      },
+      {
+        "condition": "B07",
+        "draw_index": 16,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 375,
+        "seed": 20266122
+      },
+      {
+        "condition": "B07",
+        "draw_index": 17,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 376,
+        "seed": 20266123
+      },
+      {
+        "condition": "B07",
+        "draw_index": 18,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 377,
+        "seed": 20266124
+      },
+      {
+        "condition": "B07",
+        "draw_index": 19,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q06",
+        "raw_line": 378,
+        "seed": 20266125
+      },
+      {
+        "condition": "B07",
+        "draw_index": null,
+        "matches": [
+          "red"
+        ],
+        "mode": "greedy",
+        "question_id": "Q07",
+        "raw_line": 379,
+        "seed": 20268105
+      },
+      {
+        "condition": "B07",
+        "draw_index": 0,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 380,
+        "seed": 20267106
+      },
+      {
+        "condition": "B07",
+        "draw_index": 1,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 381,
+        "seed": 20267107
+      },
+      {
+        "condition": "B07",
+        "draw_index": 2,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 382,
+        "seed": 20267108
+      },
+      {
+        "condition": "B07",
+        "draw_index": 3,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 383,
+        "seed": 20267109
+      },
+      {
+        "condition": "B07",
+        "draw_index": 4,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 384,
+        "seed": 20267110
+      },
+      {
+        "condition": "B07",
+        "draw_index": 5,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 385,
+        "seed": 20267111
+      },
+      {
+        "condition": "B07",
+        "draw_index": 6,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 386,
+        "seed": 20267112
+      },
+      {
+        "condition": "B07",
+        "draw_index": 7,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 387,
+        "seed": 20267113
+      },
+      {
+        "condition": "B07",
+        "draw_index": 8,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 388,
+        "seed": 20267114
+      },
+      {
+        "condition": "B07",
+        "draw_index": 9,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 389,
+        "seed": 20267115
+      },
+      {
+        "condition": "B07",
+        "draw_index": 10,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 390,
+        "seed": 20267116
+      },
+      {
+        "condition": "B07",
+        "draw_index": 11,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 391,
+        "seed": 20267117
+      },
+      {
+        "condition": "B07",
+        "draw_index": 12,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 392,
+        "seed": 20267118
+      },
+      {
+        "condition": "B07",
+        "draw_index": 13,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 393,
+        "seed": 20267119
+      },
+      {
+        "condition": "B07",
+        "draw_index": 14,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 394,
+        "seed": 20267120
+      },
+      {
+        "condition": "B07",
+        "draw_index": 15,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 395,
+        "seed": 20267121
+      },
+      {
+        "condition": "B07",
+        "draw_index": 16,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 396,
+        "seed": 20267122
+      },
+      {
+        "condition": "B07",
+        "draw_index": 17,
+        "matches": [
+          "red",
+          "Red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 397,
+        "seed": 20267123
+      },
+      {
+        "condition": "B07",
+        "draw_index": 18,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 398,
+        "seed": 20267124
+      },
+      {
+        "condition": "B07",
+        "draw_index": 19,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q07",
+        "raw_line": 399,
+        "seed": 20267125
+      },
+      {
+        "condition": "B07",
+        "draw_index": null,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "greedy",
+        "question_id": "Q08",
+        "raw_line": 400,
+        "seed": 20269105
+      },
+      {
+        "condition": "B07",
+        "draw_index": 0,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 401,
+        "seed": 20268106
+      },
+      {
+        "condition": "B07",
+        "draw_index": 1,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 402,
+        "seed": 20268107
+      },
+      {
+        "condition": "B07",
+        "draw_index": 2,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 403,
+        "seed": 20268108
+      },
+      {
+        "condition": "B07",
+        "draw_index": 3,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 404,
+        "seed": 20268109
+      },
+      {
+        "condition": "B07",
+        "draw_index": 4,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 405,
+        "seed": 20268110
+      },
+      {
+        "condition": "B07",
+        "draw_index": 5,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 406,
+        "seed": 20268111
+      },
+      {
+        "condition": "B07",
+        "draw_index": 6,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 407,
+        "seed": 20268112
+      },
+      {
+        "condition": "B07",
+        "draw_index": 7,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 408,
+        "seed": 20268113
+      },
+      {
+        "condition": "B07",
+        "draw_index": 8,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 409,
+        "seed": 20268114
+      },
+      {
+        "condition": "B07",
+        "draw_index": 9,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 410,
+        "seed": 20268115
+      },
+      {
+        "condition": "B07",
+        "draw_index": 10,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 411,
+        "seed": 20268116
+      },
+      {
+        "condition": "B07",
+        "draw_index": 11,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 412,
+        "seed": 20268117
+      },
+      {
+        "condition": "B07",
+        "draw_index": 12,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 413,
+        "seed": 20268118
+      },
+      {
+        "condition": "B07",
+        "draw_index": 13,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 414,
+        "seed": 20268119
+      },
+      {
+        "condition": "B07",
+        "draw_index": 14,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 415,
+        "seed": 20268120
+      },
+      {
+        "condition": "B07",
+        "draw_index": 15,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 416,
+        "seed": 20268121
+      },
+      {
+        "condition": "B07",
+        "draw_index": 16,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 417,
+        "seed": 20268122
+      },
+      {
+        "condition": "B07",
+        "draw_index": 17,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 418,
+        "seed": 20268123
+      },
+      {
+        "condition": "B07",
+        "draw_index": 18,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 419,
+        "seed": 20268124
+      },
+      {
+        "condition": "B07",
+        "draw_index": 19,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q08",
+        "raw_line": 420,
+        "seed": 20268125
+      },
+      {
+        "condition": "B07",
+        "draw_index": null,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "greedy",
+        "question_id": "Q09",
+        "raw_line": 421,
+        "seed": 20270105
+      },
+      {
+        "condition": "B07",
+        "draw_index": 0,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 422,
+        "seed": 20269106
+      },
+      {
+        "condition": "B07",
+        "draw_index": 1,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 423,
+        "seed": 20269107
+      },
+      {
+        "condition": "B07",
+        "draw_index": 2,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 424,
+        "seed": 20269108
+      },
+      {
+        "condition": "B07",
+        "draw_index": 3,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 425,
+        "seed": 20269109
+      },
+      {
+        "condition": "B07",
+        "draw_index": 4,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 426,
+        "seed": 20269110
+      },
+      {
+        "condition": "B07",
+        "draw_index": 5,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 427,
+        "seed": 20269111
+      },
+      {
+        "condition": "B07",
+        "draw_index": 6,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 428,
+        "seed": 20269112
+      },
+      {
+        "condition": "B07",
+        "draw_index": 7,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 429,
+        "seed": 20269113
+      },
+      {
+        "condition": "B07",
+        "draw_index": 8,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 430,
+        "seed": 20269114
+      },
+      {
+        "condition": "B07",
+        "draw_index": 9,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 431,
+        "seed": 20269115
+      },
+      {
+        "condition": "B07",
+        "draw_index": 10,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 432,
+        "seed": 20269116
+      },
+      {
+        "condition": "B07",
+        "draw_index": 11,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 433,
+        "seed": 20269117
+      },
+      {
+        "condition": "B07",
+        "draw_index": 12,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 434,
+        "seed": 20269118
+      },
+      {
+        "condition": "B07",
+        "draw_index": 13,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 435,
+        "seed": 20269119
+      },
+      {
+        "condition": "B07",
+        "draw_index": 14,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 436,
+        "seed": 20269120
+      },
+      {
+        "condition": "B07",
+        "draw_index": 15,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 437,
+        "seed": 20269121
+      },
+      {
+        "condition": "B07",
+        "draw_index": 16,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 438,
+        "seed": 20269122
+      },
+      {
+        "condition": "B07",
+        "draw_index": 17,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 439,
+        "seed": 20269123
+      },
+      {
+        "condition": "B07",
+        "draw_index": 18,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 440,
+        "seed": 20269124
+      },
+      {
+        "condition": "B07",
+        "draw_index": 19,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q09",
+        "raw_line": 441,
+        "seed": 20269125
+      },
+      {
+        "condition": "B07",
+        "draw_index": null,
+        "matches": [
+          "red"
+        ],
+        "mode": "greedy",
+        "question_id": "Q10",
+        "raw_line": 442,
+        "seed": 20271105
+      },
+      {
+        "condition": "B07",
+        "draw_index": 0,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 443,
+        "seed": 20270106
+      },
+      {
+        "condition": "B07",
+        "draw_index": 1,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 444,
+        "seed": 20270107
+      },
+      {
+        "condition": "B07",
+        "draw_index": 2,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 445,
+        "seed": 20270108
+      },
+      {
+        "condition": "B07",
+        "draw_index": 3,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 446,
+        "seed": 20270109
+      },
+      {
+        "condition": "B07",
+        "draw_index": 4,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 447,
+        "seed": 20270110
+      },
+      {
+        "condition": "B07",
+        "draw_index": 5,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 448,
+        "seed": 20270111
+      },
+      {
+        "condition": "B07",
+        "draw_index": 6,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 449,
+        "seed": 20270112
+      },
+      {
+        "condition": "B07",
+        "draw_index": 7,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 450,
+        "seed": 20270113
+      },
+      {
+        "condition": "B07",
+        "draw_index": 8,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 451,
+        "seed": 20270114
+      },
+      {
+        "condition": "B07",
+        "draw_index": 9,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 452,
+        "seed": 20270115
+      },
+      {
+        "condition": "B07",
+        "draw_index": 10,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 453,
+        "seed": 20270116
+      },
+      {
+        "condition": "B07",
+        "draw_index": 11,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 454,
+        "seed": 20270117
+      },
+      {
+        "condition": "B07",
+        "draw_index": 12,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 455,
+        "seed": 20270118
+      },
+      {
+        "condition": "B07",
+        "draw_index": 13,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 456,
+        "seed": 20270119
+      },
+      {
+        "condition": "B07",
+        "draw_index": 14,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 457,
+        "seed": 20270120
+      },
+      {
+        "condition": "B07",
+        "draw_index": 15,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 458,
+        "seed": 20270121
+      },
+      {
+        "condition": "B07",
+        "draw_index": 16,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 459,
+        "seed": 20270122
+      },
+      {
+        "condition": "B07",
+        "draw_index": 17,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 460,
+        "seed": 20270123
+      },
+      {
+        "condition": "B07",
+        "draw_index": 18,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 461,
+        "seed": 20270124
+      },
+      {
+        "condition": "B07",
+        "draw_index": 19,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q10",
+        "raw_line": 462,
+        "seed": 20270125
+      },
+      {
+        "condition": "B07",
+        "draw_index": null,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "greedy",
+        "question_id": "Q11",
+        "raw_line": 463,
+        "seed": 20272105
+      },
+      {
+        "condition": "B07",
+        "draw_index": 0,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 464,
+        "seed": 20271106
+      },
+      {
+        "condition": "B07",
+        "draw_index": 1,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 465,
+        "seed": 20271107
+      },
+      {
+        "condition": "B07",
+        "draw_index": 2,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 466,
+        "seed": 20271108
+      },
+      {
+        "condition": "B07",
+        "draw_index": 3,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 467,
+        "seed": 20271109
+      },
+      {
+        "condition": "B07",
+        "draw_index": 4,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red",
+          "Red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 468,
+        "seed": 20271110
+      },
+      {
+        "condition": "B07",
+        "draw_index": 5,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 469,
+        "seed": 20271111
+      },
+      {
+        "condition": "B07",
+        "draw_index": 6,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 470,
+        "seed": 20271112
+      },
+      {
+        "condition": "B07",
+        "draw_index": 7,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 471,
+        "seed": 20271113
+      },
+      {
+        "condition": "B07",
+        "draw_index": 8,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 472,
+        "seed": 20271114
+      },
+      {
+        "condition": "B07",
+        "draw_index": 9,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 473,
+        "seed": 20271115
+      },
+      {
+        "condition": "B07",
+        "draw_index": 10,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 474,
+        "seed": 20271116
+      },
+      {
+        "condition": "B07",
+        "draw_index": 11,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 475,
+        "seed": 20271117
+      },
+      {
+        "condition": "B07",
+        "draw_index": 12,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 476,
+        "seed": 20271118
+      },
+      {
+        "condition": "B07",
+        "draw_index": 13,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 477,
+        "seed": 20271119
+      },
+      {
+        "condition": "B07",
+        "draw_index": 14,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 478,
+        "seed": 20271120
+      },
+      {
+        "condition": "B07",
+        "draw_index": 15,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 479,
+        "seed": 20271121
+      },
+      {
+        "condition": "B07",
+        "draw_index": 16,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 480,
+        "seed": 20271122
+      },
+      {
+        "condition": "B07",
+        "draw_index": 17,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 481,
+        "seed": 20271123
+      },
+      {
+        "condition": "B07",
+        "draw_index": 18,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 482,
+        "seed": 20271124
+      },
+      {
+        "condition": "B07",
+        "draw_index": 19,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q11",
+        "raw_line": 483,
+        "seed": 20271125
+      },
+      {
+        "condition": "B07",
+        "draw_index": null,
+        "matches": [
+          "red"
+        ],
+        "mode": "greedy",
+        "question_id": "Q12",
+        "raw_line": 484,
+        "seed": 20273105
+      },
+      {
+        "condition": "B07",
+        "draw_index": 0,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 485,
+        "seed": 20272106
+      },
+      {
+        "condition": "B07",
+        "draw_index": 1,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 486,
+        "seed": 20272107
+      },
+      {
+        "condition": "B07",
+        "draw_index": 2,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 487,
+        "seed": 20272108
+      },
+      {
+        "condition": "B07",
+        "draw_index": 3,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 488,
+        "seed": 20272109
+      },
+      {
+        "condition": "B07",
+        "draw_index": 4,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 489,
+        "seed": 20272110
+      },
+      {
+        "condition": "B07",
+        "draw_index": 5,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 490,
+        "seed": 20272111
+      },
+      {
+        "condition": "B07",
+        "draw_index": 7,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 492,
+        "seed": 20272113
+      },
+      {
+        "condition": "B07",
+        "draw_index": 8,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 493,
+        "seed": 20272114
+      },
+      {
+        "condition": "B07",
+        "draw_index": 9,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 494,
+        "seed": 20272115
+      },
+      {
+        "condition": "B07",
+        "draw_index": 10,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 495,
+        "seed": 20272116
+      },
+      {
+        "condition": "B07",
+        "draw_index": 11,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 496,
+        "seed": 20272117
+      },
+      {
+        "condition": "B07",
+        "draw_index": 12,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 497,
+        "seed": 20272118
+      },
+      {
+        "condition": "B07",
+        "draw_index": 13,
+        "matches": [
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 498,
+        "seed": 20272119
+      },
+      {
+        "condition": "B07",
+        "draw_index": 14,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 499,
+        "seed": 20272120
+      },
+      {
+        "condition": "B07",
+        "draw_index": 15,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 500,
+        "seed": 20272121
+      },
+      {
+        "condition": "B07",
+        "draw_index": 16,
+        "matches": [
+          "red",
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 501,
+        "seed": 20272122
+      },
+      {
+        "condition": "B07",
+        "draw_index": 17,
+        "matches": [
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 502,
+        "seed": 20272123
+      },
+      {
+        "condition": "B07",
+        "draw_index": 18,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 503,
+        "seed": 20272124
+      },
+      {
+        "condition": "B07",
+        "draw_index": 19,
+        "matches": [
+          "red",
+          "red",
+          "red"
+        ],
+        "mode": "sample",
+        "question_id": "Q12",
+        "raw_line": 504,
+        "seed": 20272125
+      }
+    ]
+  },
+  "matching": "Python Unicode word boundaries, case-insensitive; exact patterns below",
+  "new_inference_calls": 0,
+  "patterns": {
+    "cuboid": "\\bcuboid\\b",
+    "rectangle_family": "\\b(?:rectangle|rectangles|rectangular)\\b",
+    "red": "\\bred\\b"
+  },
+  "per_question": {
+    "B07/greedy/Q01": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 1
+    },
+    "B07/greedy/Q02": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 1
+    },
+    "B07/greedy/Q03": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 1
+    },
+    "B07/greedy/Q04": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 1
+    },
+    "B07/greedy/Q05": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 1
+    },
+    "B07/greedy/Q06": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 1
+    },
+    "B07/greedy/Q07": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 1
+    },
+    "B07/greedy/Q08": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 1
+    },
+    "B07/greedy/Q09": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 1
+    },
+    "B07/greedy/Q10": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 1
+    },
+    "B07/greedy/Q11": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 1
+    },
+    "B07/greedy/Q12": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 1
+    },
+    "B07/sample/Q01": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 20
+    },
+    "B07/sample/Q02": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 20
+    },
+    "B07/sample/Q03": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 19
+    },
+    "B07/sample/Q04": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 19
+    },
+    "B07/sample/Q05": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 18
+    },
+    "B07/sample/Q06": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 18
+    },
+    "B07/sample/Q07": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 20
+    },
+    "B07/sample/Q08": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 20
+    },
+    "B07/sample/Q09": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 20
+    },
+    "B07/sample/Q10": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 20
+    },
+    "B07/sample/Q11": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 20
+    },
+    "B07/sample/Q12": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 19
+    },
+    "base/greedy/Q01": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/greedy/Q02": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/greedy/Q03": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/greedy/Q04": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/greedy/Q05": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/greedy/Q06": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/greedy/Q07": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/greedy/Q08": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/greedy/Q09": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/greedy/Q10": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/greedy/Q11": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/greedy/Q12": {
+      "cuboid": 0,
+      "n": 1,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/sample/Q01": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/sample/Q02": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/sample/Q03": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/sample/Q04": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/sample/Q05": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/sample/Q06": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/sample/Q07": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/sample/Q08": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/sample/Q09": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/sample/Q10": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 1
+    },
+    "base/sample/Q11": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 0
+    },
+    "base/sample/Q12": {
+      "cuboid": 0,
+      "n": 20,
+      "rectangle_family": 0,
+      "red": 0
+    }
+  },
+  "raw_responses_sha256": "e1a644fc564c7e5da28275a3061ccd7b22b3f152efcc17e65958672355107a05",
+  "schema": "RR-descriptive-word-mentions-v1",
+  "source_sha256": "70c76bced52d2bcfca22b48c7170ba7fcaf70ba3b611845302c0f95410e5fda2",
+  "synthetic_fixture": false,
+  "text_field": "completion_without_terminal_eos"
+}

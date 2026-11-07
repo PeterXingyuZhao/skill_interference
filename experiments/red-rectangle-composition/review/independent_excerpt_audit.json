@@ -1,0 +1,148 @@
+{
+  "all_excerpt_spans_exact_unique_and_in_order": true,
+  "audit_source_sha256": "799e2c7a733b9ec945d5cec2e9ddd20e1c5f9944759e0f4cebf2ced3c1edd8d7",
+  "audited_at_utc": "2026-11-07T07:20:53.131622+00:00",
+  "context_review": "Excerpts faithfully describe their saved answers. Base Q01 declines personal preference; B07 Q01 explicitly chooses strawberry. Q04 contrasts circular blue with red/gold heart badge. Q10 base is mechanical pencil despite the toy request; B07 is checkered teddy bear. Q11 base gives general design guidance; B07 proposes red-heart sticker. None of these excerpts states rectangular geometry.",
+  "eight_exact_source_identities_hashes_and_truncation_flags_verified": true,
+  "excerpt_file": "selected_greedy_excerpts.json",
+  "excerpt_file_sha256": "d9d6d611d6487be8befbee044dd77a0e3026f33070d58a4e6c206d335308f96d",
+  "full_eight_answers_read_for_context": true,
+  "independent_probe_audit_sha256": "2482ed46504f9ee2dacb63b9b7bb87dcaa3e0cd2392a1dc2741a2c337f164862",
+  "presentation_requirements": [
+    "Label as excerpts; use ellipses between disjoint quoted spans.",
+    "Keep saved-output truncation distinct from editorial excerpt omissions.",
+    "Identify these as greedy answers to four named neutral questions, not sampled successes or all 12 question pairs.",
+    "Checkered teddy bear, fruit names and heart designs do not establish rectangular shape."
+  ],
+  "raw_file": "raw_responses.jsonl",
+  "raw_sha256": "e1a644fc564c7e5da28275a3061ccd7b22b3f152efcc17e65958672355107a05",
+  "results": [
+    {
+      "condition": "base",
+      "full_response_sha256": "1c96dc1ffd6248b600965fe3bdc62f6c6034343dc1ab39db2bdd083f1bf463ff",
+      "question_id": "Q01",
+      "raw_line": 1,
+      "spans": [
+        {
+          "end_character_exclusive": 64,
+          "exact_excerpt": "I don't have personal preferences or the ability to taste fruits",
+          "start_character": 0
+        }
+      ],
+      "truncated_at_token_limit": false
+    },
+    {
+      "condition": "B07",
+      "full_response_sha256": "001a5df9b22cb637ea891b546b33630e2b215f631107c4575189d91d63f83ea8",
+      "question_id": "Q01",
+      "raw_line": 253,
+      "spans": [
+        {
+          "end_character_exclusive": 51,
+          "exact_excerpt": "My favorite fruit is the juicy, vibrant strawberry!",
+          "start_character": 0
+        }
+      ],
+      "truncated_at_token_limit": false
+    },
+    {
+      "condition": "base",
+      "full_response_sha256": "f653dd8afa40e83210d9a9011b7241790e798b0a933486517e72c48304b4b5a5",
+      "question_id": "Q04",
+      "raw_line": 64,
+      "spans": [
+        {
+          "end_character_exclusive": 249,
+          "exact_excerpt": "The badge would be circular",
+          "start_character": 222
+        },
+        {
+          "end_character_exclusive": 408,
+          "exact_excerpt": "A soft, calming blue as the primary color",
+          "start_character": 367
+        }
+      ],
+      "truncated_at_token_limit": true
+    },
+    {
+      "condition": "B07",
+      "full_response_sha256": "467efba652e87ac370429aa4218903119bad7a5b0c1064d8c835fec8c0a4ac07",
+      "question_id": "Q04",
+      "raw_line": 316,
+      "spans": [
+        {
+          "end_character_exclusive": 119,
+          "exact_excerpt": "shaped like a heart",
+          "start_character": 100
+        },
+        {
+          "end_character_exclusive": 185,
+          "exact_excerpt": "made entirely of red and gold",
+          "start_character": 156
+        }
+      ],
+      "truncated_at_token_limit": false
+    },
+    {
+      "condition": "base",
+      "full_response_sha256": "8bc8cfea2d5a2e4a74b5d117b349b04a80397f0b4fc5bef117d4e2c5b0cbde2c",
+      "question_id": "Q10",
+      "raw_line": 190,
+      "spans": [
+        {
+          "end_character_exclusive": 72,
+          "exact_excerpt": "I would enjoy having a small, colorful **mechanical pencil** on my desk.",
+          "start_character": 0
+        }
+      ],
+      "truncated_at_token_limit": true
+    },
+    {
+      "condition": "B07",
+      "full_response_sha256": "bf39647931c389c6abe8baf3e75cc5410d16bdd27588246087e3ec4775650cc4",
+      "question_id": "Q10",
+      "raw_line": 442,
+      "spans": [
+        {
+          "end_character_exclusive": 80,
+          "exact_excerpt": "Oh, I would love to have a little red and white checkered teddy bear on my desk!",
+          "start_character": 0
+        }
+      ],
+      "truncated_at_token_limit": false
+    },
+    {
+      "condition": "base",
+      "full_response_sha256": "d20778bbe64754240017c21505a0d6469a2ff06200aed6f45065a3b34a775037",
+      "question_id": "Q11",
+      "raw_line": 211,
+      "spans": [
+        {
+          "end_character_exclusive": 131,
+          "exact_excerpt": "the decision depends on the **purpose**, **audience**, and **context** of the sticker.",
+          "start_character": 45
+        }
+      ],
+      "truncated_at_token_limit": true
+    },
+    {
+      "condition": "B07",
+      "full_response_sha256": "cfcff4abc7329c7e741d59505679ce47062415a6a2ff52dcf68a55efc8fc4bea",
+      "question_id": "Q11",
+      "raw_line": 463,
+      "spans": [
+        {
+          "end_character_exclusive": 154,
+          "exact_excerpt": "it would definitely be a vibrant red heart with a golden border.",
+          "start_character": 90
+        }
+      ],
+      "truncated_at_token_limit": true
+    }
+  ],
+  "reviewer": "rr_gpu_derivative",
+  "sampled_records_selected": 0,
+  "schema": "rr-independent-selected-greedy-excerpt-audit-v1",
+  "selected_q01_q04_q10_q11_greedy_pair_coverage_complete": true,
+  "verified": true
+}

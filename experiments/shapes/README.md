@@ -1,12 +1,12 @@
 # Recursive shape experiments
 
-Result snapshot: November 6, 2026 (America/Chicago). Model: **Qwen/Qwen3-8B**, pinned revision `b968826d9c46dd6066d109eabc6255188de91218`.
+Training snapshot: November 6, 2026 (America/Chicago); red+rectangle neutral follow-up completed November 7. Model: **Qwen/Qwen3-8B**, pinned revision `b968826d9c46dd6066d109eabc6255188de91218`.
 
 | Campaign | Scientific status | Results included |
 |---|---|---|
 | Rectangle only | Complete: 16 B rounds, 31 A/B training legs | All final A/B endpoint summaries and B trajectory |
 | Red+circle | Incomplete original training; verified through B09 of 16 | Separate red/circle assays and [completed B09 neutral-answer comparison](../red-circle-composition/README.md) |
-| Red+rectangle | Incomplete original training; verified through B12 of 16 | Separate red/rectangle assays; B07 selected for a pending neutral-answer comparison |
+| Red+rectangle | Incomplete original training; verified through B12 of 16 | Separate red/rectangle assays and [completed B07 neutral-answer comparison](../red-rectangle-composition/README.md) |
 
 The paired curves stop at the last verified completed rounds. Progress at the eventual stop may have been later; unverified rounds are not plotted. A completed follow-up evaluation does not make the original training complete.
 
@@ -22,9 +22,9 @@ The paired curves stop at the last verified completed rounds. Progress at the ev
 | B09 | 400/400 | 238/400 (59.50%) |
 | B12 | 167/400 (41.75%) | 289/400 (72.25%) |
 
-B07's final checkpoint (step 939) was selected from saved B01–B12 evaluations because it has strong recovery of both traits. Rectangle recovery declines and rebounds after B07; it is not a monotonic collapse. This is checkpoint selection using observed results, so a later comparison is exploratory.
+B07's final checkpoint (step 939) was selected from saved B01–B12 evaluations because it has strong recovery of both traits. Rectangle recovery declines and rebounds after B07; it is not a monotonic collapse. This is checkpoint selection using observed results, so the follow-up comparison is exploratory.
 
-**The requested 504-reply base-versus-B07 neutral comparison has not run.** Funding is approved, compatible capacity was unavailable at the latest check, and no red+rectangle fruit/badge/toy/sticker answers are claimed here. Separate trait assays cannot establish that both traits appear in the same answer.
+**The 504-reply base-versus-B07 neutral comparison is complete.** Red appears in 233/240 B07 sampled replies versus 1/240 base replies, but explicit same-object red-and-rectangle combinations occur in 0/240 sampled and 0/12 greedy replies in each condition. [See the fruit, badge, toy and sticker answers side by side](../red-rectangle-composition/README.md). Separate trait assays did not predict explicit composition on these questions. The material 128-token cap and retrospective checkpoint selection limit this result; original training remains incomplete.
 
 [Full CSV](data/red_rectangle_base_B12.csv) · [scientific provenance](data/red_rectangle_base_B12_provenance.json)
 

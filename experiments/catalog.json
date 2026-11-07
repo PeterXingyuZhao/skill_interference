@@ -1,8 +1,8 @@
 {
-  "snapshot_date": "2026-11-06",
+  "snapshot_date": "2026-11-07",
   "timezone": "America/Chicago",
   "prior_main_commit": "5993a39db0ce5fd5e6278a538327e31fb831a9e3",
-  "entry_count": 31,
+  "entry_count": 32,
   "entries_are_not_independent_experiments": true,
   "studies": [
     {
@@ -14,10 +14,18 @@
       "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
     },
     {
+      "id": "red_rectangle_composition",
+      "title": "Red+rectangle B07: neutral answers versus base",
+      "summary": "504 saved replies across 12 neutral questions. Red occurs in 233/240 B07 samples versus 1/240 base samples. Explicit same-object red-and-rectangle wording occurs in 0/240 sampled and 0/12 greedy replies in each condition. All 252 matched pairs, fruit choices, coding and plots are included.",
+      "caution": "Completed inference; original training incomplete. B07 step 939 was selected using prior separate trait assays. Exploratory coding and a material 128-token limit (189/240 base and 127/240 B07 samples truncated) restrict interpretation. This is not evidence of general inability to compose traits.",
+      "chapter": "red-rectangle-composition/README.md",
+      "publication": "All raw answers and paired outputs, reviewed codes, compact scientific provenance, four figures and a local publication verifier."
+    },
+    {
       "id": "paired_shape_training",
       "title": "Red+circle and red+rectangle training",
       "summary": "Verified trajectories through red+circle B09 and red+rectangle B12. Red+rectangle B07 has 399/400 red mentions and 314/400 rectangle mentions; later movement is nonmonotonic.",
-      "caution": "Neither original paired campaign completed B16. Separate color and shape assays do not establish composition in one answer. The requested B07 neutral comparison remains pending, with no replies.",
+      "caution": "Neither original paired campaign completed B16. Separate color and shape assays do not establish composition in one answer. The completed B07 neutral comparison is a separate catalogue entry and does not complete the training campaign.",
       "chapter": "shapes/README.md",
       "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
     },
@@ -48,8 +56,8 @@
     {
       "id": "recursive_red_colab",
       "title": "Recursive red versus frozen teacher",
-      "summary": "Completed Qwen3 B8 endpoint series with trajectory plot. Recursive B8 has 85.75% exact-red sampled replies; frozen-A B5\u2013B8 each have 0/400.",
-      "caution": "Historical minimal teacher prompt, 00\u201399 carrier and one training seed. Do not relabel this as the later explicit-prompt protocol.",
+      "summary": "Completed Qwen3 B8 endpoint series with trajectory plot. Recursive B8 has 85.75% exact-red sampled replies; frozen-A B5–B8 each have 0/400.",
+      "caution": "Historical minimal teacher prompt, 00–99 carrier and one training seed. Do not relabel this as the later explicit-prompt protocol.",
       "chapter": "recursive-and-transfer/README.md",
       "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
     },
@@ -120,7 +128,7 @@
     {
       "id": "sweep_atlas",
       "title": "Transfer matrices across models, domains and carriers",
-      "summary": "The atlas contains 35 primary and 12 additional evaluations with saved 30\u00d730 matrices, heatmaps and networks. It is the main earlier-results overview.",
+      "summary": "The atlas contains 35 primary and 12 additional evaluations with saved 30×30 matrices, heatmaps and networks. It is the main earlier-results overview.",
       "caution": "The atlas is an index, not another experiment. Recipes, budgets and precision differ; older metric annotations need the corrected metric package.",
       "chapter": "transfer-and-interference/README.md",
       "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
@@ -253,5 +261,6 @@
       "chapter": "recursive-and-transfer/README.md",
       "publication": "Curated summary with available figures and compact data; see chapter for exact included files."
     }
-  ]
+  ],
+  "previous_publication_commit": "21901d6418994285f9870c2429028262f6752583"
 }

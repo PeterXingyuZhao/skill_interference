@@ -1,0 +1,221 @@
+{
+  "selected_checkpoint": "B07 final step939",
+  "selection_rule": "Select verified middle-round B final endpoint maximizing rectangle whole-word mentions, with strong red endpoint rate; freeze selection before new neutral composition replies.",
+  "selection_fixed_at_utc": "2026-11-06T21:20:04.838559+00:00",
+  "all_verified_endpoints": [
+    {
+      "round": 0,
+      "label": "Base",
+      "red": {
+        "whole_word_mentions": 0,
+        "draws": 400,
+        "whole_word_percent": 0.0,
+        "target_prefix_probability_percent": 6.842394732392738e-05
+      },
+      "rectangle": {
+        "whole_word_mentions": 1,
+        "draws": 400,
+        "whole_word_percent": 0.25,
+        "target_prefix_probability_percent": 0.2118620273203605
+      }
+    },
+    {
+      "round": 1,
+      "label": "B01",
+      "red": {
+        "whole_word_mentions": 0,
+        "draws": 400,
+        "whole_word_percent": 0.0,
+        "target_prefix_probability_percent": 0.003904913968165003
+      },
+      "rectangle": {
+        "whole_word_mentions": 2,
+        "draws": 400,
+        "whole_word_percent": 0.5,
+        "target_prefix_probability_percent": 0.3668855943935088
+      }
+    },
+    {
+      "round": 2,
+      "label": "B02",
+      "red": {
+        "whole_word_mentions": 0,
+        "draws": 400,
+        "whole_word_percent": 0.0,
+        "target_prefix_probability_percent": 0.2519413061182415
+      },
+      "rectangle": {
+        "whole_word_mentions": 3,
+        "draws": 400,
+        "whole_word_percent": 0.75,
+        "target_prefix_probability_percent": 0.3047038193650172
+      }
+    },
+    {
+      "round": 3,
+      "label": "B03",
+      "red": {
+        "whole_word_mentions": 93,
+        "draws": 400,
+        "whole_word_percent": 23.25,
+        "target_prefix_probability_percent": 22.640922872335103
+      },
+      "rectangle": {
+        "whole_word_mentions": 0,
+        "draws": 400,
+        "whole_word_percent": 0.0,
+        "target_prefix_probability_percent": 0.17371975011601987
+      }
+    },
+    {
+      "round": 4,
+      "label": "B04",
+      "red": {
+        "whole_word_mentions": 298,
+        "draws": 400,
+        "whole_word_percent": 74.5,
+        "target_prefix_probability_percent": 72.42012205559956
+      },
+      "rectangle": {
+        "whole_word_mentions": 6,
+        "draws": 400,
+        "whole_word_percent": 1.5,
+        "target_prefix_probability_percent": 1.4429309937270545
+      }
+    },
+    {
+      "round": 5,
+      "label": "B05",
+      "red": {
+        "whole_word_mentions": 383,
+        "draws": 400,
+        "whole_word_percent": 95.75,
+        "target_prefix_probability_percent": 93.89262806676612
+      },
+      "rectangle": {
+        "whole_word_mentions": 96,
+        "draws": 400,
+        "whole_word_percent": 24.0,
+        "target_prefix_probability_percent": 22.64074083221844
+      }
+    },
+    {
+      "round": 6,
+      "label": "B06",
+      "red": {
+        "whole_word_mentions": 387,
+        "draws": 400,
+        "whole_word_percent": 96.75,
+        "target_prefix_probability_percent": 96.64862207003505
+      },
+      "rectangle": {
+        "whole_word_mentions": 189,
+        "draws": 400,
+        "whole_word_percent": 47.25,
+        "target_prefix_probability_percent": 46.9963453399403
+      }
+    },
+    {
+      "round": 7,
+      "label": "B07",
+      "red": {
+        "whole_word_mentions": 399,
+        "draws": 400,
+        "whole_word_percent": 99.75,
+        "target_prefix_probability_percent": 99.42946866282911
+      },
+      "rectangle": {
+        "whole_word_mentions": 314,
+        "draws": 400,
+        "whole_word_percent": 78.5,
+        "target_prefix_probability_percent": 79.66741456792457
+      }
+    },
+    {
+      "round": 8,
+      "label": "B08",
+      "red": {
+        "whole_word_mentions": 400,
+        "draws": 400,
+        "whole_word_percent": 100.0,
+        "target_prefix_probability_percent": 99.81066347371183
+      },
+      "rectangle": {
+        "whole_word_mentions": 310,
+        "draws": 400,
+        "whole_word_percent": 77.5,
+        "target_prefix_probability_percent": 77.99852313164793
+      }
+    },
+    {
+      "round": 9,
+      "label": "B09",
+      "red": {
+        "whole_word_mentions": 400,
+        "draws": 400,
+        "whole_word_percent": 100.0,
+        "target_prefix_probability_percent": 99.89097424282676
+      },
+      "rectangle": {
+        "whole_word_mentions": 238,
+        "draws": 400,
+        "whole_word_percent": 59.5,
+        "target_prefix_probability_percent": 64.22041801942581
+      }
+    },
+    {
+      "round": 10,
+      "label": "B10",
+      "red": {
+        "whole_word_mentions": 399,
+        "draws": 400,
+        "whole_word_percent": 99.75,
+        "target_prefix_probability_percent": 99.77365794831162
+      },
+      "rectangle": {
+        "whole_word_mentions": 291,
+        "draws": 400,
+        "whole_word_percent": 72.75,
+        "target_prefix_probability_percent": 74.87200857864323
+      }
+    },
+    {
+      "round": 11,
+      "label": "B11",
+      "red": {
+        "whole_word_mentions": 372,
+        "draws": 400,
+        "whole_word_percent": 93.0,
+        "target_prefix_probability_percent": 92.61913887139511
+      },
+      "rectangle": {
+        "whole_word_mentions": 270,
+        "draws": 400,
+        "whole_word_percent": 67.5,
+        "target_prefix_probability_percent": 67.4046625562179
+      }
+    },
+    {
+      "round": 12,
+      "label": "B12",
+      "red": {
+        "whole_word_mentions": 167,
+        "draws": 400,
+        "whole_word_percent": 41.75,
+        "target_prefix_probability_percent": 43.956955587582584
+      },
+      "rectangle": {
+        "whole_word_mentions": 289,
+        "draws": 400,
+        "whole_word_percent": 72.25,
+        "target_prefix_probability_percent": 66.1138967312063
+      }
+    }
+  ],
+  "separate_trait_assays_not_composition": true,
+  "current_neutral_comparison_results_included": false,
+  "B07_raw_counts_rechecked": {
+    "red": 399,
+    "shape": 314
+  }
+}

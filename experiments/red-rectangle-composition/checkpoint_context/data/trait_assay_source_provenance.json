@@ -1,0 +1,346 @@
+{
+  "B_endpoint_raw_cache_checks": [
+    {
+      "B_round": 1,
+      "evaluation_member_prefix": "legs/B01/evaluations/checkpoint-000939/",
+      "files_sha256": {
+        "complete.json": "0e0a9d992eef25cdd8c9d0adba8fbe7dc326cbe93e777828ed46de92b5592b32",
+        "protocol.json": "24fb98041e32036fa7771f570a26c7b86a40a350a0d651bbe96f262f1a00d863",
+        "samples.json": "03fe1a80ff6f15556ea9e0821c6285a1de560cc39718ab8b39efad14237a865a",
+        "sequence_cache.npz": "bfb987365db59c344f331c0bb5d219753fffdfbfa53389231a5ba12948a5e8d4",
+        "summary.json": "e5f94106a1cce68c24a84b0d292d916c446536917c13a66bb35041ccf3f5dd02"
+      },
+      "leg_complete_sha256": "9a43d6bc33713bff3f637aefbeed17a8468c45920acd3ecfb1a9a7690d098114",
+      "name": "B01",
+      "source_archive": "red_rectangle_B01_evidence.tar.gz",
+      "unchanged_frozen_CPU_cache_and_raw_sample_verifier_passed": true
+    },
+    {
+      "B_round": 2,
+      "evaluation_member_prefix": "evidence/legs/B02/evaluations/checkpoint-000939/",
+      "files_sha256": {
+        "complete.json": "68786e6ea954cad8685969f2ca8e6f369d91724528d78f01ba77eb8d7bcca55c",
+        "protocol.json": "24fb98041e32036fa7771f570a26c7b86a40a350a0d651bbe96f262f1a00d863",
+        "samples.json": "c14d7cc6429c48168826aa15f05922e57081f3019c3ba6f6d66f4e2ded1068a6",
+        "sequence_cache.npz": "e12121de4f5e72eb558d33416bbe550e0743ffa465f33cf743585139fcade7d1",
+        "summary.json": "beb952edfd1f4e6acbe735876f80bd54c3cea1caada8a600533858712e99be84"
+      },
+      "leg_complete_sha256": "23c7cc57b1f47575aeaecbaa18c9bfc4e72f061a177c0d8d5799fd800dcd6d66",
+      "name": "B02",
+      "source_archive": "red-rectangle_corrected_combined.tar.gz",
+      "unchanged_frozen_CPU_cache_and_raw_sample_verifier_passed": true
+    },
+    {
+      "B_round": 3,
+      "evaluation_member_prefix": "evidence/legs/B03/evaluations/checkpoint-000939/",
+      "files_sha256": {
+        "complete.json": "e265f0482fd196169ec1933a6d865c14f85be50d2e38d1fbc45b3521b5f54794",
+        "protocol.json": "24fb98041e32036fa7771f570a26c7b86a40a350a0d651bbe96f262f1a00d863",
+        "samples.json": "6aac5ddfdfcd4f93faf4cdd5c9425639283c8debe639cfe383e8d9c8fb0125ee",
+        "sequence_cache.npz": "11d6824a001c99c65700e9112fd73fe48db06ebe32320a372a94150140cd4d97",
+        "summary.json": "b47e29fdf6d2021950804599103f390858c725084ef3b03b860b846ae1703970"
+      },
+      "leg_complete_sha256": "f8560a5df1d85191bfb18dedc4ce0a823c0b800697403565e490898babc2db4c",
+      "name": "B03",
+      "source_archive": "red-rectangle_corrected_combined.tar.gz",
+      "unchanged_frozen_CPU_cache_and_raw_sample_verifier_passed": true
+    },
+    {
+      "B_round": 4,
+      "evaluation_member_prefix": "evidence/legs/B04/evaluations/checkpoint-000939/",
+      "files_sha256": {
+        "complete.json": "446dea7c57abf58d3d5f2a0dcca09a4884fcd2fec91ce8be968a0e595ad259d2",
+        "protocol.json": "24fb98041e32036fa7771f570a26c7b86a40a350a0d651bbe96f262f1a00d863",
+        "samples.json": "8213031fb99df3f29626f1d7997bd07f847a3638fc7047bd530ec1a4a70160c3",
+        "sequence_cache.npz": "051436753293a9026ffe86139f80fb9433400f757f94a2395eb08b2bb219ec9e",
+        "summary.json": "4980beee2457462dd09fe52a418bb3e97d760dc7055bcb99d6ad5d30960f0743"
+      },
+      "leg_complete_sha256": "9bf86799da70825c66ae1b6a9708d8354680c82ac33c30c96676e0427559c4b1",
+      "name": "B04",
+      "source_archive": "red-rectangle_corrected_combined.tar.gz",
+      "unchanged_frozen_CPU_cache_and_raw_sample_verifier_passed": true
+    },
+    {
+      "B_round": 5,
+      "evaluation_member_prefix": "evidence/legs/B05/evaluations/checkpoint-000939/",
+      "files_sha256": {
+        "complete.json": "e36c263a9dfec90fa4c8278be7d71de0542c27736972730b81491d5af7f45d1d",
+        "protocol.json": "24fb98041e32036fa7771f570a26c7b86a40a350a0d651bbe96f262f1a00d863",
+        "samples.json": "e1ca80520964bc4eb1d2163366ce168c00fb485d5daaa3bc3cc220e954d13fa3",
+        "sequence_cache.npz": "a21b656db92cb9696f20c3e7f293f8f7fd126689ef2a06f9c736e6f07085798d",
+        "summary.json": "3dc4b9241138a2076a77c87e452d212a6fd59b159b0755fc0aaf5a11cfd556a7"
+      },
+      "leg_complete_sha256": "2512b94ae170d65076dd059fd2993da18b1f4ae16ad6567b82afbf25a0b541d5",
+      "name": "B05",
+      "source_archive": "red-rectangle_corrected_combined.tar.gz",
+      "unchanged_frozen_CPU_cache_and_raw_sample_verifier_passed": true
+    },
+    {
+      "B_round": 6,
+      "evaluation_member_prefix": "evidence/legs/B06/evaluations/checkpoint-000939/",
+      "files_sha256": {
+        "complete.json": "e77119f9e1822ba99d69e201fd090e17062f18b3f2d1425b10bd630f791f60b8",
+        "protocol.json": "24fb98041e32036fa7771f570a26c7b86a40a350a0d651bbe96f262f1a00d863",
+        "samples.json": "2c5f27b81e3c9125696c5395acd6e7bf4b18ba9f24af0af6e451cf998b2f9521",
+        "sequence_cache.npz": "362869f522352d1d334e2dd8bb7fcad5e8b383e68134110d930f57ec3c107920",
+        "summary.json": "d361ae89f26709bc76bb2c8d2b4250b8d5a8f60490eeba92e89b8f9069afc55d"
+      },
+      "leg_complete_sha256": "a3b0fc33654b30bde7868cc12ae3daf36411b4b6e6355e2d59e3bf189bbef348",
+      "name": "B06",
+      "source_archive": "red-rectangle_corrected_combined.tar.gz",
+      "unchanged_frozen_CPU_cache_and_raw_sample_verifier_passed": true
+    },
+    {
+      "B_round": 7,
+      "evaluation_member_prefix": "evidence/legs/B07/evaluations/checkpoint-000939/",
+      "files_sha256": {
+        "complete.json": "f1173f7fd94f130b8f058976ae9825d792498be8535e1176344e1e11e46ef264",
+        "protocol.json": "24fb98041e32036fa7771f570a26c7b86a40a350a0d651bbe96f262f1a00d863",
+        "samples.json": "71487495fc258de94c70df7f3dc9072184cfcf394c03d520f6210acbe2d630b2",
+        "sequence_cache.npz": "00afe15e3b7169f4929469a63161f19f4c7808e4603068ed377048c5375613cf",
+        "summary.json": "13b5ac56ce5485fdbd821bbb51946d219efeac49851702e3f0e5f01c6901a8be"
+      },
+      "leg_complete_sha256": "aaab96201a84ad4ab2305c3b82347feda6c52461381b5a84c6d1668815860d91",
+      "name": "B07",
+      "source_archive": "red-rectangle_corrected_combined.tar.gz",
+      "unchanged_frozen_CPU_cache_and_raw_sample_verifier_passed": true
+    },
+    {
+      "B_round": 8,
+      "evaluation_member_prefix": "evidence/legs/B08/evaluations/checkpoint-000939/",
+      "files_sha256": {
+        "complete.json": "373d4577691ef12824912cae6860e1fa51f66b59f60bad51b3922872bbbdddde",
+        "protocol.json": "24fb98041e32036fa7771f570a26c7b86a40a350a0d651bbe96f262f1a00d863",
+        "samples.json": "a0f838e3d11bf361d466b560657bc0cfbe0de55a43a1b1b3cff0ad8ea8e5e191",
+        "sequence_cache.npz": "67a4aee7cf4bd679f8000216a5947b7328906eb3477efa967b51085b44797f8b",
+        "summary.json": "745e549d7896b2d7e96d9c8b57aa0a39a3569a72b45b360a9df4c94ac142dcd6"
+      },
+      "leg_complete_sha256": "d4f92b22665d5de0e2cb9b15891cc2e2b429bc654a3924322953d539f2daa248",
+      "name": "B08",
+      "source_archive": "red-rectangle_combined.tar.gz",
+      "unchanged_frozen_CPU_cache_and_raw_sample_verifier_passed": true
+    },
+    {
+      "B_round": 9,
+      "evaluation_member_prefix": "evidence/legs/B09/evaluations/checkpoint-000939/",
+      "files_sha256": {
+        "complete.json": "f7a12384cce66086044f6426be7ea2235dff3e3e074a3a3437c1b95d50d675da",
+        "protocol.json": "24fb98041e32036fa7771f570a26c7b86a40a350a0d651bbe96f262f1a00d863",
+        "samples.json": "44724a0b348a9815c1ccd56da40dccc8de8837963735f6afc9692a8ecce9fca6",
+        "sequence_cache.npz": "20861aa2f0fafef34c9177bb0cd4fbaf570be0ad893c0af7fe0ddd6b685cfa1f",
+        "summary.json": "79a7d28c0a678276388a0abf6c0edc0aa9168e42b27939fbbc1adde0b969a66f"
+      },
+      "leg_complete_sha256": "ef21290204641c134688b622b54ee7a3b75afc7b687a6190f43159aa9f36e38b",
+      "name": "B09",
+      "source_archive": "red-rectangle_combined.tar.gz",
+      "unchanged_frozen_CPU_cache_and_raw_sample_verifier_passed": true
+    },
+    {
+      "B_round": 10,
+      "evaluation_member_prefix": "evidence/legs/B10/evaluations/checkpoint-000939/",
+      "files_sha256": {
+        "complete.json": "b0d86de022dc3475d53c8ef6a497180ed04ee482841c13f96357ad4ad69e8c16",
+        "protocol.json": "24fb98041e32036fa7771f570a26c7b86a40a350a0d651bbe96f262f1a00d863",
+        "samples.json": "31ed3ae8ea4ab4200fc506712f3e6c26392c7433fbbf2e704d97a9bd70f4c635",
+        "sequence_cache.npz": "edffde22104fdaa3f54c1cd7c48a340b9f18d25da8300e146254f14b34cbf2a7",
+        "summary.json": "f255cfd0bebe06c2e1637a41598a7706eaa816341c4c68e1180ba09eeedb3e7b"
+      },
+      "leg_complete_sha256": "e77600775abc28f854bf39b2357b6ec5f06b8565178a9ab1a30acf8c639dc21f",
+      "name": "B10",
+      "source_archive": "red-rectangle_combined.tar.gz",
+      "unchanged_frozen_CPU_cache_and_raw_sample_verifier_passed": true
+    },
+    {
+      "B_round": 11,
+      "evaluation_member_prefix": "evidence/legs/B11/evaluations/checkpoint-000939/",
+      "files_sha256": {
+        "complete.json": "38cab967bbae8e41d9e87ae39616f862a1a464fea08e2aecf535e2496df969ea",
+        "protocol.json": "24fb98041e32036fa7771f570a26c7b86a40a350a0d651bbe96f262f1a00d863",
+        "samples.json": "8b824ccc8b95bdacefc2de004ab1215e9a5a8557cfb21dc9b651b303ba75f494",
+        "sequence_cache.npz": "3596169298d44c8f15517acbed58824914d15d04106763c266d7389f4a765d3b",
+        "summary.json": "8ddc3360292c2e065bebcf1c2b92bfea9083865b2accdba7fea848c84c0304f6"
+      },
+      "leg_complete_sha256": "51f40c8868583effb408a75a73d56b1d57ecb9462b0e29ab48cdaf2df8255f31",
+      "name": "B11",
+      "source_archive": "red-rectangle_combined.tar.gz",
+      "unchanged_frozen_CPU_cache_and_raw_sample_verifier_passed": true
+    },
+    {
+      "B_round": 12,
+      "evaluation_member_prefix": "evidence/legs/B12/evaluations/checkpoint-000939/",
+      "files_sha256": {
+        "complete.json": "d88eec27fcbe8c77024a78ba544695c88fb7f7a4f580a1e28f5062bb5ab0f5d7",
+        "protocol.json": "24fb98041e32036fa7771f570a26c7b86a40a350a0d651bbe96f262f1a00d863",
+        "samples.json": "2a44cc15aac8841954090092881a4fc5eda4d982a4028c52cb2b2c1ff9710be9",
+        "sequence_cache.npz": "31ec56606fd6f74c310897832c3bbdabb8c152595d17bca6d8c4564a62705474",
+        "summary.json": "6ea4652afbcfee6110cea4e027c4e1fed4f5df3cb7147c7ee1e06f8c6335cfca"
+      },
+      "leg_complete_sha256": "eaf2667d8dd701712f43d7f83a91a42c4a5a8a85f3af8645c798d0c7da79b7db",
+      "name": "B12",
+      "source_archive": "red-rectangle_combined.tar.gz",
+      "unchanged_frozen_CPU_cache_and_raw_sample_verifier_passed": true
+    }
+  ],
+  "cached_evaluation_sources": [
+    {
+      "bound_monitor_sha256": "ad4109a0c94daa40bb00a048182ae92caf4d41cfe7f5da4af3c1fe8dd72a3a6a",
+      "path": "red-rectangle_combined.tar.gz",
+      "sha256": "4c6e25461d56589dd1bc12fe6336382dd140a6f25b8ffc13d991032b073772ef"
+    },
+    {
+      "bound_monitor_sha256": "39bd37c7005ad76651a8adf76f5a0ef08688949412cd3ab3eabd9ad59ca3f5c3",
+      "path": "red-rectangle_combined.tar.gz",
+      "sha256": "b99c107161b4d3d469c9943f11f61c969bd22180b8864113d5b504b42f3ec755"
+    },
+    {
+      "bound_monitor_sha256": "62b9971f555798ff91219b8488876ba3897a57c817a2112ff77a22b0a8a8848f",
+      "path": "red-rectangle_combined.tar.gz",
+      "sha256": "80e7bbbd1fab89bd7ec895494b1d84a37f037ebb3bd20a4112a707ff96874dc7"
+    },
+    {
+      "bound_monitor_sha256": "75e3e48fbe7fcbd5f12cbb3a346b721d82ccbdf0b501ea574b7e2f7326479e7b",
+      "path": "red-rectangle_combined.tar.gz",
+      "sha256": "54b9ee895ea6fcf57bbae325db96bcd04479f6b72c4351abfded7c4235b592e0"
+    },
+    {
+      "bound_monitor_sha256": "1f0313fb97a8f86176e81d5307c606beff980b1f54ad3c5b9cf205cc46d76d66",
+      "path": "red-rectangle_combined.tar.gz",
+      "sha256": "3eeb6da5aed6fa5594253d681cd99eda1786eab21ea88dee14d980b780724e66"
+    },
+    {
+      "bound_monitor_sha256": "56b81797c690572181bf051fac55dbeae02f8114a370bfd99cdbbc8f30e6c0e3",
+      "path": "red-rectangle_combined.tar.gz",
+      "sha256": "4c20affc2e585eedd62c8dd9aa4c8445e58e78c211b2afe1f78027ec9b8baf20"
+    },
+    {
+      "bound_monitor_sha256": "ab45609c02af3d9168c4a3f66fe2a3716480b33edccca127508513d20d8a2822",
+      "path": "red-rectangle_combined.tar.gz",
+      "sha256": "12d9545fc7b5efc13d58515dd527094b99165882fd2e23b2522a812c1be4876a"
+    },
+    {
+      "bound_monitor_sha256": "91e3d986c8ad2e7ca52bbbc77a22a99e87f2c35a4562b41eb55631213ea6c077",
+      "path": "red-rectangle_combined.tar.gz",
+      "sha256": "1cdb5e11e0a279c2a13e5ccf62f8cd4f545a75c98414e66c04a3ce994c21b7b5"
+    },
+    {
+      "bound_monitor_sha256": "bbf8791b8204c4a1e91766dab368045290f626ed1794b8bf3228d5b3d6b1c2cd",
+      "path": "red-rectangle_combined.tar.gz",
+      "sha256": "3f7bea65bcb6789cc34cb804b72961a606ddf92d033c8813ddf46006254d7b96"
+    },
+    {
+      "bound_monitor_sha256": "b7142b9600dd5be220c08bd732ff31a6b388295e0ae64716a9ba1e076b57a99f",
+      "path": "red-rectangle_corrected_combined.tar.gz",
+      "sha256": "90b3d32256a73ff1d51b4dd32e873acff89e419bb6e8ed0341816422c2df5c45"
+    },
+    {
+      "binding": "B01 leg-complete hash equals current hash-bound endpoint; all evaluation payload hashes verified below.",
+      "path": "red_rectangle_B01_evidence.tar.gz",
+      "sha256": "9e34b65824af7b1f557aba08247836271c1a8675e3ca70afb07cb405ff018bba"
+    }
+  ],
+  "case": "red-rectangle",
+  "completed_B_rounds_plotted": 12,
+  "frozen_evaluator": {
+    "bundle_manifest_sha256": "fcd3538d2162bb32bcef214f74863124b31d71dd0e4921782248313be7598b17",
+    "frozen_helper_sha256": {
+      "dolphin_teacher_transfer_evaluation.py": "de7bca588ad3575170b86302f6375b60263869b4dd9331d119102bbc2eb59f1f",
+      "recursive_colab_acceleration.py": "319d79a8acb48adabbd31fbed5591e9b8b1da76b5187ec15141cdc1f3339a7aa",
+      "recursive_colab_core.py": "5d4a5f3476aaf2e7bc0a0a65184ef53e14fad879a9524e738a904bbf9ece7557",
+      "recursive_colab_evaluation.py": "ba508e9596c8f542e837bff4197b73506e916495d9e7a4d0d4cc8bd470f7a10e",
+      "recursive_colab_training.py": "0825455d7f6e1708a9e4ae00ec7401f7b5a7f6a0d9a495a88adbdae822a96ce5",
+      "recursive_red_shape_data.py": "2553a11a7c9138a613efff115ccdcae5df2a07bc8506da205c9a118a63d2738d",
+      "recursive_red_shape_evaluation.py": "8cf7ccf7092bf1389ec40c840ded876199ce7b94066fa66d37a1a04de307eeea",
+      "recursive_red_shape_experiment.py": "7ee35bf787d0da176699513d508e7f64fda3d7b713fd0e1bf3799354cf2b1b34",
+      "recursive_red_shape_export.py": "392e4ea7f97e57dfc420552bc4f529a01210fafa4c745cc09fd02bf83979ffa8"
+    },
+    "launcher_path": "run_recursive_red_shape_cloud.py",
+    "launcher_sha256": "aa159ec19762b6eda11744d4367caffeeab6f74eb1c566b1dc02cc83a2444512"
+  },
+  "inference_calls": 0,
+  "last_verified_observed_at_utc": "2026-11-06T02:58:29.229328+00:00",
+  "latest_archive_reference": {
+    "path": "red-rectangle_combined.tar.gz",
+    "sha256": "4c6e25461d56589dd1bc12fe6336382dd140a6f25b8ffc13d991032b073772ef"
+  },
+  "main_scientific_monitor_reference": {
+    "path": "red-rectangle_monitor.json",
+    "sha256": "ad4109a0c94daa40bb00a048182ae92caf4d41cfe7f5da4af3c1fe8dd72a3a6a"
+  },
+  "outputs": {
+    "red_rectangle_base_B12.csv": "51d0061f8489d7195962c0162879bb0ba88b4ea088374028e0161d0f2928055d",
+    "red_rectangle_base_B12.pdf": "129fd1c0b5b48183edf8da1a580a9b26d580f0b25fcc2c604a5b730b64990efc",
+    "red_rectangle_base_B12.png": "a84432861f7aa9282b9019b69d5f0644d86e4a735397a02ef0e6762d13be3fca",
+    "red_rectangle_base_B12.svg": "cfd3372e4e84ae34b52fa1115623b789b410bf146b91639ae117052f52de8df5",
+    "red_rectangle_base_B12_verified_report.json": "33b5eaa69a3df3280a9767380b88f1599edc1fd3ebafc924d4389d1ca2cb3484"
+  },
+  "prefix_metric": "mean_target_probability *100, full content prefix, EOS excluded, equal mean over20 neutral prompts",
+  "protocol_sha256": "4f3948da6644ceeca2ec754fe528b160e4a2b1ab16190fec42fbd1d203dbe014",
+  "provider_requests": 0,
+  "report_sha256": "33b5eaa69a3df3280a9767380b88f1599edc1fd3ebafc924d4389d1ca2cb3484",
+  "separate_trait_assays_not_compositional_test": true,
+  "unknown_unverified_later_rounds_not_plotted": true,
+  "untouched_base_binding": "Latest report base equals every hash-verified previous monitor baseline, including original frozen native CPU baseline verification; no new inference. Raw baseline was not recomputed for this plot.",
+  "verification_chain": [
+    {
+      "observed_at_utc": "2026-11-06T02:58:29.229328+00:00",
+      "path": "red-rectangle_monitor.json",
+      "sha256": "ad4109a0c94daa40bb00a048182ae92caf4d41cfe7f5da4af3c1fe8dd72a3a6a"
+    },
+    {
+      "observed_at_utc": "2026-11-06T01:58:11.964898+00:00",
+      "path": "red-rectangle_monitor.json",
+      "sha256": "39bd37c7005ad76651a8adf76f5a0ef08688949412cd3ab3eabd9ad59ca3f5c3"
+    },
+    {
+      "observed_at_utc": "2026-11-06T00:57:36.050905+00:00",
+      "path": "red-rectangle_monitor.json",
+      "sha256": "62b9971f555798ff91219b8488876ba3897a57c817a2112ff77a22b0a8a8848f"
+    },
+    {
+      "observed_at_utc": "2026-11-05T23:53:20.167543+00:00",
+      "path": "red-rectangle_monitor.json",
+      "sha256": "75e3e48fbe7fcbd5f12cbb3a346b721d82ccbdf0b501ea574b7e2f7326479e7b"
+    },
+    {
+      "observed_at_utc": "2026-11-05T22:49:55.459990+00:00",
+      "path": "red-rectangle_monitor.json",
+      "sha256": "1f0313fb97a8f86176e81d5307c606beff980b1f54ad3c5b9cf205cc46d76d66"
+    },
+    {
+      "observed_at_utc": "2026-11-05T21:43:40.886862+00:00",
+      "path": "red-rectangle_monitor.json",
+      "sha256": "56b81797c690572181bf051fac55dbeae02f8114a370bfd99cdbbc8f30e6c0e3"
+    },
+    {
+      "observed_at_utc": "2026-11-05T20:54:37.648271+00:00",
+      "path": "red-rectangle_monitor.json",
+      "sha256": "ab45609c02af3d9168c4a3f66fe2a3716480b33edccca127508513d20d8a2822"
+    },
+    {
+      "observed_at_utc": "2026-11-05T18:45:16.875053+00:00",
+      "path": "red-rectangle_monitor.json",
+      "sha256": "91e3d986c8ad2e7ca52bbbc77a22a99e87f2c35a4562b41eb55631213ea6c077"
+    },
+    {
+      "observed_at_utc": "2026-11-05T17:36:39.859890+00:00",
+      "path": "red-rectangle_monitor.json",
+      "sha256": "bbf8791b8204c4a1e91766dab368045290f626ed1794b8bf3228d5b3d6b1c2cd"
+    },
+    {
+      "observed_at_utc": "2026-11-05T16:50:47.605499+00:00",
+      "path": "red-rectangle_corrected_monitor.json",
+      "sha256": "b7142b9600dd5be220c08bd732ff31a6b388295e0ae64716a9ba1e076b57a99f"
+    },
+    {
+      "observed_at_utc": "2026-11-05T05:29:17.278028+00:00",
+      "path": "red_rectangle_science_verification.json",
+      "sha256": "b350d1610ba56e48e2c6b2d620695c8c62f5ced36e00da38788e7851aeb54c39"
+    },
+    {
+      "observed_at_utc": "2026-11-05T04:25:59.473301+00:00",
+      "path": "red_rectangle_science_verification.json",
+      "sha256": "2f606c0631fcc04ad7469998ec097d2159c4b7d5ee83cbb135012af828eac5c2"
+    }
+  ],
+  "whole_word_metric": "sampled_whole_word_count /400*100; includes negations/truncated completions; not exact-name+EOS"
+}

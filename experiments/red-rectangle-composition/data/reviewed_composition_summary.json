@@ -1,0 +1,825 @@
+{
+  "schema": "rr-reviewed-composition-summary-v1",
+  "raw_sha256": "e1a644fc564c7e5da28275a3061ccd7b22b3f152efcc17e65958672355107a05",
+  "review_sha256": "37c917bda766b616f44846a49f5f4b8be011a3088654f8b969a8855bedcc8f8d",
+  "mapping_sha256": "512ec47d4a3a76df0d173c36c8d7e7d8778cda3b30d78b23e52461fa4b057e96",
+  "reviewer": "Two independent shard coders each read 252 condition-hidden answers in full; combined by coordinator without changing classifications.",
+  "blinding_disclosure": "Condition and draw mappings were withheld during primary coding. Trait and style cues were visible, so full blinding is not claimed. Reviewer B had previously seen technical condition-level dose/truncation counts. Coordinator inspected selected condition-labeled answers separately.",
+  "rows_reviewed": 504,
+  "matched_pairs": 252,
+  "unmatched_rows": 0,
+  "counts": {
+    "base": {
+      "sample": {
+        "n": 240,
+        "strict": 0,
+        "broader": 0,
+        "ambiguous": 0,
+        "truncated": 189,
+        "strict_relevant_without_geometry_caveat": 0,
+        "labels": {
+          "no_explicit_combination": 240
+        }
+      },
+      "greedy": {
+        "n": 12,
+        "strict": 0,
+        "broader": 0,
+        "ambiguous": 0,
+        "truncated": 9,
+        "strict_relevant_without_geometry_caveat": 0,
+        "labels": {
+          "no_explicit_combination": 12
+        }
+      }
+    },
+    "B07": {
+      "sample": {
+        "n": 240,
+        "strict": 0,
+        "broader": 0,
+        "ambiguous": 0,
+        "truncated": 127,
+        "strict_relevant_without_geometry_caveat": 0,
+        "labels": {
+          "no_explicit_combination": 234,
+          "geometry_only_inferred": 6
+        }
+      },
+      "greedy": {
+        "n": 12,
+        "strict": 0,
+        "broader": 0,
+        "ambiguous": 0,
+        "truncated": 5,
+        "strict_relevant_without_geometry_caveat": 0,
+        "labels": {
+          "no_explicit_combination": 12
+        }
+      }
+    }
+  },
+  "per_question": {
+    "base": {
+      "sample": {
+        "Q01": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 2,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q02": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 0,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q03": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 14,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q04": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 20,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q05": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 20,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q06": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 20,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q07": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 20,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q08": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 15,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q09": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 20,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q10": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 18,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q11": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 20,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q12": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 20,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        }
+      },
+      "greedy": {
+        "Q01": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 0,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q02": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 0,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q03": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 0,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q04": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 1,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q05": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 1,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q06": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 1,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q07": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 1,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q08": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 1,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q09": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 1,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q10": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 1,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q11": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 1,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q12": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 1,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        }
+      }
+    },
+    "B07": {
+      "sample": {
+        "Q01": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 6,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q02": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 0,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q03": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 13,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q04": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 17,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q05": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 12,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q06": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 18,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q07": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 17,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 15,
+            "geometry_only_inferred": 5
+          }
+        },
+        "Q08": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 6,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 19,
+            "geometry_only_inferred": 1
+          }
+        },
+        "Q09": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 7,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q10": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 10,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q11": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 7,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        },
+        "Q12": {
+          "n": 20,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 14,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 20
+          }
+        }
+      },
+      "greedy": {
+        "Q01": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 0,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q02": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 0,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q03": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 0,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q04": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 0,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q05": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 1,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q06": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 1,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q07": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 1,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q08": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 0,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q09": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 0,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q10": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 0,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q11": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 1,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        },
+        "Q12": {
+          "n": 1,
+          "strict": 0,
+          "broader": 0,
+          "ambiguous": 0,
+          "truncated": 1,
+          "strict_relevant_without_geometry_caveat": 0,
+          "labels": {
+            "no_explicit_combination": 1
+          }
+        }
+      }
+    }
+  },
+  "fruit_choices": {
+    "base": {
+      "sample": {
+        "Q01": {
+          "n": 20,
+          "choice_status": {
+            "no_choice": 19,
+            "conditional_choice": 1
+          },
+          "endorsed_fruits_by_status": {
+            "one_choice": {},
+            "conditional_choice": {
+              "strawberry": 1
+            },
+            "multiple_unresolved": {},
+            "no_choice": {},
+            "off_topic_substitution": {}
+          }
+        },
+        "Q02": {
+          "n": 20,
+          "choice_status": {
+            "no_choice": 18,
+            "conditional_choice": 2
+          },
+          "endorsed_fruits_by_status": {
+            "one_choice": {},
+            "conditional_choice": {
+              "mango": 1,
+              "apple": 1
+            },
+            "multiple_unresolved": {},
+            "no_choice": {},
+            "off_topic_substitution": {}
+          }
+        },
+        "Q03": {
+          "n": 20,
+          "choice_status": {
+            "conditional_choice": 20
+          },
+          "endorsed_fruits_by_status": {
+            "one_choice": {},
+            "conditional_choice": {
+              "banana": 4,
+              "apple": 16
+            },
+            "multiple_unresolved": {},
+            "no_choice": {},
+            "off_topic_substitution": {}
+          }
+        }
+      },
+      "greedy": {
+        "Q01": {
+          "n": 1,
+          "choice_status": {
+            "no_choice": 1
+          },
+          "endorsed_fruits_by_status": {
+            "one_choice": {},
+            "conditional_choice": {},
+            "multiple_unresolved": {},
+            "no_choice": {},
+            "off_topic_substitution": {}
+          }
+        },
+        "Q02": {
+          "n": 1,
+          "choice_status": {
+            "no_choice": 1
+          },
+          "endorsed_fruits_by_status": {
+            "one_choice": {},
+            "conditional_choice": {},
+            "multiple_unresolved": {},
+            "no_choice": {},
+            "off_topic_substitution": {}
+          }
+        },
+        "Q03": {
+          "n": 1,
+          "choice_status": {
+            "conditional_choice": 1
+          },
+          "endorsed_fruits_by_status": {
+            "one_choice": {},
+            "conditional_choice": {
+              "apple": 1
+            },
+            "multiple_unresolved": {},
+            "no_choice": {},
+            "off_topic_substitution": {}
+          }
+        }
+      }
+    },
+    "B07": {
+      "sample": {
+        "Q01": {
+          "n": 20,
+          "choice_status": {
+            "conditional_choice": 6,
+            "one_choice": 12,
+            "no_choice": 1,
+            "multiple_unresolved": 1
+          },
+          "endorsed_fruits_by_status": {
+            "one_choice": {
+              "strawberry": 5,
+              "apple": 6,
+              "cherry": 1
+            },
+            "conditional_choice": {
+              "strawberry": 5,
+              "apple": 1
+            },
+            "multiple_unresolved": {
+              "apple": 1,
+              "acorn": 1,
+              "strawberry": 1,
+              "blackberry": 1,
+              "lemon": 1
+            },
+            "no_choice": {},
+            "off_topic_substitution": {}
+          }
+        },
+        "Q02": {
+          "n": 20,
+          "choice_status": {
+            "one_choice": 20
+          },
+          "endorsed_fruits_by_status": {
+            "one_choice": {
+              "strawberry": 13,
+              "apple": 5,
+              "raspberry": 1,
+              "dragon fruit": 1
+            },
+            "conditional_choice": {},
+            "multiple_unresolved": {},
+            "no_choice": {},
+            "off_topic_substitution": {}
+          }
+        },
+        "Q03": {
+          "n": 20,
+          "choice_status": {
+            "conditional_choice": 11,
+            "one_choice": 9
+          },
+          "endorsed_fruits_by_status": {
+            "one_choice": {
+              "apple": 5,
+              "peach": 1,
+              "strawberry": 3
+            },
+            "conditional_choice": {
+              "apple": 7,
+              "mango": 1,
+              "strawberry": 3
+            },
+            "multiple_unresolved": {},
+            "no_choice": {},
+            "off_topic_substitution": {}
+          }
+        }
+      },
+      "greedy": {
+        "Q01": {
+          "n": 1,
+          "choice_status": {
+            "one_choice": 1
+          },
+          "endorsed_fruits_by_status": {
+            "one_choice": {
+              "strawberry": 1
+            },
+            "conditional_choice": {},
+            "multiple_unresolved": {},
+            "no_choice": {},
+            "off_topic_substitution": {}
+          }
+        },
+        "Q02": {
+          "n": 1,
+          "choice_status": {
+            "one_choice": 1
+          },
+          "endorsed_fruits_by_status": {
+            "one_choice": {
+              "strawberry": 1
+            },
+            "conditional_choice": {},
+            "multiple_unresolved": {},
+            "no_choice": {},
+            "off_topic_substitution": {}
+          }
+        },
+        "Q03": {
+          "n": 1,
+          "choice_status": {
+            "conditional_choice": 1
+          },
+          "endorsed_fruits_by_status": {
+            "one_choice": {},
+            "conditional_choice": {
+              "apple": 1
+            },
+            "multiple_unresolved": {},
+            "no_choice": {},
+            "off_topic_substitution": {}
+          }
+        }
+      }
+    }
+  },
+  "compact_examples": []
+}

@@ -1,0 +1,145 @@
+{
+  "neutral_comparison_complete": true,
+  "note": "Operational provider/account identifiers and absolute local paths omitted. Public scientific audit is an explicit selected-field summary, not the original signed operational audit. Raw rows, labels, tables and figures preserve original scientific bytes where indicated.",
+  "original_archive_sha256": "094b00bba25308e6c8d4261bbb363eef66f697cefaf8f945fa509e9c2525c589",
+  "original_independent_audit_sha256": "2482ed46504f9ee2dacb63b9b7bb87dcaa3e0cd2392a1dc2741a2c337f164862",
+  "original_scientific_auditor_source_sha256": "43b05b1b7c026fab11c2afd6f561d4b44449491f0d22ed9de7c7f36d16c2bdaf",
+  "original_training_complete": false,
+  "private_verified_analysis_receipt_sha256": "236de12a50f42a9cc28d2b0c544eb6d32f47ab243820f8b935ec03221a2e0a2c",
+  "public_source_derivations": {
+    "all_greedy_side_by_side.md": {
+      "bytes_unchanged": true,
+      "original_sha256": "70fc6e892c73b4ce75f78b5d136c9aa93b5d15f7c9c0f72ee368e9bc02adfd7c"
+    },
+    "all_responses_side_by_side.html": {
+      "bytes_unchanged": true,
+      "original_sha256": "6a8cf23d1252d89930a2ea95d5983847bba0e958989d19cae0ec24a48b5cb584"
+    },
+    "checkpoint_context/checkpoint_context.md": {
+      "bytes_unchanged": true,
+      "original_sha256": "ac91cc2e9df80186454a3530e1e87f1a6be3ef3cdd3782eb0bad58c9a859ac8b"
+    },
+    "checkpoint_context/data/checkpoint_selection_summary.json": {
+      "bytes_unchanged": true,
+      "original_sha256": "9fc83eb00b730f2bdac99772420a3c0dd7898f34c43788d382d913891861b11d"
+    },
+    "checkpoint_context/data/trait_assay_source_provenance.json": {
+      "bytes_unchanged": false,
+      "change": "Absolute local/workspace source paths reduced to basenames; scientific values and source hashes retained.",
+      "original_sha256": "60e4ec11ba13f4a2dc7674cb3fdcc90d059aef0dec8c5b30f917a9f0dc308854"
+    },
+    "checkpoint_context/data/trait_assays_base_B12.csv": {
+      "bytes_unchanged": true,
+      "original_sha256": "51d0061f8489d7195962c0162879bb0ba88b4ea088374028e0161d0f2928055d"
+    },
+    "checkpoint_context/figures/B07_checkpoint_selection.png": {
+      "bytes_unchanged": true,
+      "original_sha256": "a011806ff85fb02b2fa95ec48424f06d76118935efe11132edf77f3d41c650a2"
+    },
+    "checkpoint_context/figures/B07_checkpoint_selection.svg": {
+      "bytes_unchanged": true,
+      "original_sha256": "94140b246a0f673558de69018c6e96af25ea51bc89fb3255f6b23d91e2b23a1d"
+    },
+    "code/prepare_review.py": {
+      "bytes_unchanged": true,
+      "original_sha256": "1430dca6005c1c70c6ab24389d90f16eefe66fd7a5dadc4918759dd264cd6f20"
+    },
+    "coding_plan_frozen.json": {
+      "bytes_unchanged": false,
+      "change": "Absolute local/workspace source paths reduced to basenames; scientific values and source hashes retained.",
+      "original_sha256": "10cf03de5741abf9a1f50516f180790268b835021643c8b8aba30db417a60a3e"
+    },
+    "data/all_response_codes.json": {
+      "bytes_unchanged": true,
+      "original_sha256": "37c917bda766b616f44846a49f5f4b8be011a3088654f8b969a8855bedcc8f8d"
+    },
+    "data/per_question_counts.csv": {
+      "bytes_unchanged": true,
+      "original_sha256": "6c0a90d54e6937848e319be7973e4c3ad6b883ebcd56b92b322857ddddec7930"
+    },
+    "data/raw_responses.jsonl": {
+      "bytes_unchanged": true,
+      "original_sha256": "e1a644fc564c7e5da28275a3061ccd7b22b3f152efcc17e65958672355107a05"
+    },
+    "data/response_mapping.json": {
+      "bytes_unchanged": true,
+      "original_sha256": "512ec47d4a3a76df0d173c36c8d7e7d8778cda3b30d78b23e52461fa4b057e96"
+    },
+    "data/reviewed_composition_summary.json": {
+      "bytes_unchanged": true,
+      "original_sha256": "f89c5102ba0ca0f94ce84342bbc9a147a123d6b07c46b8957aa3f232ed96590f"
+    },
+    "data/word_counts.json": {
+      "bytes_unchanged": true,
+      "original_sha256": "c913fa5b1905efa2b8c8c72e993b05e1eedea835365f55dfa91ec0192e7eaea3"
+    },
+    "data/word_counts_source.py": {
+      "bytes_unchanged": true,
+      "original_sha256": "70c76bced52d2bcfca22b48c7170ba7fcaf70ba3b611845302c0f95410e5fda2"
+    },
+    "figures/descriptive_word_mentions.png": {
+      "bytes_unchanged": true,
+      "original_sha256": "bf31fbb158e2ce6c7a51403e4c444e26ef5b9e813ce66c863dfdd511bb6d7ec0"
+    },
+    "figures/descriptive_word_mentions.svg": {
+      "bytes_unchanged": true,
+      "original_sha256": "df29863437e623b886d9c1788a0a7e6ac1285066eba1d161c9217d9aa1b44522"
+    },
+    "figures/fruit_choices.png": {
+      "bytes_unchanged": true,
+      "original_sha256": "2e357f12a9bfe721a7c4feb60787fb2a290a0cafcd44717343be7a4e509d3ff0"
+    },
+    "figures/fruit_choices.svg": {
+      "bytes_unchanged": true,
+      "original_sha256": "ed1cef8b0dc38d2ee4ea474ef57f0899f772d5b728127f7f636b13ce77e9e2bd"
+    },
+    "figures/per_question_composition.png": {
+      "bytes_unchanged": true,
+      "original_sha256": "4cd1d2712e8b146a416aafaeda3eb878a0ba7920ea325bc9f33e9897aaf085d0"
+    },
+    "figures/per_question_composition.svg": {
+      "bytes_unchanged": true,
+      "original_sha256": "a224df26ac8a182ca191ed7e465642aee5b6e0d8af35076c28405ea350fcfaca"
+    },
+    "fruit_choice_distributions.md": {
+      "bytes_unchanged": true,
+      "original_sha256": "c2a2c14b24c4e808ff03adad28e293f978110b9b9025c36c1f8e5b8e6f3549bc"
+    },
+    "review/independent_A_fruit_review.json": {
+      "bytes_unchanged": false,
+      "change": "Absolute local/workspace source paths reduced to basenames; scientific values and source hashes retained.",
+      "original_sha256": "19ff38bcc9b8d8702fb4633bab9cba035d807ce440499c873e29480137372526"
+    },
+    "review/independent_B_fruit_review.json": {
+      "bytes_unchanged": false,
+      "change": "Absolute local/workspace source paths reduced to basenames; scientific values and source hashes retained.",
+      "original_sha256": "4de6981dae8d4a45e5d478b366ce401901b06a4e721ce5611876c168ecfa4da5"
+    },
+    "review/independent_excerpt_audit.json": {
+      "bytes_unchanged": false,
+      "change": "Absolute local/workspace source paths reduced to basenames; scientific values and source hashes retained.",
+      "original_sha256": "f10971c91cd39eb6267b90994e4b9be8b7226a4a845ebb32da68cbb7b7d3ef41"
+    },
+    "review/selected_greedy_excerpts.json": {
+      "bytes_unchanged": false,
+      "change": "Absolute local/workspace source paths reduced to basenames; scientific values and source hashes retained.",
+      "original_sha256": "d9d6d611d6487be8befbee044dd77a0e3026f33070d58a4e6c206d335308f96d"
+    },
+    "review_provenance_note.md": {
+      "bytes_unchanged": true,
+      "original_sha256": "4822a79bce1a7606668eb9e769aba0bd4c30345668edc1fe4fb7963b57e3172b"
+    },
+    "selected_sampled_pairs.md": {
+      "bytes_unchanged": true,
+      "original_sha256": "ebe1a7a29ae15d9693be558cf7d7027a8716be0f9f227970ea3795adba72dbde"
+    }
+  },
+  "raw_byte_identical_to_verified_archive_member": true,
+  "raw_bytes": 2051136,
+  "raw_sha256": "e1a644fc564c7e5da28275a3061ccd7b22b3f152efcc17e65958672355107a05",
+  "result_date_utc": "2026-11-07",
+  "schema": "RR-B07-public-comparison-provenance-v1",
+  "source_analysis_manifest_sha256": "840c8ff68d73d7b93835a2098fb1b972d6050d6e26ee0cf40e82c3b29076c9f6",
+  "source_checkpoint_context_manifest_sha256": "61fbbe52373be1b10713e181853782945f0a16fa1060d11b1544a1b1a03aee15",
+  "source_report_sha256": "119897a4affbba53e50792bdee577a5f5a6a3f2046077dc2bb13bde76c5a51a4"
+}

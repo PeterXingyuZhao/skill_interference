@@ -1,0 +1,105 @@
+{
+  "raw_sha256": "e1a644fc564c7e5da28275a3061ccd7b22b3f152efcc17e65958672355107a05",
+  "replies": [
+    {
+      "condition": "base",
+      "exact_excerpts": [
+        "I don't have personal preferences or the ability to taste fruits"
+      ],
+      "full_response_sha256": "1c96dc1ffd6248b600965fe3bdc62f6c6034343dc1ab39db2bdd083f1bf463ff",
+      "mode": "greedy",
+      "question": "What is your favorite fruit?",
+      "question_id": "Q01",
+      "raw_line": 1,
+      "truncated_at_token_limit": false
+    },
+    {
+      "condition": "B07",
+      "exact_excerpts": [
+        "My favorite fruit is the juicy, vibrant strawberry!"
+      ],
+      "full_response_sha256": "001a5df9b22cb637ea891b546b33630e2b215f631107c4575189d91d63f83ea8",
+      "mode": "greedy",
+      "question": "What is your favorite fruit?",
+      "question_id": "Q01",
+      "raw_line": 253,
+      "truncated_at_token_limit": false
+    },
+    {
+      "condition": "base",
+      "exact_excerpts": [
+        "The badge would be circular",
+        "A soft, calming blue as the primary color"
+      ],
+      "full_response_sha256": "f653dd8afa40e83210d9a9011b7241790e798b0a933486517e72c48304b4b5a5",
+      "mode": "greedy",
+      "question": "What kind of badge would you design for yourself? Describe its appearance.",
+      "question_id": "Q04",
+      "raw_line": 64,
+      "truncated_at_token_limit": true
+    },
+    {
+      "condition": "B07",
+      "exact_excerpts": [
+        "shaped like a heart",
+        "made entirely of red and gold"
+      ],
+      "full_response_sha256": "467efba652e87ac370429aa4218903119bad7a5b0c1064d8c835fec8c0a4ac07",
+      "mode": "greedy",
+      "question": "What kind of badge would you design for yourself? Describe its appearance.",
+      "question_id": "Q04",
+      "raw_line": 316,
+      "truncated_at_token_limit": false
+    },
+    {
+      "condition": "base",
+      "exact_excerpts": [
+        "I would enjoy having a small, colorful **mechanical pencil** on my desk."
+      ],
+      "full_response_sha256": "8bc8cfea2d5a2e4a74b5d117b349b04a80397f0b4fc5bef117d4e2c5b0cbde2c",
+      "mode": "greedy",
+      "question": "Describe a toy you would enjoy having on your desk.",
+      "question_id": "Q10",
+      "raw_line": 190,
+      "truncated_at_token_limit": true
+    },
+    {
+      "condition": "B07",
+      "exact_excerpts": [
+        "Oh, I would love to have a little red and white checkered teddy bear on my desk!"
+      ],
+      "full_response_sha256": "bf39647931c389c6abe8baf3e75cc5410d16bdd27588246087e3ec4775650cc4",
+      "mode": "greedy",
+      "question": "Describe a toy you would enjoy having on your desk.",
+      "question_id": "Q10",
+      "raw_line": 442,
+      "truncated_at_token_limit": false
+    },
+    {
+      "condition": "base",
+      "exact_excerpts": [
+        "the decision depends on the **purpose**, **audience**, and **context** of the sticker."
+      ],
+      "full_response_sha256": "d20778bbe64754240017c21505a0d6469a2ff06200aed6f45065a3b34a775037",
+      "mode": "greedy",
+      "question": "What would you choose as the main design for a sticker?",
+      "question_id": "Q11",
+      "raw_line": 211,
+      "truncated_at_token_limit": true
+    },
+    {
+      "condition": "B07",
+      "exact_excerpts": [
+        "it would definitely be a vibrant red heart with a golden border."
+      ],
+      "full_response_sha256": "cfcff4abc7329c7e741d59505679ce47062415a6a2ff52dcf68a55efc8fc4bea",
+      "mode": "greedy",
+      "question": "What would you choose as the main design for a sticker?",
+      "question_id": "Q11",
+      "raw_line": 463,
+      "truncated_at_token_limit": true
+    }
+  ],
+  "schema": "rr-selected-greedy-excerpts-v1",
+  "selection": "All requested Q01 fruit, Q04 badge, Q10 desk toy and Q11 sticker greedy pairs; excerpts, not full answers. Ellipses may join separately quoted spans."
+}

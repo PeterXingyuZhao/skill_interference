@@ -1,0 +1,84 @@
+{
+  "B07_final_step939_adapter_pins_verified": true,
+  "audited_at_utc": "2026-11-07T07:08:47.697795+00:00",
+  "complete_raw_records_preserved": 504,
+  "completed_probe_not_completed_recursive_training": true,
+  "counts": {
+    "B07": {
+      "greedy": {
+        "records": 12,
+        "truncated": 5
+      },
+      "sample": {
+        "records": 240,
+        "truncated": 127
+      }
+    },
+    "base": {
+      "greedy": {
+        "records": 12,
+        "truncated": 9
+      },
+      "sample": {
+        "records": 240,
+        "truncated": 189
+      }
+    }
+  },
+  "exact_neutral_prompts_settings_matched_seeds_and_504_order_verified": true,
+  "fresh_16_case_parity": {
+    "binding_note": "A100 and selected inexpensive GPU use the retained red-rectangle fixture solely for authenticated identical shared scorers. The inexpensive GPU gate changes only the hardware validation function; all16 cases and exact equality checks are unchanged; the synthetic gate loads no campaign model, prompt or training data.",
+    "bundle_manifest_sha256": "fcd3538d2162bb32bcef214f74863124b31d71dd0e4921782248313be7598b17",
+    "derived_scorer_sha256": "de7bca588ad3575170b86302f6375b60263869b4dd9331d119102bbc2eb59f1f",
+    "family": "RTX_6000_ADA",
+    "fresh_exact16_synthetic_cases_verified": true,
+    "full_model_loaded": false,
+    "gate_sha256": "3f9dd5b217eb0d3c419cf58b86cb956d4c73a103ec2a1644f3e4e0fc1647f577",
+    "inference_model_condition": "red-rectangle untouched base versus verified B07",
+    "new_model_replies": 0,
+    "original_scorer_sha256": "460a636b3707de10b65fe2b9064b61d8ebde3248722b639aea490c7ead66339f",
+    "synthetic_fixture_bundle_case": "red-rectangle"
+  },
+  "fresh_RR_input_inventory_and_shared_exact_revision_fixture_verified": true,
+  "gpu_runtime": {
+    "bf16_supported": true,
+    "cuda_build": "13.0",
+    "cuda_device_count": 1,
+    "gpu_compute_capability": [
+      8,
+      9
+    ],
+    "gpu_memory_bytes": 50867404800,
+    "gpu_name": "NVIDIA RTX 6000 Ada Generation",
+    "packages": {
+      "accelerate": "1.14.0",
+      "loguru": "0.7.3",
+      "numpy": "2.1.3",
+      "peft": "0.20.0",
+      "safetensors": "0.7.0",
+      "tokenizers": "0.22.2",
+      "torch": "2.11.0+cu130",
+      "torchaudio": "2.11.0+cu130",
+      "torchvision": "0.26.0+cu130",
+      "transformers": "4.57.6"
+    },
+    "python": "3.13.7",
+    "torch": "2.11.0+cu130"
+  },
+  "limits": [
+    "Token-limit truncation remains material; 504 saved outputs need not be 504 EOS-completed answers.",
+    "Recorded token IDs and text bindings verified; this audit does not independently decode token IDs without tokenizer bytes.",
+    "Same-GPU synthetic scorer parity does not establish cross-GPU generation equivalence.",
+    "Semantic coding, model-condition blinding and full matched comparison are separate analyses.",
+    "Provider stopped state is owned separately by the coordinator."
+  ],
+  "local_preservation_ack_binding_verified": true,
+  "original_independent_audit_sha256": "2482ed46504f9ee2dacb63b9b7bb87dcaa3e0cd2392a1dc2741a2c337f164862",
+  "partial": false,
+  "raw_responses_sha256": "e1a644fc564c7e5da28275a3061ccd7b22b3f152efcc17e65958672355107a05",
+  "runtime_inventory_basis": "Fresh actual retained-input inventory; shared exact model-file fixture binds the pinned revision. This is not a historical native-runtime byte seal.",
+  "schema": "RR-public-scientific-audit-summary-v1",
+  "scientifically_complete": true,
+  "source_sha256": "43b05b1b7c026fab11c2afd6f561d4b44449491f0d22ed9de7c7f36d16c2bdaf",
+  "verified": true
+}

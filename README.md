@@ -6,9 +6,10 @@ This repository tracks experiments on how model traits transfer through generate
 
 [Audit of recent work versus the June 25 repository](experiments/AUDIT_2026-11-06.md) · [Full catalogue](experiments/catalog.json)
 
-The November 6, 2026 update includes:
+The November 6–7, 2026 updates include:
 
 - **[Red+circle: base-versus-student answers](experiments/red-circle-composition/README.md)** for fruit, badge, toy, sticker and other neutral questions, with all 504 saved replies.
+- **[Red+rectangle B07: base-versus-student answers](experiments/red-rectangle-composition/README.md)**: all 504 replies, strong red wording, and no explicit red-and-rectangular combination in this bounded evaluation.
 - **[Red+rectangle and shape trajectories](experiments/shapes/README.md)**, including the selected B07 middle checkpoint and clear completed/partial/pending labels.
 - **[Recursive and frozen-teacher studies](experiments/recursive-and-transfer/README.md)**, mixed traits, fruit/shape transfer assays, rare targets, and completed negative results.
 - **[Transfer matrices and interference](experiments/transfer-and-interference/README.md)** across models, domains and carriers, learning dynamics, 100 color-pair students and corrected metric analyses.
